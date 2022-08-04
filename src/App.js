@@ -7,16 +7,16 @@ import {Navbar} from './components'
 const App = () => {
   return (
     <div>
-        <Navbar/>
+        {/*<Navbar/>*/}
         <Header/>
-        <About/>
-        <Brands/>
-        <Stats/>
-        <Portfolio/>
-        <Services/>
-        <Media/>
-        <Team/>
-        <AddServices/>
+        {/*<About/>*/}
+        {/*<Brands/>*/}
+        {/*<Stats/>*/}
+        {/*<Portfolio/>*/}
+        {/*<Services/>*/}
+        {/*<Media/>*/}
+        {/*<Team/>*/}
+        {/*<AddServices/>*/}
     </div>
   );
 }
