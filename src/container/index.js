@@ -1,0 +1,10 @@
+export {default as About} from './About/About';
+export {default as AddServices} from './AddServices/AddServices';
+export {default as Footer} from './Footer/Footer';
+export {default as Header} from './Header/Header';
+export {default as Brands} from './Brands/Brands';
+export {default as Media} from './Media/Media';
+export {default as Portfolio} from './Portfolio/Portfolio';
+export {default as Services} from './Services/Services';
+export {default as Stats} from './Stats/Stats';
+export {default as Team} from './Team/Team';
