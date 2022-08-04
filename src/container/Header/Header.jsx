@@ -4,6 +4,7 @@ import videoBgImg from '../../assets/KT-Management-home-screen-video-city.jpg'
 import videoBgMp4 from '../../assets/KT-Management-home-screen-video-city.mp4';
 import videoBgOgv from '../../assets/KT-Management-home-screen-video-city.ogv';
 import videoBgWebm from '../../assets/KT-Management-home-screen-video-city.webm';
+import {IoIosArrowDown} from "react-icons/io";
 
 const Header = () => {
     return (
@@ -40,7 +41,7 @@ const Header = () => {
 
             {/*  Arrow Down */}
             <a href="#about" className="arrow-down smooth-scroll">
-                <i className="fa fa-angle-down"></i>
+                <IoIosArrowDown icon="fa-solid fa-angle-down" />
             </a>
         </section>
     );

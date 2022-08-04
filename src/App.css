@@ -543,10 +543,11 @@ section {
   box-shadow: 0 0 10px rgba(0,0,0,.1);
 }
 
-.about-item i {
+.about-item .react-icon-about {
   font-size: 42px;
   margin: 0;
 }
+
 
 .about-item h3 {
   font-size: 24px;
@@ -570,8 +571,9 @@ section {
 .about-item:hover {
   background-color: #cd0000;
 }
-
+a
 .about-item:hover i,
+.about-item:hover .react-icon-about,
 .about-item:hover h3,
 .about-item:hover p {
   color: #dcdcdc;
@@ -581,13 +583,15 @@ section {
   background-color: #dcdcdc;
 }
 
-.about-item:hover i {
+.about-item:hover i,
+.about-item:hover .react-icon-about {
   transform: translateY(-5px);
 }
 
 /* Smooth transition */
 .about-item,
 .about-item i,
+.about-item .react-icon-about,
 .about-item hr {
   -webkit-transition: all 400ms ease-in-out;
   transition: all 400ms ease-in-out;
