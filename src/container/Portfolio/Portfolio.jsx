@@ -3,6 +3,11 @@ import './Portfolio.scss';
 import {images} from "../../constants";
 import {urlFor, client} from "../../client";
 
+import 'photoswipe/dist/photoswipe.css'
+import { Gallery, Item } from 'react-photoswipe-gallery'
+import {Link} from "react-router-dom";
+
+
 const Portfolio = () => {
 
     const [influencers, setInfluencers] = useState([]);
@@ -10,10 +15,13 @@ const Portfolio = () => {
     useEffect(() => {
         const query = '*[_type == "influencer"]';
 
+
+
         client.fetch(query)
             .then((data) => {
                 setInfluencers(data)
             })
+
     },[])
 
     return (
@@ -67,10 +75,7 @@ const Portfolio = () => {
 
 
 
-                                            <a href={urlFor(influencer.imageUrl)}
-                                               data-title="
-    <div class='show-button'><a href='mailto:shawn@ktmanagers.com?subject=I am interested in Mimi promoting my brand' target='_blank'><button class='btn btn-client-book btn-red'>Book Mimi to promote your brand!</button></a><hr><a href='https://www.instagram.com/mimifaust' target='_blank'><button class='btn btn-social-i btn-instagram'><i class='fa fa-instagram'></i></button></a><a href='https://www.facebook.com/officialmimifaust' target='_blank'><button class='btn btn-social-i-f btn-facebook'><i class='fa fa-facebook'></i></button></a><a href='https://twitter.com/mimifaust' target='_blank'><button class='btn btn-social-i-t btn-twitter'><i class='fa fa-twitter'></i></button></a></div><hr>
-    "
+                                            <Link to={'/influencer/' + influencer.slug.current}
 
                                             >
                                                 <img src={urlFor(influencer.imageUrl)} className="img-responsive"
@@ -91,11 +96,38 @@ const Portfolio = () => {
                                                         </div>
                                                     </div>
 
-                                            </a>
+                                            </Link>
                                         </div>
                                     </div>
 
                                 ))}
+
+                                {/*<Gallery withCaption>*/}
+                                {/*    <div className="col-lg-2 col-md-3 col-sm-6 col-xs-12 div-size filter women client-custom">*/}
+
+                                {/*        <div className="portfolio-item portfolio-pic no-underline">*/}
+
+                                {/*            <Item*/}
+                                {/*                original={images.clientTemp}*/}
+                                {/*                thumbnail={images.clientTemp}*/}
+                                {/*                width="800"*/}
+                                {/*                height="800"*/}
+                                {/*                caption="<div className='show-button'><a href='mailto:shawn@ktmanagers.com?subject=I am interested in Mimi promoting my brand' target='_blank'><button className='btn btn-client-book btn-red'>Book Mimi to promote your brand!</button></a><hr><a href='https://www.instagram.com/mimifaust' target='_blank'><button className='btn btn-social-i btn-instagram'><i className='fa fa-instagram'></i></button></a><a href='https://www.facebook.com/officialmimifaust' target='_blank'><button className='btn btn-social-i-f btn-facebook'><i className='fa fa-facebook'></i></button></a><a href='https://twitter.com/mimifaust' target='_blank'><button className='btn btn-social-i-t btn-twitter'><i className='fa fa-twitter'></i></button></a></div><hr>"*/}
+                                {/*            >*/}
+                                {/*                {({ ref, open }) => (*/}
+                                {/*                    <>*/}
+                                {/*                        <img ref={ref} onClick={open} src={images.clientTemp} />*/}
+
+                                {/*                    </>*/}
+                                {/*                )}*/}
+
+                                {/*            </Item>*/}
+                                {/*            */}
+                                {/*        </div>*/}
+                                {/*    </div>*/}
+                                {/*        */}
+                                {/*</Gallery>*/}
+
 
 
                             </div>

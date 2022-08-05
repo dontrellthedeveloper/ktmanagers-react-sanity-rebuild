@@ -162,14 +162,14 @@ section {
 }
 
 .btn-client-book {
-  font-family: 'raleway', sans-serif;
-  border-radius: 28px;
-  font-size: 13px;
-  text-transform: uppercase;
-  margin: 0 6px;
-  padding: 12px 30px 12px 30px;
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  font-family: 'raleway', sans-serif !important;
+  border-radius: 28px !important;
+  font-size: 13px !important;
+  text-transform: uppercase !important;
+  margin: 0 6px !important;
+  padding: 12px 30px 12px 30px !important;
+  -webkit-transition: all .5s !important;
+  transition: all .5s !important;
 }
 
 .btn-social-i {
