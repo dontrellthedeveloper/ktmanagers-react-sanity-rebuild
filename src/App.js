@@ -10,7 +10,7 @@ const App = () => {
         {/*<Navbar/>*/}
         <Header/>
         <About/>
-        {/*<Brands/>*/}
+        <Brands/>
         {/*<Stats/>*/}
         {/*<Portfolio/>*/}
         {/*<Services/>*/}
