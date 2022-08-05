@@ -11,7 +11,7 @@ const App = () => {
         <Header/>
         <About/>
         <Brands/>
-        {/*<Stats/>*/}
+        <Stats/>
         {/*<Portfolio/>*/}
         {/*<Services/>*/}
         {/*<Media/>*/}

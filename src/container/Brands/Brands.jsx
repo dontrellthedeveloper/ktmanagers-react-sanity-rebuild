@@ -22,14 +22,12 @@ const Brands = () => {
                             <OwlCarousel
                                 items='6'
                                 autoplay
-                            smartSpeed='700'
-                            loop
-                            autoplayHoverPause='false'
-                            nav
-                            dots='false'
-
+                                smartSpeed='700'
+                                loop
+                                autoplayHoverPause='false'
+                                nav
+                                dots='false'
                                 id="clients-list" className="owl-carousel owl-theme">
-
 
                                 <div className="item client">
                                     <img src={images.brands1} className="img-fluid" alt="client"/>
