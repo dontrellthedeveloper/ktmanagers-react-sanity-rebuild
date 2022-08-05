@@ -1,5 +1,6 @@
 import './App.css';
 import './Responsive.css';
+import './loader';
 
 import {Header, About, Brands, Stats, Portfolio, Services, Media, Team, AddServices} from './container';
 import {Navbar} from './components'
@@ -12,8 +13,8 @@ const App = () => {
         <About/>
         <Brands/>
         <Stats/>
-        {/*<Portfolio/>*/}
-        {/*<Services/>*/}
+        <Portfolio/>
+        <Services/>
         {/*<Media/>*/}
         {/*<Team/>*/}
         {/*<AddServices/>*/}

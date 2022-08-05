@@ -1119,6 +1119,10 @@ ul.social-list .twitter-bg-color a:hover {
 
 
 
+.client-custom {
+  display: inline-block;
+}
+
 
 
 /* Zoom Effect */
@@ -1673,6 +1677,24 @@ ul.navbar-nav > li > a:focus {
   font-weight: 500;
 }
 
+
+
+
+
+.offer-header {
+  font-size: 25px !important;
+  font-weight: 700;
+}
+
+.offer-text {
+  font-size: 16px !important;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.offer-break {
+  border: 1px solid #dcdcdc;
+}
 
 
 
