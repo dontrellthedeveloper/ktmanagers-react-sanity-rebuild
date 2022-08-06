@@ -19,7 +19,7 @@ const Homepage = () => {
             <Stats/>
             <Portfolio/>
             <Services/>
-            <Media/>
+            {/*<Media/>*/}
             {/*<Team/>*/}
             {/*<AddServices/>*/}
 

@@ -189,7 +189,8 @@ section {
   font-size: 22px;
   text-transform: uppercase;
   margin: 0 15px;
-  padding: 6px 16px 6px 16px;
+  /*padding: 6px 16px 6px 16px;*/
+  padding: 6px 12px 6px 12px;
   -webkit-transition: all .5s;
   transition: all .5s;
 }
@@ -287,7 +288,8 @@ section {
 
 .btn-tiktok {
   color: white;
-  background: #f4f4f4;
+  /*background: #f4f4f4;*/
+  background: #5bdcd2;
 }
 
 .btn-tiktok:hover,
@@ -1191,13 +1193,14 @@ ul.social-list .twitter-bg-color a:hover {
   font-size: 10px;
   color: #dcdcdc;
   text-transform: uppercase;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   -webkit-transform: translateY(20%);
   transform: translateY(20%);
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   line-height: 22px;
+  width: 85%;
 }
 
 /* Show Overlay on mouse over */

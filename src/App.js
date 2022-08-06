@@ -17,7 +17,7 @@ const App = () => {
     <Router>
         <Routes>
             <Route path='/' element={<Homepage/>} exact />
-            <Route path='/influencer/:slug' element={<Influencer/>} exact />
+            <Route path='/:slug' element={<Influencer/>} exact />
         </Routes>
         {/*<Homepage/>*/}
 

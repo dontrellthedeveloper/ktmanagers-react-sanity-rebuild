@@ -226,7 +226,8 @@
 
 
     .btn-social-i-f {
-        padding: 6px 16px 6px 16px;
+        /*padding: 6px 16px 6px 16px;*/
+        padding: 6px 12px 6px 12px;
         font-size: 22px;
     }
 

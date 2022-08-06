@@ -13,7 +13,7 @@ const Portfolio = () => {
     const [influencers, setInfluencers] = useState([]);
 
     useEffect(() => {
-        const query = '*[_type == "influencer"]';
+        const query = '*[_type == "influencer"] | order(order asc)';
 
 
 
@@ -75,7 +75,7 @@ const Portfolio = () => {
 
 
 
-                                            <Link to={'/influencer/' + influencer.slug.current}
+                                            <Link to={'/' + influencer.slug.current}
 
                                             >
                                                 <img src={urlFor(influencer.imageUrl)} className="img-responsive"
@@ -90,8 +90,7 @@ const Portfolio = () => {
                                                             <span></span>
 
                                                              {/*Item Description */}
-                                                            <p>Currently Starring on the Hit TV Show<br/>“Love & Hip Hop:
-                                                                Atlanta” on the<br/> VH1 Network <br/> influencer</p>
+                                                            <p>{influencer.description}</p>
 
                                                         </div>
                                                     </div>
