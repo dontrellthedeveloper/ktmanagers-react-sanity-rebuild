@@ -69,11 +69,43 @@ const Navbar = () => {
                     >
                         <HiX onClick={() => setToggle(false)}/>
                         <ul>
-                            {['home','about','work','skills','contact'].map((item)=> (
-                                <li key={item}>
-                                    <a href={`#${item}`} onClick={() => setToggle(false)}>{item}</a>
-                                </li>
-                            ))}
+                            {/*{['home','about','work','skills','contact'].map((item)=> (*/}
+                            {/*    <li key={item}>*/}
+                            {/*        <a href={`#${item}`} onClick={() => setToggle(false)}>{item}</a>*/}
+                            {/*    </li>*/}
+                            {/*))}*/}
+                            <li>
+                                <NavLink className='app__navbar-menu-links' to='/' onClick={() => setToggle(false)}>Home
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink className='app__navbar-menu-links' to='/about' onClick={() => setToggle(false)}>About
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink className='app__navbar-menu-links' to='/influencers' onClick={() => setToggle(false)}>Influencers
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink className='app__navbar-menu-links' to='/kids' onClick={() => setToggle(false)}>KTM Kids
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink className='app__navbar-menu-links' to='/services' onClick={() => setToggle(false)}>Services
+                                </NavLink>
+                            </li>
+                            {/*<li>*/}
+                            {/*    <a href={`#`} onClick={() => setToggle(false)}>About</a>*/}
+                            {/*</li>*/}
+                            {/*<li>*/}
+                            {/*    <a href={`#`} onClick={() => setToggle(false)}>Influencers</a>*/}
+                            {/*</li>*/}
+                            {/*<li>*/}
+                            {/*    <a href={`#`} onClick={() => setToggle(false)}>KTM Kids</a>*/}
+                            {/*</li>*/}
+                            {/*<li>*/}
+                            {/*    <a href={`#`} onClick={() => setToggle(false)}>Services</a>*/}
+                            {/*</li>*/}
                         </ul>
                     </div>
                 )}

@@ -177,7 +177,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--secondary-color);
+
+  //background-color: var(--secondary-color);
+  background-color: #cd0000;
 
   svg {
     width: 70%;
@@ -212,7 +214,8 @@
     svg {
       width: 35px;
       height: 35px;
-      color: var(--secondary-color);
+      //color: var(--secondary-color);
+      color: #500000;;
       margin: 0.5rem 1rem;
     }
 
@@ -231,6 +234,20 @@
       li {
         margin: 1rem;
 
+
+        .app__navbar-menu-links {
+          //color: var(--gray-color);
+          color: #500000;
+          text-decoration: none;
+          font-size: 1rem;
+          text-transform: uppercase;
+          font-weight: 500;
+
+          transition: all 0.3s ease-in-out;
+
+
+        }
+
         a {
           color: var(--gray-color);
           text-decoration: none;
@@ -243,6 +260,26 @@
           &:hover {
             color: var(--secondary-color);
           }
+        }
+
+        &:hover {
+          //color:var(--secondary-color);
+          color: #ed2a2a;
+        }
+
+        &:target {
+          color: #ed2a2a;
+        }
+
+        &:focus {
+          color: #ed2a2a;
+        }
+
+        &:active {
+          //color:var(--secondary-color)
+          color: #ed2a2a;
+          //text-shadow: 1px 0 #000, -1px 0 #000, 0 1px #000, 0 -1px #000,
+          //1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
         }
       }
 

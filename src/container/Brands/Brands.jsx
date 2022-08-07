@@ -27,7 +27,25 @@ const Brands = () => {
                                 autoplayHoverPause='false'
                                 nav
                                 dots='false'
-                                id="clients-list" className="owl-carousel owl-theme">
+                                id="clients-list" className="owl-carousel owl-theme"
+                                responsive={{
+                                    0: {
+                                        items: 2
+                                    },
+                                    480: {
+                                        items: 2
+                                    },
+                                    768: {
+                                        items: 3
+                                    },
+                                    1000: {
+                                        items: 6
+                                    },
+                                    1200: {
+                                        items: 6
+                                    },
+                                }}
+                            >
 
                                 <div className="item client">
                                     <img src={images.brands1} className="img-fluid" alt="client"/>

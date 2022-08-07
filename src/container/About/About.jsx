@@ -37,7 +37,7 @@ const About = () => {
                         <div className="row">
                             <div className="col-md-12">
                                 <div className="about-bottom">
-                                    <img src={images.aboutLeft} alt="About Us" className="img-responsive"/>
+                                    <img src={images.aboutLeft} alt="About Us" className="img-responsive about__image-section"/>
                                 </div>
                             </div>
                         </div>
