@@ -1102,6 +1102,7 @@ ul.social-list .twitter-bg-color a:hover {
   -webkit-box-shadow: none;
   box-shadow: none;
   outline: 0;
+  margin: 3px;
 }
 
 #isotope-filters button span {
@@ -1284,6 +1285,7 @@ ul.social-list .twitter-bg-color a:hover {
   padding: 25px 50px;
   -webkit-transition: all 400ms linear;
   transition: all 400ms linear;
+  margin-top: 25px;
 }
 
 /*.stats-item i {*/
@@ -1301,31 +1303,28 @@ ul.social-list .twitter-bg-color a:hover {
   transition: all 400ms linear;
 }
 
+.stats-item .stats-item-icon {
+  /*font-size: 42px;*/
+  font-size: 50px;
+  margin: 0 0 6px 0;
+  -webkit-transition: all 400ms linear;
+  transition: all 400ms linear;
+}
+
 .stats-item-icon {
   margin-bottom: 10px;
 }
 
-/*.stats-item-t i {*/
-/*  color: #38A1F3;*/
-/*  background: #dcdcdc;*/
-/*  padding: 30px;*/
-/*  border-radius: 50%;*/
-/*}*/
-
 .stats-item-t div {
   color: #38A1F3;
   background: #dcdcdc;
-  /*padding: 30px;*/
-  padding: 50px;
+  padding: 30px;
+  /*padding: 50px;*/
   border-radius: 50%;
+  display: inline-block;
+  /*margin-bottom: 20px;*/
+  /*margin-top: 20px;*/
 }
-
-/*.stats-item-y i {*/
-/*  color: #cd0000;*/
-/*  background: #dcdcdc;*/
-/*  padding: 30px;*/
-/*  border-radius: 50%;*/
-/*}*/
 
 
 
@@ -1333,9 +1332,19 @@ ul.social-list .twitter-bg-color a:hover {
 .stats-item-y div {
   color: #cd0000;
   background: #dcdcdc;
-  /*padding: 30px;*/
-  padding: 50px;
+  padding: 30px;
+  /*padding: 50px;*/
   border-radius: 50%;
+  display: inline-block;
+}
+
+.stats-item-tik div {
+  color: #4cb5ad;
+  background: #dcdcdc;
+  padding: 30px;
+  /*padding: 50px;*/
+  border-radius: 50%;
+  display: inline-block;
 }
 
 
@@ -1349,9 +1358,10 @@ ul.social-list .twitter-bg-color a:hover {
 .stats-item-f div {
   color: #4267b2;
   background: #dcdcdc;
-  /*padding: 30px;*/
-  padding: 50px;
+  padding: 30px;
+  /*padding: 50px;*/
   border-radius: 50%;
+  display: inline-block;
 }
 
 /*.stats-item-i i {*/
@@ -1364,9 +1374,10 @@ ul.social-list .twitter-bg-color a:hover {
 .stats-item-i div {
   color: #F56040;
   background: #dcdcdc;
-  /*padding: 30px;*/
-  padding: 50px;
+  padding: 30px;
+  /*padding: 50px;*/
   border-radius: 50%;
+  display: inline-block;
 }
 
 
@@ -1412,6 +1423,10 @@ ul.social-list .twitter-bg-color a:hover {
   background: #4267b2;
 }
 
+.stats-item-tik:hover {
+  background: #4cb5ad;
+}
+
 .stats-item-i:hover {
   background: #f09433;
   background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
@@ -1431,6 +1446,8 @@ ul.social-list .twitter-bg-color a:hover {
 
 .social-links-margin {
   margin-bottom: 40px;
+  align-items: center;
+  justify-content: center;
 }
 
 .arrow-white {

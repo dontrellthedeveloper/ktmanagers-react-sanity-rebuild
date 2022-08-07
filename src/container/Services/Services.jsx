@@ -63,7 +63,7 @@ const Services = () => {
                                                     <div className="container">
                                                         <div className="row">
                                                             <div className="col-md-12 text-center">
-                                                                <div className="horizontal-heading">
+                                                                <div className="horizontal-heading branding-promo-mobile-s">
                                                                     <h5>Learn about</h5>
                                                                     <h2>Branding & Promotion</h2>
                                                                 </div>

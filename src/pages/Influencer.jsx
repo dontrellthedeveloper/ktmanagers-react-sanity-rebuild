@@ -149,7 +149,7 @@ function Influencer() {
                                                     {/*   >*/}
 
                                                     {singleInfluencer.imageUrl2 && (
-                                                        <div className="column-show map-color-7 influencer-image"
+                                                        <div className="mobile__hide-image column-show map-color-7 influencer-image"
                                                              >
                                                             <img src={urlFor(singleInfluencer.imageUrl2).width(800).height(800).url()} className="influencer-image-2"
                                                                  alt=""/>
@@ -164,7 +164,7 @@ function Influencer() {
                                                     </div>
 
                                                     {singleInfluencer.imageUrl3 && (
-                                                    <div className="column-show map-color-7 influencer-image"
+                                                    <div className="mobile__hide-image column-show map-color-7 influencer-image"
                                                     >
                                                         <img src={urlFor(singleInfluencer.imageUrl3).width(800).height(800).url()} className="influencer-image-2"
                                                              alt=""/>
