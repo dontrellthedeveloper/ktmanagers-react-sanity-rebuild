@@ -4,6 +4,7 @@ import {client, urlFor} from "../client";
 import {Link} from "react-router-dom";
 import videoBgMp4 from "../assets/KT-Management-home-screen-video-city.mp4";
 import './scss/Kids.scss';
+import {Brands} from "../container";
 
 function Kids() {
     const [kids, setKids] = useState([]);
@@ -48,19 +49,19 @@ function Kids() {
                                 </div>
                             </div>
 
-                            <div className="col-md-12">
+                            {/*<div className="col-md-12">*/}
 
-                                <div id="isotope-filters" className="margin-bottom-g">
+                            {/*    <div id="isotope-filters" className="margin-bottom-g">*/}
 
-                                    <button className="btn btn-red btn-grey active-item gallery-list-item"
-                                            data-filter="all"><span>All</span></button>
-                                    <button className="btn btn-red gallery-list-item" data-filter="women"><span>Women</span>
-                                    </button>
-                                    <button className="btn btn-red active-item gallery-list-item" data-filter="men">
-                                        <span>Men</span></button>
-                                </div>
+                            {/*        <button className="btn btn-red btn-grey active-item gallery-list-item"*/}
+                            {/*                data-filter="all"><span>All</span></button>*/}
+                            {/*        <button className="btn btn-red gallery-list-item" data-filter="women"><span>Women</span>*/}
+                            {/*        </button>*/}
+                            {/*        <button className="btn btn-red active-item gallery-list-item" data-filter="men">*/}
+                            {/*            <span>Men</span></button>*/}
+                            {/*    </div>*/}
 
-                            </div>
+                            {/*</div>*/}
                             <div className="col-md-12">
                                 <p className="client-show-instructions">Click on photo for details</p>
                             </div>
@@ -179,7 +180,7 @@ function Kids() {
                 {/*</div>*/}
             </section>
 
-
+            <Brands/>
         </>
 
     );

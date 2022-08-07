@@ -7,6 +7,7 @@ import influencers from './influencers';
 import services from './services';
 import addservices from './addservices';
 import kids from './kids';
+import team from './team';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -18,7 +19,8 @@ export default createSchema({
       influencers,
       services,
       addservices,
-      kids
+      kids,
+      team
     /* Your types here! */
   ]),
 })

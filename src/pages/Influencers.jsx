@@ -4,6 +4,7 @@ import {client, urlFor} from "../client";
 import {Link} from "react-router-dom";
 import videoBgMp4 from "../assets/KT-Management-home-screen-video-city.mp4";
 import './scss/Influencers.scss';
+import {Brands, Stats} from "../container";
 
 function Influencers() {
     const [influencers, setInfluencers] = useState([]);
@@ -178,6 +179,9 @@ function Influencers() {
 
                 {/*</div>*/}
             </section>
+
+            {/*<Stats/>*/}
+            <Brands/>
 
 
         </>
