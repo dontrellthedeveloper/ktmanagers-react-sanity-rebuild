@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {HiMenuAlt4, HiX} from "react-icons/hi";
 import {images} from "../../constants";
 import './Navbar.scss';
+import {NavLink} from "react-router-dom";
 
 const Navbar = () => {
     const [toggle, setToggle] = useState(false);
@@ -22,12 +23,40 @@ const Navbar = () => {
                 <img src={scroll ? images.logo3 : images.logo2} alt="logo"/>
             </div>
             <ul className='app__navbar-links'>
-                {['home','about','influencers','KTM kids','services'].map((item)=> (
-                    <li className='app__flex p-text' key={`link-${item}`}>
-                        <div/>
-                        <a className={scroll ? 'navbar__links-color-scroll' : 'navbar__links-color'} href={`#${item}`}>{item}</a>
-                    </li>
-                ))}
+                <li className='app__flex p-text'>
+                    <div/>
+                    <NavLink className={scroll ? 'navbar__links-styles navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to='/'>Home
+                    </NavLink>
+                </li>
+                <li className='app__flex p-text'>
+                    <div/>
+                    <NavLink className={scroll ? 'navbar__links-styles navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to='/about'>About
+                    </NavLink>
+                </li>
+                <li className='app__flex p-text'>
+                    <div/>
+                    <NavLink className={scroll ? 'navbar__links-styles navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to='/influencers'>Influencers
+                    </NavLink>
+                </li>
+                <li className='app__flex p-text'>
+                    <div/>
+                    <NavLink className={scroll ? 'navbar__links-styles navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to='/kids'>ktm kids
+                    </NavLink>
+                </li>
+                <li className='app__flex p-text'>
+                    <div/>
+                    <NavLink className={scroll ? 'navbar__links-styles navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to='/services'>Services
+                    </NavLink>
+                </li>
+
+
+                {/*{['home','about','influencers','KTM kids','services'].map((item)=> (*/}
+                {/*    <li className='app__flex p-text' key={`link-${item}`}>*/}
+                {/*        <div/>*/}
+                {/*        <NavLink className={scroll ? 'navbar__links-styles navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to={`/${item}`}>{item}*/}
+                {/*        </NavLink>*/}
+                {/*    </li>*/}
+                {/*))}*/}
             </ul>
 
             <div className='app__navbar-menu'>
