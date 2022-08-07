@@ -183,7 +183,7 @@ function Influencer() {
 
                                                 <div className="desc map-color-7 container-paragraph influencer-info">
                                                     <div className="map-paragraph">
-                                                        <h2 className="i-map-paragraph"><b>{singleInfluencer.name}</b></h2>
+                                                        <h2 className="i-map-paragraph"><b className='show-page-name-s'>{singleInfluencer.name}</b></h2>
                                                         {/*<hr className='show-break-style'/>*/}
                                                         <div className='show-button'>
 

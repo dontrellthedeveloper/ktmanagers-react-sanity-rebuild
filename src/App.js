@@ -34,9 +34,9 @@ const App = () => {
             <Route path='/influencers' element={<Influencers/>} />
             <Route path='/:slug' element={<Influencer/>} />
             <Route path='/kids' element={<Kids/>} />
-            <Route path='/kids/:slug' element={<Kid/>} />
+            <Route path='/kid/:slug' element={<Kid/>} />
             <Route path='/services' element={<Services/>} />
-            <Route path='/:slug' element={<Service/>} />
+            <Route path='/service/:slug' element={<Service/>} />
         </Routes>
         <Footer/>
 

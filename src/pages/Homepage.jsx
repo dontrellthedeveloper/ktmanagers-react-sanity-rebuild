@@ -27,8 +27,9 @@ const Homepage = () => {
             {/*<Navbar/>*/}
             <Header/>
             <Portfolio/>
-            <Stats/>
             <Brands/>
+            <Stats/>
+
             <Services/>
 
             {/*<About/>*/}

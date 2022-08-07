@@ -6,21 +6,21 @@ import videoBgMp4 from "../assets/KT-Management-home-screen-video-city.mp4";
 import './scss/Kids.scss';
 
 function Kids() {
-    const [influencers, setInfluencers] = useState([]);
+    const [kids, setKids] = useState([]);
 
     useEffect(() => {
-        const query = '*[_type == "influencer"] | order(order asc)';
+        const query = '*[_type == "kids"] | order(order asc)';
 
 
 
         client.fetch(query)
             .then((data) => {
-                setInfluencers(data)
+                setKids(data)
             })
 
     },[])
 
-    if(!influencers) return (
+    if(!kids) return (
         <div className="preloader">
             <div className="status"></div>
         </div>
@@ -44,7 +44,7 @@ function Kids() {
                             <div className="col-md-12">
                                 <div className="vertical-heading">
                                     <h5>Find Branding</h5>
-                                    <h2>Our <br/>Amazing <strong>Influencers</strong></h2>
+                                    <h2>Our <br/>Amazing <strong>Kids</strong></h2>
                                 </div>
                             </div>
 
@@ -77,31 +77,31 @@ function Kids() {
 
                                 <div className="isotope-filters" style={{paddingLeft: '0', paddingRight: '0'}}>
 
-                                    {influencers.map((influencer, index) => (
+                                    {kids.map((kid, index) => (
 
 
-                                        <div key={influencer.name + index} className="col-lg-2 col-md-3 col-sm-6 col-xs-12 div-size filter women client-custom">
+                                        <div key={kid.name + index} className="col-lg-2 col-md-3 col-sm-6 col-xs-12 div-size filter women client-custom">
 
                                             <div className="portfolio-item portfolio-pic no-underline">
 
 
 
-                                                <Link to={'/' + influencer.slug.current}
+                                                <Link to={'/kid/' + kid.slug.current}
 
                                                 >
-                                                    <img src={urlFor(influencer.imageUrl)} className="img-responsive"
+                                                    <img src={urlFor(kid.imageUrl)} className="img-responsive"
                                                          alt="portfolio 01"/>
 
                                                     <div className="portfolio-item-overlay margin-top-g">
                                                         <div className="portfolio-item-details text-center">
                                                             {/*Item Header*/}
-                                                            <h3>{influencer.name}</h3>
+                                                            <h3>{kid.name}</h3>
 
                                                             {/*Item Strips*/}
                                                             <span></span>
 
                                                             {/*Item Description */}
-                                                            <p>{influencer.description}</p>
+                                                            <p>{kid.description}</p>
 
                                                         </div>
                                                     </div>
