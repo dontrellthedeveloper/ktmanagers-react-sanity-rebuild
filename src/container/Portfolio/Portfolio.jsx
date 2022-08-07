@@ -24,6 +24,12 @@ const Portfolio = () => {
 
     },[])
 
+    if(!influencers) return (
+        <div className="preloader">
+            <div className="status"></div>
+        </div>
+    )
+
     return (
         <section id="portfolio">
 

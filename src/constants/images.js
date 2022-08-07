@@ -7,6 +7,9 @@ import brands5 from '../assets/brand05_crop.jpg';
 import brands6 from '../assets/brand06_crop.jpg';
 import brands7 from '../assets/brand07_crop.jpg';
 import clientTemp from '../assets/client_temp.jpeg';
+import logo from '../assets/logo.png';
+import logo2 from '../assets/logo-light.png';
+import logo3 from '../assets/logo-dark.png';
 
 export default {
     aboutLeft,
@@ -17,5 +20,8 @@ export default {
     brands5,
     brands6,
     brands7,
-    clientTemp
+    clientTemp,
+    logo,
+    logo2,
+    logo3
 }

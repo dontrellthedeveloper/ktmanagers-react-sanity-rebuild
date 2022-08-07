@@ -64,7 +64,7 @@ section {
 }
 
 .status {
-  /*background-image: url("../img/kt_preloader/wine-preloader-2.gif");*/
+  background-image: url("./assets/wine-preloader-2.gif");
   background-repeat: no-repeat;
   width: 70px;
   height: 70px;
@@ -755,8 +755,8 @@ ul.social-list .youtube-bg-color a:hover {
 }
 
 ul.social-list .facebook-bg-color a:hover {
-  /*background: #3b5998;*/
-  background: #a1aca1;
+  background: #3b5998;
+  /*background: #a1aca1;*/
   border-color: transparent;
   animation: GradientT 300ms ease-in;
 }

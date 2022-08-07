@@ -11,22 +11,22 @@ import Homepage from "./pages/Homepage";
 import Influencer from "./pages/Influencer";
 import {Footer} from "./container";
 import {Navbar} from "./components";
+import ScrollToTop from "./helper/ScrollToTop";
 
 const App = () => {
 
 
   return (
-    <Router>
-        {/*<Navbar/>*/}
+    <>
+        <Navbar/>
         <Routes>
             <Route path='/' element={<Homepage/>} exact />
             <Route path='/:slug' element={<Influencer/>} exact />
         </Routes>
         <Footer/>
-        {/*<Homepage/>*/}
 
 
-    </Router>
+    </>
   );
 }
 
