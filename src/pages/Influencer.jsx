@@ -18,12 +18,31 @@ import {Services} from "../container";
 import OwlCarousel from "react-owl-carousel";
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
+import {BiCaretRight, BiRightArrow} from "react-icons/bi";
+
+
+
 
 
 function Influencer() {
     const [singleInfluencer, setSingleInfluencer] = useState(null);
     const [services, setServices] = useState(null);
     const {slug} = useParams();
+
+    const options = {
+        responsive:{
+            0: {
+                items: 1
+            },
+            // 480: {
+            //     items: 2
+            // },
+            768: {
+                items: 3
+            }
+        }
+    };
+
 
 
     useEffect(() => {
@@ -154,7 +173,7 @@ function Influencer() {
                                                 <div className="desc map-color-7 container-paragraph influencer-info">
                                                     <div className="map-paragraph">
                                                         <h2 className="i-map-paragraph"><b>{singleInfluencer.name}</b></h2>
-                                                        <hr className='show-break-style'/>
+                                                        {/*<hr className='show-break-style'/>*/}
                                                         <div className='show-button'>
 
 
@@ -242,137 +261,149 @@ function Influencer() {
                                                 </div>
 
 
-                                                <section id="pricing">
-                                                    <div className="content-box-md">
-                                                        <div className="container">
-                                                            <div className="row">
-                                                                <div className="col-md-12 text-center">
-                                                                    <div className="horizontal-heading">
-                                                                        <h5>Learn about</h5>
-                                                                        <h2>Branding & Promotion</h2>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+                                            <Services/>
 
-                                                            <div className="row">
+                                                {/*<section id="pricing">*/}
+                                                {/*    <div className="content-box-md">*/}
+                                                {/*        <div className="container">*/}
+                                                {/*            <div className="row">*/}
+                                                {/*                <div className="col-md-12 text-center">*/}
+                                                {/*                    <div className="horizontal-heading">*/}
+                                                {/*                        <h5>Learn about</h5>*/}
+                                                {/*                        <h2>Branding & Promotion</h2>*/}
+                                                {/*                    </div>*/}
+                                                {/*                </div>*/}
+                                                {/*            </div>*/}
 
-
-
-                                                                <OwlCarousel
-                                                                    items='2'
-                                                                    // autoplay
-                                                                    smartSpeed='700'
-                                                                    loop
-                                                                    autoplayHoverPause='false'
-                                                                    nav
-                                                                    dots='false'
-                                                                    id="clients-list" className="owl-carousel owl-theme">
+                                                {/*            <div className="row">*/}
 
 
-                                                                    {services.map((service, index) => (
-                                                                    <div key={service.name + index} className="branding-promo-s">
-                                                                            <div className="pricing-table black">
-                                                                                {/*<div className="type">*/}
-                                                                                {/*    <h4>{service.name}</h4>*/}
-                                                                                {/*</div>*/}
-                                                                                <div className="price">
-                                                                                    <div className="row">
-                                                                                        <div
-                                                                                            className="col-md-12 col-sm-12 col-xs-12">
 
-                                                                                            {/*<h2><span*/}
-                                                                                            {/*    className="dollar"></span><br/><span*/}
-                                                                                            {/*    className="month"></span>*/}
-                                                                                            {/*</h2>*/}
-                                                                                            <div className="type">
-                                                                                                <h4>{service.name}</h4>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <ul className="package">
-
-                                                                                    {service.serviceDescription1 && (
-                                                                                        <li>
-                                                                                            <FaHandPointRight/> {service.serviceDescription1}
-                                                                                            <hr/>
-                                                                                        </li>
-
-                                                                                    )}
-
-                                                                                    {service.serviceDescription2 && (
-                                                                                        <li>
-                                                                                            <FaHandPointRight/> {service.serviceDescription2}
-                                                                                            <hr/>
-                                                                                        </li>
-                                                                                    )}
-                                                                                    {service.serviceDescription3 && (
-                                                                                        <li>
-                                                                                            <FaHandPointRight/> {service.serviceDescription3}
-                                                                                            <hr/>
-                                                                                        </li>
-                                                                                    )}
-                                                                                    {service.serviceDescription4 && (
-                                                                                        <li>
-                                                                                            <FaHandPointRight/> {service.serviceDescription4}
-                                                                                            <hr/>
-                                                                                        </li>
-                                                                                    )}
-                                                                                    {service.serviceDescription5 && (
-                                                                                        <li>
-                                                                                            <FaHandPointRight/> {service.serviceDescription5}
-                                                                                            <hr/>
-                                                                                        </li>
-                                                                                    )}
-                                                                                    {service.serviceDescription6 && (
-                                                                                        <li>
-                                                                                            <FaHandPointRight/> {service.serviceDescription6}
-                                                                                            <hr/>
-                                                                                        </li>
-                                                                                    )}
-                                                                                    {service.serviceDescription7 && (
-                                                                                        <li>
-                                                                                            <FaHandPointRight/> {service.serviceDescription7}
-                                                                                            <hr/>
-                                                                                        </li>
-                                                                                    )}
-                                                                                    {service.serviceDescription8 && (
-                                                                                        <li>
-                                                                                            <FaHandPointRight/> {service.serviceDescription8}
-                                                                                            <hr/>
-                                                                                        </li>
-                                                                                    )}
-                                                                                    {service.serviceDescription9 && (
-                                                                                        <li>
-                                                                                            <FaHandPointRight/> {service.serviceDescription9}
-                                                                                            <hr/>
-                                                                                        </li>
-                                                                                    )}
-                                                                                    {service.serviceDescription10 && (
-                                                                                        <li>
-                                                                                            <FaHandPointRight/> {service.serviceDescription10}
-                                                                                            <hr/>
-                                                                                        </li>
-                                                                                    )}
+                                                {/*                <OwlCarousel*/}
+                                                {/*                    items='3'*/}
+                                                {/*                    // autoplay*/}
+                                                {/*                    smartSpeed='700'*/}
+                                                {/*                    loop*/}
+                                                {/*                    autoplayHoverPause='false'*/}
+                                                {/*                    nav*/}
+                                                {/*                    dots='false'*/}
+                                                {/*                    id="clients-list" className="owl-carousel owl-theme"*/}
+                                                {/*                    responsive={{*/}
+                                                {/*                        0: {*/}
+                                                {/*                            items: 1*/}
+                                                {/*                        },*/}
+                                                {/*                        480: {*/}
+                                                {/*                            items: 1*/}
+                                                {/*                        },*/}
+                                                {/*                        768: {*/}
+                                                {/*                            items: 1*/}
+                                                {/*                        },*/}
+                                                {/*                        1000: {*/}
+                                                {/*                            items: 2*/}
+                                                {/*                        },*/}
+                                                {/*                        1200: {*/}
+                                                {/*                            items: 3*/}
+                                                {/*                        },*/}
+                                                {/*                    }}*/}
+                                                {/*                >*/}
 
 
-                                                                                </ul>
+                                                {/*                    {services.map((service, index) => (*/}
+                                                {/*                    <div key={service.name + index} className="branding-promo-s">*/}
+                                                {/*                            <div className="pricing-table black">*/}
+                                                {/*                                <div className="price">*/}
+                                                {/*                                    <div className="row">*/}
+                                                {/*                                        <div*/}
+                                                {/*                                            className="col-md-12 col-sm-12 col-xs-12">*/}
+                                                {/*                                            <div className="type">*/}
+                                                {/*                                                <h4>{service.name}</h4>*/}
+                                                {/*                                            </div>*/}
+                                                {/*                                        </div>*/}
+                                                {/*                                    </div>*/}
+                                                {/*                                </div>*/}
+                                                {/*                                <ul className="package">*/}
 
-                                                                                <div className="pricing-btn">
-                                                                                    <a className="btn btn-general btn-white services-button-s"
-                                                                                       href="#"
-                                                                                       title="Get Started" role="button">Get
-                                                                                        Started</a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
+                                                {/*                                    {service.serviceDescription1 && (*/}
+                                                {/*                                        <li>*/}
+                                                {/*                                            <BiCaretRight/> {service.serviceDescription1}*/}
 
-                                                                    ))}
-                                                                </OwlCarousel>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </section>
+                                                {/*                                        </li>*/}
+
+                                                {/*                                    )}*/}
+
+                                                {/*                                    {service.serviceDescription2 && (*/}
+                                                {/*                                        <li>*/}
+                                                {/*                                            <BiCaretRight/> {service.serviceDescription2}*/}
+                                                {/*                                            >*/}
+                                                {/*                                        </li>*/}
+                                                {/*                                    )}*/}
+                                                {/*                                    {service.serviceDescription3 && (*/}
+                                                {/*                                        <li>*/}
+                                                {/*                                            <BiCaretRight/> {service.serviceDescription3}*/}
+
+                                                {/*                                        </li>*/}
+                                                {/*                                    )}*/}
+                                                {/*                                    {service.serviceDescription4 && (*/}
+                                                {/*                                        <li>*/}
+                                                {/*                                            <BiCaretRight/> {service.serviceDescription4}*/}
+
+                                                {/*                                        </li>*/}
+                                                {/*                                    )}*/}
+                                                {/*                                    {service.serviceDescription5 && (*/}
+                                                {/*                                        <li>*/}
+                                                {/*                                            <BiCaretRight/> {service.serviceDescription5}*/}
+
+                                                {/*                                        </li>*/}
+                                                {/*                                    )}*/}
+                                                {/*                                    {service.serviceDescription6 && (*/}
+                                                {/*                                        <li>*/}
+                                                {/*                                            <BiCaretRight/> {service.serviceDescription6}*/}
+
+                                                {/*                                        </li>*/}
+                                                {/*                                    )}*/}
+                                                {/*                                    {service.serviceDescription7 && (*/}
+                                                {/*                                        <li>*/}
+                                                {/*                                            <BiCaretRight/> {service.serviceDescription7}*/}
+
+                                                {/*                                        </li>*/}
+                                                {/*                                    )}*/}
+                                                {/*                                    {service.serviceDescription8 && (*/}
+                                                {/*                                        <li>*/}
+                                                {/*                                            <BiCaretRight/> {service.serviceDescription8}*/}
+
+                                                {/*                                        </li>*/}
+                                                {/*                                    )}*/}
+                                                {/*                                    {service.serviceDescription9 && (*/}
+                                                {/*                                        <li>*/}
+                                                {/*                                            <BiCaretRight/> {service.serviceDescription9}*/}
+
+                                                {/*                                        </li>*/}
+                                                {/*                                    )}*/}
+                                                {/*                                    {service.serviceDescription10 && (*/}
+                                                {/*                                        <li>*/}
+                                                {/*                                            <BiCaretRight/> {service.serviceDescription10}*/}
+
+                                                {/*                                        </li>*/}
+                                                {/*                                    )}*/}
+
+
+                                                {/*                                </ul>*/}
+
+                                                {/*                                <div className="pricing-btn">*/}
+                                                {/*                                    <a className="btn btn-general btn-white services-button-s"*/}
+                                                {/*                                       href="#"*/}
+                                                {/*                                       title="Get Started" role="button">Get*/}
+                                                {/*                                        Started</a>*/}
+                                                {/*                                </div>*/}
+                                                {/*                            </div>*/}
+                                                {/*                        </div>*/}
+
+                                                {/*                    ))}*/}
+                                                {/*                </OwlCarousel>*/}
+                                                {/*            </div>*/}
+                                                {/*        </div>*/}
+                                                {/*    </div>*/}
+                                                {/*</section>*/}
 
 
                                         </section>

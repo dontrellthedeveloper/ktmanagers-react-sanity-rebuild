@@ -5,6 +5,7 @@ export {default as Header} from './Header/Header';
 export {default as Brands} from './Brands/Brands';
 export {default as Media} from './Media/Media';
 export {default as Portfolio} from './Portfolio/Portfolio';
+export {default as Statement} from './Statement/Statement';
 export {default as Services} from './Services/Services';
 export {default as Stats} from './Stats/Stats';
 export {default as Team} from './Team/Team';

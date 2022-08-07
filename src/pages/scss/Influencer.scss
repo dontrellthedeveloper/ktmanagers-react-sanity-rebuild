@@ -147,7 +147,7 @@
   font-size: 16px;
   padding-right: 20px;
   padding-left: 20px;
-  //width: 65%;
+  width: 65%;
   margin: 0 auto;
 
   @media(max-width: 767px) {
@@ -172,7 +172,8 @@
 // Services
 
 .content-box-md {
-  padding: 60px 0 80px 0;
+  //padding: 60px 0 80px 0;
+  padding: 20px 0 80px 0;
   background-color: #DCDCDD;
 }
 

@@ -1,6 +1,6 @@
 export default {
     name: 'service',
-    title: 'Services',
+    title: 'Promotions',
     type: 'document',
     fields: [
         {
@@ -15,52 +15,52 @@ export default {
             type: 'string',
         },
         {
-            title: 'Service Description 1',
+            title: 'Promo Description 1',
             name: 'serviceDescription1',
             type: 'text'
         },
         {
-            title: 'Service Description 2',
+            title: 'Promo Description 2',
             name: 'serviceDescription2',
             type: 'text'
         },
         {
-            title: 'Service Description 3',
+            title: 'Promo Description 3',
             name: 'serviceDescription3',
             type: 'text'
         },
         {
-            title: 'Service Description 4',
+            title: 'Promo Description 4',
             name: 'serviceDescription4',
             type: 'text'
         },
         {
-            title: 'Service Description 5',
+            title: 'Promo Description 5',
             name: 'serviceDescription5',
             type: 'text'
         },
         {
-            title: 'Service Description 6',
+            title: 'Promo Description 6',
             name: 'serviceDescription6',
             type: 'text'
         },
         {
-            title: 'Service Description 7',
+            title: 'Promo Description 7',
             name: 'serviceDescription7',
             type: 'text'
         },
         {
-            title: 'Service Description 8',
+            title: 'Promo Description 8',
             name: 'serviceDescription8',
             type: 'text'
         },
         {
-            title: 'Service Description 9',
+            title: 'Promo Description 9',
             name: 'serviceDescription9',
             type: 'text'
         },
         {
-            title: 'Service Description 10',
+            title: 'Promo Description 10',
             name: 'serviceDescription10',
             type: 'text'
         }

@@ -4,7 +4,19 @@
 
 import React from 'react';
 
-import {Header, About, Brands, Stats, Portfolio, Services, Media, Team, AddServices} from '../container';
+import {
+    Header,
+    About,
+    Brands,
+    Stats,
+    Portfolio,
+    Services,
+    Media,
+    Team,
+    AddServices,
+    Statement,
+    Footer
+} from '../container';
 import {Navbar} from '../components'
 
 const Homepage = () => {
@@ -14,11 +26,14 @@ const Homepage = () => {
         <>
             {/*<Navbar/>*/}
             <Header/>
-            <About/>
-            <Brands/>
-            <Stats/>
             <Portfolio/>
+            <Stats/>
+            <Brands/>
             <Services/>
+
+            {/*<About/>*/}
+
+            {/*<Statement/>*/}
             {/*<Media/>*/}
             {/*<Team/>*/}
             {/*<AddServices/>*/}
