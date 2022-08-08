@@ -59,7 +59,7 @@ function Influencers() {
             </section>
 
             <div className="map-color-3">
-                <div className="row">
+                <div className="">
                     <div className="home-headings tools-p-align">
                         <div className="horizontal-heading influencer-name">
                             <h1 className="home-headings-2 influencer-name-h1"><span className='influencer-name-span'> Influencers</span></h1>

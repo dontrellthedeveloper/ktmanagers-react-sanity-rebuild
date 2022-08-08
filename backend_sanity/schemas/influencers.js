@@ -76,6 +76,7 @@ export default {
             name: 'tags',
             title: 'Tags',
             type:'array',
+            hidden: true,
             of: [
                 {
                     name:'tag',

@@ -729,12 +729,15 @@ ul.social-list li a {
 }
 
 ul.social-list .instagram-bg-color a:hover {
-  background: #f09433;
-  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-  background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
-  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+  /*background: #f09433;*/
+  /*background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);*/
+  /*background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);*/
+  /*background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);*/
   border-color: transparent;
   animation: GradientT 300ms ease-in;
+  border: 2px solid #d02464;
+  color: #d02464;
+  background: #dcdcdc;
 }
 
 ul.social-list .instagram-bg-color a {
@@ -742,10 +745,11 @@ ul.social-list .instagram-bg-color a {
   background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
   background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
   background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
-  border-color: transparent;
+  /*border-color: transparent;*/
   animation: GradientT 300ms ease-in;
   color: #dcdcdc;
-  border: 1px solid #dcdcdc;
+  border: 2px solid #d02464;
+  /*border: 1px solid #dcdcdc;*/
 }
 
 ul.social-list .youtube-bg-color a:hover {
@@ -755,10 +759,12 @@ ul.social-list .youtube-bg-color a:hover {
 }
 
 ul.social-list .facebook-bg-color a:hover {
-  background: #3b5998;
+  background: #dcdcdc;
   /*background: #a1aca1;*/
   border-color: transparent;
   animation: GradientT 300ms ease-in;
+  border: 2px solid #3b5998;
+  color: #3b5998;
 }
 
 .contact-icon-margin {
@@ -768,10 +774,10 @@ ul.social-list .facebook-bg-color a:hover {
 
 ul.social-list .facebook-bg-color a {
   background: #3b5998;
-  border-color: transparent;
+  /*border-color: transparent;*/
   animation: GradientT 300ms ease-in;
   color: #dcdcdc;
-  border: 1px solid #dcdcdc;
+  border: 2px solid #3b5998;
 }
 
 ul.social-list .twitter-bg-color a:hover {
@@ -1040,7 +1046,8 @@ ul.social-list .twitter-bg-color a:hover {
 ================================================ */
 #portfolio .vertical-heading {
   margin-top: 20px;
-  margin-bottom: 30px;
+  /*margin-bottom: 30px;*/
+  margin-bottom: 0;
 }
 #portfolio .vertical-heading h5 {
   top: 70px;
