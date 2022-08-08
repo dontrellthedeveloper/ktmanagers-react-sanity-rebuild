@@ -1183,11 +1183,46 @@ ul.social-list .twitter-bg-color a:hover {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(14, 14, 14, 0.9);
+  /*background: rgba(14, 14, 14, 0.9);*/
+  background: #500000cc;
   cursor: zoom-in;
   opacity: 0;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+}
+
+.portfolio-item-overlay-service {
+  position: absolute;
+  top: 85%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /*background: rgba(14, 14, 14, 0.9);*/
+  background:   #500000cc;
+  cursor: zoom-in;
+  opacity: 1;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+
+.portfolio-item-overlay-service h3 {
+  /*color: #e60000;*/
+  color: #fff;
+  text-transform: uppercase;
+  /* font-size: 30px; */
+  font-size: 16px;
+  margin: 12px;
+  /* padding: 0; */
+  /* transform: translateY(-20%); */
+  transition: all 0.5s;
+  text-align: center;
+}
+
+@media(max-width: 767px) {
+  .portfolio-item-overlay-service h3 {
+    margin: 20px;
+  }
 }
 
 /* Item Details Effect*/
@@ -1198,19 +1233,23 @@ ul.social-list .twitter-bg-color a:hover {
   left: 0;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
+  padding: 0 15px 0 15px;
 }
 
 .portfolio-item-details h3 {
-  color: #e60000;
+  /*color: #e60000;*/
+  color: #fff;
   text-transform: uppercase;
   /*font-size: 30px;*/
-  font-size: 23px;
+  /*font-size: 23px;*/
+  font-size: 18px;
   margin: 0;
   padding: 0;
   -webkit-transform: translateY(-20%);
   transform: translateY(-20%);
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  font-weight: 700;
 }
 
 .portfolio-item-details span {

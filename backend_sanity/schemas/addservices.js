@@ -9,6 +9,11 @@ export default {
             type: 'string',
         },
         {
+            name: 'job',
+            title: 'Job Title',
+            type: 'string',
+        },
+        {
             name: 'slug',
             title: 'Handle',
             type: 'slug',

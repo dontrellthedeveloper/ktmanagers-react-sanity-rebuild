@@ -237,8 +237,8 @@ function Influencer() {
                                                             </div>
 
                                                             <hr/>
-                                                            <a href="mailto:shawn@ktmanagers.com">
-                                                                <button className='btn btn-client-book btn-red'>Book {singleInfluencer.name} Promo!</button>
+                                                            <a href={`mailto:shawn@ktmanagers.com?subject=I am interested in ${singleInfluencer.name} promoting my brand`}>
+                                                                <button className='btn btn-client-book btn-red'>Book @{singleInfluencer.slug.current} Promo!</button>
                                                             </a>
 
                                                             {/*<ButtonMailto label="Write me an E-Mail" mailto="mailto:shawn@ktmanagers.com"/>*/}

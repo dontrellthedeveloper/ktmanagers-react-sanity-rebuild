@@ -38,6 +38,7 @@ function Service() {
             name,
             _id,
             slug,
+            job,
             instagramLink,
             facebookLink,
             twitterLink,
@@ -225,7 +226,7 @@ function Service() {
 
                                                         <hr/>
                                                         <a href="mailto:shawn@ktmanagers.com">
-                                                            <button className='btn btn-client-book btn-red'>Book {singleService.name} Promo!</button>
+                                                            <button className='btn btn-client-book btn-red'>Book {singleService.slug.current} <br/> {singleService.job}</button>
                                                         </a>
 
                                                         {/*<ButtonMailto label="Write me an E-Mail" mailto="mailto:shawn@ktmanagers.com"/>*/}

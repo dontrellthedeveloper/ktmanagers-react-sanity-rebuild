@@ -225,7 +225,7 @@ function Kid() {
 
                                                         <hr/>
                                                         <a href="mailto:shawn@ktmanagers.com">
-                                                            <button className='btn btn-client-book btn-red'>Book {singleKid.name} Promo!</button>
+                                                            <button className='btn btn-client-book btn-red'>Book @{singleKid.slug.current} Promo!</button>
                                                         </a>
 
                                                         {/*<ButtonMailto label="Write me an E-Mail" mailto="mailto:shawn@ktmanagers.com"/>*/}

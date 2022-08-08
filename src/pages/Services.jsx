@@ -101,9 +101,13 @@ function Services() {
                                                             <span></span>
 
                                                             {/*Item Description */}
-                                                            <p>{service.description}</p>
+                                                            <p>@{service.slug.current}</p>
 
                                                         </div>
+                                                    </div>
+
+                                                    <div className='portfolio-item-overlay-service'>
+                                                        <h3>{service.job}</h3>
                                                     </div>
 
                                                 </Link>
