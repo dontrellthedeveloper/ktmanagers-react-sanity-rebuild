@@ -36,8 +36,8 @@ const About = () => {
                         {/* About Bottom */}
                         <div className="row">
                             <div className="col-md-12">
-                                <div className="about-bottom">
-                                    <img src={images.aboutLeft} alt="About Us" className="img-responsive about__image-section"/>
+                                <div className="about-bottom about__image-section">
+                                    <img src={images.aboutLeft} alt="About Us" className="about-img-mobile-css img-responsive "/>
                                 </div>
                             </div>
                         </div>

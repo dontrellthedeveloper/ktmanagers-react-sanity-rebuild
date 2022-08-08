@@ -17,7 +17,7 @@ function Influencers() {
         client.fetch(query)
             .then((data) => {
                 setInfluencers(data)
-                setFilterInfluencers(data)
+                // setFilterInfluencers(data)
             })
 
     },[])

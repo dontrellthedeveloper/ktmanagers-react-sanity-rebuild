@@ -30,11 +30,7 @@ const Navbar = () => {
                     <NavLink className={scroll ? 'navbar__links-styles navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to='/'>Home
                     </NavLink>
                 </li>
-                <li className='app__flex p-text'>
-                    <div/>
-                    <NavLink className={scroll ? 'navbar__links-styles navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to='/about'>About
-                    </NavLink>
-                </li>
+
                 <li className='app__flex p-text'>
                     <div/>
                     <NavLink className={scroll ? 'navbar__links-styles navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to='/influencers'>Influencers
@@ -50,7 +46,11 @@ const Navbar = () => {
                     <NavLink className={scroll ? 'navbar__links-styles navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to='/services'>Services
                     </NavLink>
                 </li>
-
+                <li className='app__flex p-text'>
+                    <div/>
+                    <NavLink className={scroll ? 'navbar__links-styles navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to='/about'>About Us
+                    </NavLink>
+                </li>
 
                 {/*{['home','about','influencers','KTM kids','services'].map((item)=> (*/}
                 {/*    <li className='app__flex p-text' key={`link-${item}`}>*/}
@@ -81,10 +81,6 @@ const Navbar = () => {
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink className='app__navbar-menu-links' to='/about' onClick={() => setToggle(false)}>About
-                                </NavLink>
-                            </li>
-                            <li>
                                 <NavLink className='app__navbar-menu-links' to='/influencers' onClick={() => setToggle(false)}>Influencers
                                 </NavLink>
                             </li>
@@ -94,6 +90,10 @@ const Navbar = () => {
                             </li>
                             <li>
                                 <NavLink className='app__navbar-menu-links' to='/services' onClick={() => setToggle(false)}>Services
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink className='app__navbar-menu-links' to='/about' onClick={() => setToggle(false)}>About Us
                                 </NavLink>
                             </li>
                             {/*<li>*/}

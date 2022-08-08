@@ -313,7 +313,7 @@ function About() {
                             {/* About Bottom */}
                             <div className="row">
                                 <div className="col-md-12">
-                                    <div className="about-bottom">
+                                    <div className="about-bottom about__image-section">
                                         <img src={images.aboutLeft} alt="About Us" className="img-responsive"/>
                                     </div>
                                 </div>
