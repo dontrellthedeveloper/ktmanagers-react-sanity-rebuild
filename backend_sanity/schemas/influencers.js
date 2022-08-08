@@ -23,31 +23,6 @@ export default {
             type: 'text'
         },
         {
-            name: 'instagramLink',
-            title: 'Instagram Link',
-            type: 'string',
-        },
-        {
-            name: 'facebookLink',
-            title: 'Facebook Link',
-            type: 'string',
-        },
-        {
-            name: 'twitterLink',
-            title: 'Twitter Link',
-            type: 'string',
-        },
-        {
-            name: 'youtubeLink',
-            title: 'Youtube Link',
-            type: 'string',
-        },
-        {
-            name: 'tiktokLink',
-            title: 'Tiktok Link',
-            type: 'string',
-        },
-        {
             name: 'imageUrl',
             title: 'ImageUrl',
             type: 'image',
@@ -73,23 +48,48 @@ export default {
         },
 
         {
+            name: 'instagramLink',
+            title: 'Instagram Link',
+            type: 'string',
+        },
+        {
+            name: 'facebookLink',
+            title: 'Facebook Link',
+            type: 'string',
+        },
+        {
+            name: 'twitterLink',
+            title: 'Twitter Link',
+            type: 'string',
+        },
+        {
+            name: 'youtubeLink',
+            title: 'Youtube Link',
+            type: 'string',
+        },
+        {
+            name: 'tiktokLink',
+            title: 'Tiktok Link',
+            type: 'string',
+        },
+        {
+            name: 'tags',
+            title: 'Tags',
+            type:'array',
+            of: [
+                {
+                    name:'tag',
+                    title:'Tag',
+                    type:'string'
+                }
+            ]
+        },
+        {
             name: "order",
             title: "Order",
             type: "number",
             hidden: true,
-        },
-        // {
-        //     name: 'tags',
-        //     title: 'Tags',
-        //     type:'array',
-        //     of: [
-        //         {
-        //             name:'tag',
-        //             title:'Tag',
-        //             type:'string'
-        //         }
-        //     ]
-        // },
+        }
 
     ],
 };

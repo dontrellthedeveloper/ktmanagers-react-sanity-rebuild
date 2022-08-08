@@ -8,15 +8,16 @@ import {Brands, Stats} from "../container";
 
 function Influencers() {
     const [influencers, setInfluencers] = useState([]);
+    const [filterInfluencers, setFilterInfluencers] = useState([]);
+    const [activeFilter, setActiveFilter] = useState('All');
 
     useEffect(() => {
         const query = '*[_type == "influencer"] | order(order asc)';
 
-
-
         client.fetch(query)
             .then((data) => {
                 setInfluencers(data)
+                setFilterInfluencers(data)
             })
 
     },[])
@@ -26,6 +27,26 @@ function Influencers() {
             <div className="status"></div>
         </div>
     )
+
+
+
+
+    // const handleWorkFilter = (item) => {
+    //     setActiveFilter(item)
+    //
+    //     setTimeout(() => {
+    //
+    //
+    //         if(item === 'All') {
+    //             setFilterInfluencers(influencers);
+    //         } else {
+    //             setFilterInfluencers(influencers.filter((influencer) => influencer.tags.includes(item)))
+    //         }
+    //     }, 500)
+    // }
+
+
+
 
     return (
 
@@ -37,36 +58,60 @@ function Influencers() {
                 <div id="home-overlay-2"></div>
             </section>
 
+            <div className="map-color-3">
+                <div className="row">
+                    <div className="home-headings tools-p-align">
+                        <div className="horizontal-heading influencer-name">
+                            <h1 className="home-headings-2 influencer-name-h1"><span className='influencer-name-span'> Influencers</span></h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <section id="portfolio">
 
                 <div className="isotope-filters">
                     <div className="container">
-                        <div className="row">
-                            <div className="col-md-12">
-                                <div className="vertical-heading">
-                                    <h5>Find Branding</h5>
-                                    <h2>Our <br/>Amazing <strong>Influencers</strong></h2>
-                                </div>
-                            </div>
+                        {/*<div className="row">*/}
+                        {/*    <div className="col-md-12">*/}
+                        {/*        <div className="vertical-heading">*/}
+                        {/*            <h5>Find Branding</h5>*/}
+                        {/*            <h2>Our <br/>Amazing <strong>Influencers</strong></h2>*/}
+                        {/*        </div>*/}
+                        {/*    </div>*/}
 
-                            <div className="col-md-12">
+                        {/*    <div className="col-md-12">*/}
 
-                                <div id="isotope-filters" className="margin-bottom-g">
+                        {/*        <div id="isotope-filters" className="margin-bottom-g">*/}
 
-                                    <button className="btn btn-red btn-grey active-item gallery-list-item"
-                                            data-filter="all"><span>All</span></button>
-                                    <button className="btn btn-red gallery-list-item" data-filter="women"><span>Women</span>
-                                    </button>
-                                    <button className="btn btn-red active-item gallery-list-item" data-filter="men">
-                                        <span>Men</span></button>
-                                </div>
 
-                            </div>
-                            <div className="col-md-12">
-                                <p className="client-show-instructions">Click on photo for details</p>
-                            </div>
+                        {/*            /!*{['All','Women','Men'].map((item, index) => (*!/*/}
 
-                        </div>
+                        {/*            /!*    <button*!/*/}
+                        {/*            /!*        key={index}*!/*/}
+                        {/*            /!*        onClick={() => handleWorkFilter(item)}*!/*/}
+                        {/*            /!*        className={`btn btn-red btn-grey gallery-list-item ${activeFilter === item ? 'item-active active-item': ''}`}*!/*/}
+                        {/*            /!*        data-filter="all">*!/*/}
+                        {/*            /!*        <span>{item}</span>*!/*/}
+                        {/*            /!*    </button>*!/*/}
+                        {/*            /!*))}*!/*/}
+                        {/*            /!*<button className="btn btn-red gallery-list-item" data-filter="women">*!/*/}
+                        {/*            /!*    <span>Women</span>*!/*/}
+                        {/*            /!*</button>*!/*/}
+                        {/*            /!*<button className="btn btn-red active-item gallery-list-item" data-filter="men">*!/*/}
+                        {/*            /!*    <span>Men</span>*!/*/}
+                        {/*            /!*</button>*!/*/}
+
+
+                        {/*        </div>*/}
+                        {/*        */}
+
+                        {/*    </div>*/}
+                        {/*    <div className="col-md-12">*/}
+                        {/*        <p className="client-show-instructions">Click on photo for details</p>*/}
+                        {/*    </div>*/}
+
+                        {/*</div>*/}
                     </div>
 
                     {/* Portfolio items Wrapper */}
@@ -81,7 +126,7 @@ function Influencers() {
                                     {influencers.map((influencer, index) => (
 
 
-                                        <div key={influencer.name + index} className="col-lg-2 col-md-3 col-sm-6 col-xs-12 div-size filter women client-custom">
+                                        <div key={index} className="col-lg-2 col-md-3 col-sm-6 col-xs-12 div-size filter women client-custom">
 
                                             <div className="portfolio-item portfolio-pic no-underline">
 
@@ -181,7 +226,7 @@ function Influencers() {
             </section>
 
             {/*<Stats/>*/}
-            <Brands/>
+            {/*<Brands/>*/}
 
 
         </>
