@@ -29,7 +29,7 @@ export default {
                 source: 'name',
                 maxLength: 96,
             },
-            // hidden: true,
+            hidden: true,
         }
     ],
 };
