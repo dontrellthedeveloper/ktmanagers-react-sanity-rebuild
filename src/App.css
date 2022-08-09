@@ -15,6 +15,15 @@
 /* ================================================
 |   |   |   |   Html, Body
 ================================================ */
+*{
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+
 #home {
   background: none;
   height: 100%;
