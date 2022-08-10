@@ -225,7 +225,10 @@ function Service() {
                                                         </div>
 
                                                         <hr/>
-                                                        <a href="mailto:shawn@ktmanagers.com">
+                                                        <a
+                                                            // href="mailto:shawn@ktmanagers.com"
+                                                           href='#contact'
+                                                        >
                                                             <button className='btn btn-client-book btn-red'>Book {singleService.slug.current} <br/> {singleService.job}</button>
                                                         </a>
 

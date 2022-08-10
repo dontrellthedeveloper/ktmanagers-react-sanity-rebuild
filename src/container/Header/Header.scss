@@ -1,0 +1,33 @@
+.app__header-logo img {
+  width: 380px;
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    width: 270px;
+  }
+
+  @media(max-width: 767px) {
+    width: 250px;
+  }
+}
+
+
+
+
+
+
+
+//@media (min-width: 1200px) {
+//
+//}
+//
+//@media (min-width: 992px) and (max-width: 1199px) {
+//
+//}
+//
+//@media (min-width: 768px) and (max-width: 991px) {
+//
+//}
+//
+//@media(max-width: 767px) {
+//
+//}

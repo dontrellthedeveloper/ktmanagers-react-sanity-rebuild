@@ -224,7 +224,10 @@ function Kid() {
                                                         </div>
 
                                                         <hr/>
-                                                        <a href="mailto:shawn@ktmanagers.com">
+                                                        <a
+                                                            // href="mailto:shawn@ktmanagers.com"
+                                                            href='#contact'
+                                                        >
                                                             <button className='btn btn-client-book btn-red'>Book @{singleKid.slug.current} Promo!</button>
                                                         </a>
 
