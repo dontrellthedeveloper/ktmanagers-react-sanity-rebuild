@@ -186,8 +186,8 @@ const Services = () => {
 
                                                                             <div className="pricing-btn">
                                                                                 <a className="btn btn-general btn-white services-button-s"
-                                                                                   href={`mailto:shawn@ktmanagers.com?subject=I am interested in ${service.name} promotion`}
-                                                                                   target="_blank"
+                                                                                   // href={`mailto:shawn@ktmanagers.com?subject=I am interested in ${service.name} promotion`}
+                                                                                    href='#contact'
                                                                                    title="Get Started" role="button">Get
                                                                                     Started</a>
                                                                             </div>

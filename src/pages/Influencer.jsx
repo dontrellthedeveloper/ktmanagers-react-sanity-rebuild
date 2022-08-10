@@ -237,8 +237,11 @@ function Influencer() {
                                                             </div>
 
                                                             <hr/>
-                                                            <a href={`mailto:shawn@ktmanagers.com?subject=I am interested in ${singleInfluencer.name} promoting my brand`}>
-                                                                <button className='btn btn-client-book btn-red'>Book @{singleInfluencer.slug.current} Promo!</button>
+                                                            <a
+                                                                // target="_blank"
+                                                                // href={`mailto:shawn@ktmanagers.com?subject=I am interested in ${singleInfluencer.name} promoting my brand`} rel="noopener noreferrer">
+                                                                href='#contact'>
+                                                                <button  className='btn btn-client-book btn-red'>Book @{singleInfluencer.slug.current} Promo!</button>
                                                             </a>
 
                                                             {/*<ButtonMailto label="Write me an E-Mail" mailto="mailto:shawn@ktmanagers.com"/>*/}
@@ -272,163 +275,15 @@ function Influencer() {
                                                     </div>
                                                 </div>
 
-
+                                            {/* Services Component */}
                                             <Services/>
 
-                                                {/*<section id="pricing">*/}
-                                                {/*    <div className="content-box-md">*/}
-                                                {/*        <div className="container">*/}
-                                                {/*            <div className="row">*/}
-                                                {/*                <div className="col-md-12 text-center">*/}
-                                                {/*                    <div className="horizontal-heading">*/}
-                                                {/*                        <h5>Learn about</h5>*/}
-                                                {/*                        <h2>Branding & Promotion</h2>*/}
-                                                {/*                    </div>*/}
-                                                {/*                </div>*/}
-                                                {/*            </div>*/}
-
-                                                {/*            <div className="row">*/}
-
-
-
-                                                {/*                <OwlCarousel*/}
-                                                {/*                    items='3'*/}
-                                                {/*                    // autoplay*/}
-                                                {/*                    smartSpeed='700'*/}
-                                                {/*                    loop*/}
-                                                {/*                    autoplayHoverPause='false'*/}
-                                                {/*                    nav*/}
-                                                {/*                    dots='false'*/}
-                                                {/*                    id="clients-list" className="owl-carousel owl-theme"*/}
-                                                {/*                    responsive={{*/}
-                                                {/*                        0: {*/}
-                                                {/*                            items: 1*/}
-                                                {/*                        },*/}
-                                                {/*                        480: {*/}
-                                                {/*                            items: 1*/}
-                                                {/*                        },*/}
-                                                {/*                        768: {*/}
-                                                {/*                            items: 1*/}
-                                                {/*                        },*/}
-                                                {/*                        1000: {*/}
-                                                {/*                            items: 2*/}
-                                                {/*                        },*/}
-                                                {/*                        1200: {*/}
-                                                {/*                            items: 3*/}
-                                                {/*                        },*/}
-                                                {/*                    }}*/}
-                                                {/*                >*/}
-
-
-                                                {/*                    {services.map((service, index) => (*/}
-                                                {/*                    <div key={service.name + index} className="branding-promo-s">*/}
-                                                {/*                            <div className="pricing-table black">*/}
-                                                {/*                                <div className="price">*/}
-                                                {/*                                    <div className="row">*/}
-                                                {/*                                        <div*/}
-                                                {/*                                            className="col-md-12 col-sm-12 col-xs-12">*/}
-                                                {/*                                            <div className="type">*/}
-                                                {/*                                                <h4>{service.name}</h4>*/}
-                                                {/*                                            </div>*/}
-                                                {/*                                        </div>*/}
-                                                {/*                                    </div>*/}
-                                                {/*                                </div>*/}
-                                                {/*                                <ul className="package">*/}
-
-                                                {/*                                    {service.serviceDescription1 && (*/}
-                                                {/*                                        <li>*/}
-                                                {/*                                            <BiCaretRight/> {service.serviceDescription1}*/}
-
-                                                {/*                                        </li>*/}
-
-                                                {/*                                    )}*/}
-
-                                                {/*                                    {service.serviceDescription2 && (*/}
-                                                {/*                                        <li>*/}
-                                                {/*                                            <BiCaretRight/> {service.serviceDescription2}*/}
-                                                {/*                                            >*/}
-                                                {/*                                        </li>*/}
-                                                {/*                                    )}*/}
-                                                {/*                                    {service.serviceDescription3 && (*/}
-                                                {/*                                        <li>*/}
-                                                {/*                                            <BiCaretRight/> {service.serviceDescription3}*/}
-
-                                                {/*                                        </li>*/}
-                                                {/*                                    )}*/}
-                                                {/*                                    {service.serviceDescription4 && (*/}
-                                                {/*                                        <li>*/}
-                                                {/*                                            <BiCaretRight/> {service.serviceDescription4}*/}
-
-                                                {/*                                        </li>*/}
-                                                {/*                                    )}*/}
-                                                {/*                                    {service.serviceDescription5 && (*/}
-                                                {/*                                        <li>*/}
-                                                {/*                                            <BiCaretRight/> {service.serviceDescription5}*/}
-
-                                                {/*                                        </li>*/}
-                                                {/*                                    )}*/}
-                                                {/*                                    {service.serviceDescription6 && (*/}
-                                                {/*                                        <li>*/}
-                                                {/*                                            <BiCaretRight/> {service.serviceDescription6}*/}
-
-                                                {/*                                        </li>*/}
-                                                {/*                                    )}*/}
-                                                {/*                                    {service.serviceDescription7 && (*/}
-                                                {/*                                        <li>*/}
-                                                {/*                                            <BiCaretRight/> {service.serviceDescription7}*/}
-
-                                                {/*                                        </li>*/}
-                                                {/*                                    )}*/}
-                                                {/*                                    {service.serviceDescription8 && (*/}
-                                                {/*                                        <li>*/}
-                                                {/*                                            <BiCaretRight/> {service.serviceDescription8}*/}
-
-                                                {/*                                        </li>*/}
-                                                {/*                                    )}*/}
-                                                {/*                                    {service.serviceDescription9 && (*/}
-                                                {/*                                        <li>*/}
-                                                {/*                                            <BiCaretRight/> {service.serviceDescription9}*/}
-
-                                                {/*                                        </li>*/}
-                                                {/*                                    )}*/}
-                                                {/*                                    {service.serviceDescription10 && (*/}
-                                                {/*                                        <li>*/}
-                                                {/*                                            <BiCaretRight/> {service.serviceDescription10}*/}
-
-                                                {/*                                        </li>*/}
-                                                {/*                                    )}*/}
-
-
-                                                {/*                                </ul>*/}
-
-                                                {/*                                <div className="pricing-btn">*/}
-                                                {/*                                    <a className="btn btn-general btn-white services-button-s"*/}
-                                                {/*                                       href="#"*/}
-                                                {/*                                       title="Get Started" role="button">Get*/}
-                                                {/*                                        Started</a>*/}
-                                                {/*                                </div>*/}
-                                                {/*                            </div>*/}
-                                                {/*                        </div>*/}
-
-                                                {/*                    ))}*/}
-                                                {/*                </OwlCarousel>*/}
-                                                {/*            </div>*/}
-                                                {/*        </div>*/}
-                                                {/*    </div>*/}
-                                                {/*</section>*/}
-
-
                                         </section>
-
                                     </div>
-
                                 </div>
-
-
                             </div>
                         </div>
                     </div>
-
                 </div>
 
             </section>
