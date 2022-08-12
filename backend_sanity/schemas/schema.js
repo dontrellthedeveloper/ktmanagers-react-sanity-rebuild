@@ -9,6 +9,7 @@ import addservices from './addservices';
 import kids from './kids';
 import team from './team';
 import stats from './stats';
+import offer from './offer';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -22,7 +23,8 @@ export default createSchema({
       addservices,
       kids,
       team,
-      stats
+      stats,
+      offer
     /* Your types here! */
   ]),
 })

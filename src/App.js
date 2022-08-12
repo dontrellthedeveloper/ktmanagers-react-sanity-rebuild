@@ -16,6 +16,7 @@ import Service from "./pages/Service";
 
 import {Footer} from "./container";
 import {Navbar} from "./components";
+import WhatWeOffer from "./pages/WhatWeOffer";
 
 
 
@@ -37,6 +38,7 @@ const App = () => {
             <Route path='/kid/:slug' element={<Kid/>} />
             <Route path='/services' element={<Services/>} />
             <Route path='/service/:slug' element={<Service/>} />
+            <Route path='/what-we-offer' element={<WhatWeOffer/>} />
         </Routes>
         <Footer/>
 

@@ -74,7 +74,7 @@ const Services = () => {
 
 
                                                             <OwlCarousel
-                                                                items='3'
+                                                                items='2'
                                                                 // autoplay
                                                                 smartSpeed='700'
                                                                 loop
@@ -96,7 +96,7 @@ const Services = () => {
                                                                         items: 2
                                                                     },
                                                                     1200: {
-                                                                        items: 3
+                                                                        items: 2
                                                                     },
                                                                 }}
                                                             >

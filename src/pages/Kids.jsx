@@ -52,32 +52,7 @@ function Kids() {
 
                 <div className="isotope-filters">
                     <div className="container">
-                        {/*<div className="row">*/}
-                        {/*    <div className="col-md-12">*/}
-                        {/*        <div className="vertical-heading">*/}
-                        {/*            <h5>Find Branding</h5>*/}
-                        {/*            <h2>Our <br/>Amazing <strong>Kids</strong></h2>*/}
-                        {/*        </div>*/}
-                        {/*    </div>*/}
 
-                        {/*    /!*<div className="col-md-12">*!/*/}
-
-                        {/*    /!*    <div id="isotope-filters" className="margin-bottom-g">*!/*/}
-
-                        {/*    /!*        <button className="btn btn-red btn-grey active-item gallery-list-item"*!/*/}
-                        {/*    /!*                data-filter="all"><span>All</span></button>*!/*/}
-                        {/*    /!*        <button className="btn btn-red gallery-list-item" data-filter="women"><span>Women</span>*!/*/}
-                        {/*    /!*        </button>*!/*/}
-                        {/*    /!*        <button className="btn btn-red active-item gallery-list-item" data-filter="men">*!/*/}
-                        {/*    /!*            <span>Men</span></button>*!/*/}
-                        {/*    /!*    </div>*!/*/}
-
-                        {/*    /!*</div>*!/*/}
-                        {/*    <div className="col-md-12">*/}
-                        {/*        <p className="client-show-instructions">Click on photo for details</p>*/}
-                        {/*    </div>*/}
-
-                        {/*</div>*/}
                     </div>
 
                     {/* Portfolio items Wrapper */}
@@ -158,37 +133,6 @@ function Kids() {
                     </section>
                 </div>
 
-
-
-
-
-
-
-
-                {/*<div className="client-border">*/}
-                {/*    <div className="container">*/}
-                {/*        <div className="row">*/}
-                {/*            <div className="col-md-12">*/}
-                {/*                <div className="vertical-heading">*/}
-                {/*                    <h5>Find Branding</h5>*/}
-                {/*                    <h2>Our <br/>Amazing <strong>Kids</strong></h2>*/}
-                {/*                </div>*/}
-                {/*            </div>*/}
-                {/*            <div className="col-md-12">*/}
-                {/*                <p className="client-show-instructions">Click on photo for details</p>*/}
-                {/*            </div>*/}
-                {/*            <div className="col-md-12">*/}
-
-                {/*                <div className="margin-bottom-g">*/}
-
-                {/*                </div>*/}
-
-                {/*            </div>*/}
-
-                {/*        </div>*/}
-                {/*    </div>*/}
-
-                {/*</div>*/}
             </section>
 
             {/*<Brands/>*/}

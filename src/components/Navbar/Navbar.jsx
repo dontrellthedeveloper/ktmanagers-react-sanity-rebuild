@@ -30,7 +30,11 @@ const Navbar = () => {
                     <NavLink className={scroll ? 'navbar__links-styles navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to='/'>Home
                     </NavLink>
                 </li>
-
+                <li className='app__flex p-text'>
+                    <div/>
+                    <NavLink className={scroll ? 'navbar__links-styles navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to='/what-we-offer'>What We Offer
+                    </NavLink>
+                </li>
                 <li className='app__flex p-text'>
                     <div/>
                     <NavLink className={scroll ? 'navbar__links-styles navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to='/influencers'>Influencers

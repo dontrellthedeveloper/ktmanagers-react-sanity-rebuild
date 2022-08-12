@@ -46,7 +46,29 @@ export default {
                 hotspot: true,
             },
         },
-
+        {
+            name: 'imageUrl4',
+            title: 'ImageUrl 4',
+            type: 'image',
+            options: {
+                hotspot: true,
+            },
+        },
+        {
+            name: 'imageUrl5',
+            title: 'ImageUrl 5',
+            type: 'image',
+            options: {
+                hotspot: true,
+            },
+        },        {
+            name: 'imageUrl6',
+            title: 'ImageUrl 6',
+            type: 'image',
+            options: {
+                hotspot: true,
+            },
+        },
         {
             name: 'instagramLink',
             title: 'Instagram Link',

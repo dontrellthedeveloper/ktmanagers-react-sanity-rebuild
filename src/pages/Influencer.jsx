@@ -74,6 +74,24 @@ function Influencer() {
                     _id,
                     url
                 }
+            },
+            imageUrl4{
+                asset->{
+                    _id,
+                    url
+                }
+            },
+            imageUrl5{
+                asset->{
+                    _id,
+                    url
+                }
+            },
+            imageUrl6{
+                asset->{
+                    _id,
+                    url
+                }
             }
         }`).then((data) => setSingleInfluencer(data[0]))
             .catch(console.error)
@@ -144,10 +162,6 @@ function Influencer() {
 
 
                                                 <div className="row-show port-popup show-page-image-s">
-                                                    {/*<a className="portfolio-item-d-overlay"*/}
-                                                    {/*   href={urlFor(singleInfluencer.imageUrl).width(400).height(400).url()}*/}
-                                                    {/*   >*/}
-
                                                     {singleInfluencer.imageUrl2 && (
                                                         <div className="mobile__hide-image column-show map-color-7 influencer-image"
                                                              >
@@ -274,6 +288,37 @@ function Influencer() {
 
                                                     </div>
                                                 </div>
+
+
+                                            <div className="row-show port-popup show-page-image-s">
+                                                {singleInfluencer.imageUrl4 && (
+                                                    <div className="mobile__hide-image column-show map-color-7 influencer-image"
+                                                    >
+                                                        <img src={urlFor(singleInfluencer.imageUrl4).width(800).height(800).url()} className="influencer-image-2"
+                                                             alt=""/>
+
+                                                    </div>
+                                                )}
+                                                {singleInfluencer.imageUrl5 && (
+                                                    <div className="mobile__hide-image column-show map-color-7 influencer-image"
+                                                    >
+                                                        <img src={urlFor(singleInfluencer.imageUrl5).width(800).height(800).url()} className="influencer-image-2"
+                                                             alt=""/>
+
+                                                    </div>
+                                                )}
+
+                                                {singleInfluencer.imageUrl6 && (
+                                                    <div className="mobile__hide-image column-show map-color-7 influencer-image"
+                                                    >
+                                                        <img src={urlFor(singleInfluencer.imageUrl6).width(800).height(800).url()} className="influencer-image-2"
+                                                             alt=""/>
+
+                                                    </div>
+                                                )}
+                                                {/*</a>*/}
+                                            </div>
+
 
                                             {/* Services Component */}
                                             <Services/>
