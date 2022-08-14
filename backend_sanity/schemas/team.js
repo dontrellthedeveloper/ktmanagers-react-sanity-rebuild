@@ -1,6 +1,6 @@
 export default {
     name: 'team',
-    title: 'Manager',
+    title: 'About Page',
     type: 'document',
     fields: [
         {

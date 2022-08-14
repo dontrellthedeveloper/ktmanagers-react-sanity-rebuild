@@ -22,6 +22,10 @@
   margin-right: auto;
   width: 65%;
   margin-top: 30px;
+
+  @media(max-width: 767px) {
+    width: 100%;
+  }
 }
 
 .map-color-8 {
