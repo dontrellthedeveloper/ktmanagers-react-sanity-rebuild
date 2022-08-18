@@ -292,7 +292,7 @@ function Influencer() {
 
                                             <div className="row-show port-popup show-page-image-s">
                                                 {singleInfluencer.imageUrl4 && (
-                                                    <div className="mobile__hide-image column-show map-color-7 influencer-image"
+                                                    <div className="column-show map-color-7 influencer-image"
                                                     >
                                                         <img src={urlFor(singleInfluencer.imageUrl4).width(800).height(800).url()} className="influencer-image-2"
                                                              alt=""/>
