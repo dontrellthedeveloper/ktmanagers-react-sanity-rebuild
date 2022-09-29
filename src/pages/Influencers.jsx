@@ -147,7 +147,7 @@ function Influencers() {
                                                             <span></span>
 
                                                             {/*Item Description */}
-                                                            <p>{influencer.description}</p>
+                                                            <p className='influencer-description'>{influencer.description}</p>
 
                                                         </div>
                                                     </div>

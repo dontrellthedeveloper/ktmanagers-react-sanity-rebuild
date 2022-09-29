@@ -1290,6 +1290,15 @@ ul.social-list .twitter-bg-color a:hover {
   transition: all 0.5s;
   line-height: 22px;
   width: 85%;
+
+  /*limit text*/
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+
 }
 
 /* Show Overlay on mouse over */
