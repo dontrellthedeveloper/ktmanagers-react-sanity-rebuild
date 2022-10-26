@@ -242,7 +242,7 @@ Project Link: [https://github.com/dontrellthedeveloper/ktmanagers-react-sanity-r
 [license-shield]: https://img.shields.io/github/license/dontrellthedeveloper/ktmanagers-react-sanity-rebuild.svg?style=for-the-badge
 [license-url]: https://github.com/dontrellthedeveloper/ktmanagers-react-sanity-rebuild/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
+[linkedin-url]: https://linkedin.com/in/dontrell-washington
 [product-screenshot]: images/screenshot2.png
 [product-screenshot2]: images/screenshot3.png
 [product-screenshot3]: images/screenshot4.png
