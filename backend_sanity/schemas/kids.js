@@ -23,6 +23,14 @@ export default {
             type: 'text'
         },
         {
+            name: 'imageUrl',
+            title: 'ImageUrl',
+            type: 'image',
+            options: {
+                hotspot: true,
+            },
+        },
+        {
             name: 'imageTitle',
             title: 'Image 1 Title',
             type: 'string'
@@ -33,8 +41,8 @@ export default {
             type: 'text'
         },
         {
-            name: 'imageUrl',
-            title: 'ImageUrl',
+            name: 'imageUrl2',
+            title: 'ImageUrl 2',
             type: 'image',
             options: {
                 hotspot: true,
@@ -51,8 +59,8 @@ export default {
             type: 'text'
         },
         {
-            name: 'imageUrl2',
-            title: 'ImageUrl 2',
+            name: 'imageUrl3',
+            title: 'ImageUrl 3',
             type: 'image',
             options: {
                 hotspot: true,
@@ -69,8 +77,8 @@ export default {
             type: 'text'
         },
         {
-            name: 'imageUrl3',
-            title: 'ImageUrl 3',
+            name: 'imageUrl4',
+            title: 'ImageUrl 4',
             type: 'image',
             options: {
                 hotspot: true,
@@ -87,8 +95,8 @@ export default {
             type: 'text'
         },
         {
-            name: 'imageUrl4',
-            title: 'ImageUrl 4',
+            name: 'imageUrl5',
+            title: 'ImageUrl 5',
             type: 'image',
             options: {
                 hotspot: true,
@@ -105,8 +113,8 @@ export default {
             type: 'text'
         },
         {
-            name: 'imageUrl5',
-            title: 'ImageUrl 5',
+            name: 'imageUrl6',
+            title: 'ImageUrl 6',
             type: 'image',
             options: {
                 hotspot: true,
@@ -122,14 +130,7 @@ export default {
             title: 'Image 6 Description',
             type: 'text'
         },
-        {
-            name: 'imageUrl6',
-            title: 'ImageUrl 6',
-            type: 'image',
-            options: {
-                hotspot: true,
-            },
-        },
+
         {
             name: 'instagramLink',
             title: 'Instagram Link',

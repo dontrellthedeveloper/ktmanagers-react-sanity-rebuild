@@ -19,7 +19,7 @@ import OwlCarousel from "react-owl-carousel";
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import {BiCaretRight, BiRightArrow} from "react-icons/bi";
-import videoBgMp4 from "../assets/KT-Management-home-screen-video-city.mp4";
+import videoBgMp4 from "../assets/KT-Management-home-screen-video-city-compressed.mp4";
 
 
 
@@ -29,6 +29,14 @@ function Mascot() {
     const [singleMascot, setSingleMascot] = useState(null);
     const [services, setServices] = useState(null);
     const {slug} = useParams();
+
+    const [scroll, setScroll] = useState(false);
+
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            setScroll(window.scrollY > 50);
+        });
+    }, []);
 
     const options = {
         responsive:{
@@ -162,7 +170,7 @@ function Mascot() {
                         <div className="map-color-6">
                             <div className="container">
                                 <div className="row">
-                                    <div id="content">
+                                    <div id="content" className='influencer-single-page__mobile-img'>
                                         <section id="map-section" className="inner over client-section-b">
 
 
@@ -565,12 +573,80 @@ function Mascot() {
                                                     </div>
                                                 )}
 
-                                                {singleMascot.imageUrl6 && (
-                                                    <div className="mobile__hide-image column-show map-color-7 influencer-image"
-                                                    >
-                                                        <img src={urlFor(singleMascot.imageUrl6).width(800).height(800).url()} className="influencer-image-2"
-                                                             alt=""/>
 
+                                                {singleMascot.imageUrl6 && (
+                                                    <div className="mobile__hide-image column-show map-color-7 influencer-image">
+                                                        <div className="portfolio-item">
+                                                            <img src={urlFor(singleMascot.imageUrl6).width(800).height(800).url()} className="influencer-image-2" alt=""/>
+
+                                                            <div className="portfolio-item-overlay margin-top-g">
+                                                                <div className="portfolio-item-details text-center">
+                                                                    {/*Item Header*/}
+                                                                    {singleMascot.imageTitle6 && (
+                                                                        <>
+                                                                            <h3>{singleMascot.imageTitle6}</h3>
+                                                                            {/*Item Strips*/}
+                                                                            <span></span>
+                                                                        </>
+                                                                    )}
+
+                                                                    {/*Item Description */}
+                                                                    {singleMascot.imageDescription6 && (
+                                                                        <p className='influencer-description'>{singleMascot.imageDescription6}</p>
+                                                                    )}
+
+                                                                    <div className='show-button'>
+
+                                                                        {singleMascot.instagramLink && (
+                                                                            <a href={singleMascot.instagramLink} target='_blank'>
+                                                                                <button className='btn btn-social-influencer-img btn-social-img btn-social-instagram'>
+                                                                                    <FaInstagram/>
+                                                                                </button>
+                                                                            </a>
+                                                                        )}
+
+                                                                        {singleMascot.facebookLink && (
+                                                                            <a href={singleMascot.facebookLink} target='_blank'>
+                                                                                <button className='btn btn-social-influencer-img btn-social-img
+                                                                                    btn-social-facebook'>
+                                                                                    <FaFacebookF/>
+                                                                                </button>
+                                                                            </a>
+                                                                        )}
+
+                                                                        {singleMascot.twitterLink && (
+                                                                            <a href={singleMascot.twitterLink} target='_blank'>
+                                                                                <button className='btn btn-social-influencer-img btn-social-img
+                                                                                    btn-social-twitter'>
+                                                                                    <FaTwitter/>
+                                                                                </button>
+                                                                            </a>
+                                                                        )}
+
+                                                                        {singleMascot.youtubeLink && (
+                                                                            <a href={singleMascot.youtubeLink}
+                                                                               target='_blank'>
+                                                                                <button className='btn btn-social-influencer-img btn-social-img
+                                                                                    btn-social-youtube'>
+                                                                                    <FaYoutube/>
+                                                                                </button>
+                                                                            </a>
+                                                                        )}
+
+                                                                        {singleMascot.tiktokLink && (
+                                                                            <a href={singleMascot.tiktokLink}
+                                                                               target='_blank'>
+                                                                                <button className='btn btn-social-influencer-img btn-social-img
+                                                                                    btn-social-tiktok'>
+                                                                                    <FaTiktok/>
+                                                                                </button>
+                                                                            </a>
+                                                                        )}
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 )}
                                                 {/*</a>*/}
@@ -653,6 +729,7 @@ function Mascot() {
                                                     <div className='template-p-detail'>
                                                         More information? Please contact
                                                         <a className='email__design-s' href='mailto:shawn@ktmanagers.com' target='_blank'>
+                                                            {" "}
                                                             shawn@ktmanagers.com
                                                         </a>
                                                     </div>
@@ -661,6 +738,18 @@ function Mascot() {
                                             </div>
 
 
+
+
+                                            {/*sticky footer*/}
+                                            <div className={scroll ? 'map-color-3 influencer-handle-mobile-scroll' : 'map-color-3 influencer-handle-mobile' }>
+                                                <div className="row">
+                                                    <div className="home-headings tools-p-align">
+                                                        <div className="horizontal-heading influencer-name">
+                                                            <h1 className="home-headings-2 influencer-name-h1"><span className='influencer-name-span'> @{singleMascot.slug.current}</span></h1>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
 
 
 
@@ -678,43 +767,6 @@ function Mascot() {
             </section>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            {/*<section id="about">*/}
-
-            {/*    /!* About 01 *!/*/}
-            {/*    <div className="about-01">*/}
-            {/*        <div className="content-box-main">*/}
-            {/*            <div className="container">*/}
-
-            {/*                /!* About Bottom *!/*/}
-            {/*                <div className="row">*/}
-            {/*                    <div className="col-md-12">*/}
-            {/*                        <div className="about-bottom">*/}
-            {/*                            <img src={urlFor(singleMascot.imageUrl).width(400).height(400).url()} alt="About Us" className="img-responsive"/>*/}
-            {/*                        </div>*/}
-            {/*                    </div>*/}
-            {/*                </div>*/}
-            {/*            </div>*/}
-            {/*        </div>*/}
-            {/*    </div>*/}
-
-            {/*    /!* About 02 *!/*/}
-
-            {/*</section>*/}
 
 
         </>

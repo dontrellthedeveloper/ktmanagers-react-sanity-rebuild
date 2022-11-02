@@ -3,6 +3,10 @@
   /* height: 69px; */
   background-color: #500000cc;
   height: 80px;
+
+  @media(max-width: 767px) {
+    height: 70px !important;
+  }
 }
 
 #home-bg-video-2 {

@@ -2,12 +2,19 @@ import React from 'react';
 import {useEffect, useState} from "react";
 import {client, urlFor} from "../client";
 import {Link} from "react-router-dom";
-import videoBgMp4 from "../assets/KT-Management-home-screen-video-city.mp4";
+import videoBgMp4 from "../assets/KT-Management-home-screen-video-city-compressed.mp4";
 import './scss/Kids.scss';
 import {Brands} from "../container";
 
 function Kids() {
     const [kids, setKids] = useState([]);
+
+    const [scroll, setScroll] = useState(false);
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            setScroll(window.scrollY > 50);
+        });
+    }, []);
 
     useEffect(() => {
         const query = '*[_type == "kids"] | order(order asc)';
@@ -99,31 +106,7 @@ function Kids() {
 
                                     ))}
 
-                                    {/*<Gallery withCaption>*/}
-                                    {/*    <div className="col-lg-2 col-md-3 col-sm-6 col-xs-12 div-size filter women client-custom">*/}
 
-                                    {/*        <div className="portfolio-item portfolio-pic no-underline">*/}
-
-                                    {/*            <Item*/}
-                                    {/*                original={images.clientTemp}*/}
-                                    {/*                thumbnail={images.clientTemp}*/}
-                                    {/*                width="800"*/}
-                                    {/*                height="800"*/}
-                                    {/*                caption="<div className='show-button'><a href='mailto:shawn@ktmanagers.com?subject=I am interested in Mimi promoting my brand' target='_blank'><button className='btn btn-client-book btn-red'>Book Mimi to promote your brand!</button></a><hr><a href='https://www.instagram.com/mimifaust' target='_blank'><button className='btn btn-social-i btn-instagram'><i className='fa fa-instagram'></i></button></a><a href='https://www.facebook.com/officialmimifaust' target='_blank'><button className='btn btn-social-i-f btn-facebook'><i className='fa fa-facebook'></i></button></a><a href='https://twitter.com/mimifaust' target='_blank'><button className='btn btn-social-i-t btn-twitter'><i className='fa fa-twitter'></i></button></a></div><hr>"*/}
-                                    {/*            >*/}
-                                    {/*                {({ ref, open }) => (*/}
-                                    {/*                    <>*/}
-                                    {/*                        <img ref={ref} onClick={open} src={images.clientTemp} />*/}
-
-                                    {/*                    </>*/}
-                                    {/*                )}*/}
-
-                                    {/*            </Item>*/}
-                                    {/*            */}
-                                    {/*        </div>*/}
-                                    {/*    </div>*/}
-                                    {/*        */}
-                                    {/*</Gallery>*/}
 
 
 
@@ -134,6 +117,20 @@ function Kids() {
                 </div>
 
             </section>
+
+
+
+            {/*sticky footer*/}
+            <div className={scroll ? 'map-color-3 influencer-handle-mobile-scroll' : 'map-color-3 influencer-handle-mobile' }>
+                <div className="row">
+                    <div className="home-headings tools-p-align">
+                        <div className="horizontal-heading influencer-name">
+                            <h1 className="home-headings-2 influencer-name-h1"><span className='influencer-name-span'> KTM Kids</span></h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 
             {/*<Brands/>*/}
         </>

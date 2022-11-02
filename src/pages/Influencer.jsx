@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useLayoutEffect} from 'react';
 import {
     FaFacebookF, FaHandPointRight,
     FaInstagram,
@@ -19,7 +19,7 @@ import OwlCarousel from "react-owl-carousel";
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import {BiCaretRight, BiRightArrow} from "react-icons/bi";
-import videoBgMp4 from "../assets/KT-Management-home-screen-video-city.mp4";
+import videoBgMp4 from "../assets/KT-Management-home-screen-video-city-compressed.mp4";
 
 
 
@@ -28,7 +28,17 @@ import videoBgMp4 from "../assets/KT-Management-home-screen-video-city.mp4";
 function Influencer() {
     const [singleInfluencer, setSingleInfluencer] = useState(null);
     const [services, setServices] = useState(null);
+    // const [isVisible, setIsVisible] = useState(false);
+
+
     const {slug} = useParams();
+    const [scroll, setScroll] = useState(false);
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            setScroll(window.scrollY > 50);
+        });
+    }, []);
+
 
     const options = {
         responsive:{
@@ -128,7 +138,7 @@ function Influencer() {
 
 
 
-    if(!singleInfluencer || !services) return (
+    if(!singleInfluencer || !services ) return (
         <div className="preloader">
             <div className="status"></div>
         </div>
@@ -162,7 +172,7 @@ function Influencer() {
                         <div className="map-color-6">
                             <div className="container">
                                 <div className="row">
-                                    <div id="content">
+                                    <div id="content" className='influencer-single-page__mobile-img'>
                                         <section id="map-section" className="inner over client-section-b">
 
 
@@ -566,11 +576,78 @@ function Influencer() {
                                                 )}
 
                                                 {singleInfluencer.imageUrl6 && (
-                                                    <div className="mobile__hide-image column-show map-color-7 influencer-image"
-                                                    >
-                                                        <img src={urlFor(singleInfluencer.imageUrl6).width(800).height(800).url()} className="influencer-image-2"
-                                                             alt=""/>
+                                                    <div className="mobile__hide-image column-show map-color-7 influencer-image">
+                                                        <div className="portfolio-item">
+                                                            <img src={urlFor(singleInfluencer.imageUrl6).width(800).height(800).url()} className="influencer-image-2" alt=""/>
 
+                                                            <div className="portfolio-item-overlay margin-top-g">
+                                                                <div className="portfolio-item-details text-center">
+                                                                    {/*Item Header*/}
+                                                                    {singleInfluencer.imageTitle6 && (
+                                                                        <>
+                                                                            <h3>{singleInfluencer.imageTitle6}</h3>
+                                                                            {/*Item Strips*/}
+                                                                            <span></span>
+                                                                        </>
+                                                                    )}
+
+                                                                    {/*Item Description */}
+                                                                    {singleInfluencer.imageDescription6 && (
+                                                                        <p className='influencer-description'>{singleInfluencer.imageDescription6}</p>
+                                                                    )}
+
+                                                                    <div className='show-button'>
+
+                                                                        {singleInfluencer.instagramLink && (
+                                                                            <a href={singleInfluencer.instagramLink} target='_blank'>
+                                                                                <button className='btn btn-social-influencer-img btn-social-img btn-social-instagram'>
+                                                                                    <FaInstagram/>
+                                                                                </button>
+                                                                            </a>
+                                                                        )}
+
+                                                                        {singleInfluencer.facebookLink && (
+                                                                            <a href={singleInfluencer.facebookLink} target='_blank'>
+                                                                                <button className='btn btn-social-influencer-img btn-social-img
+                                                                                    btn-social-facebook'>
+                                                                                    <FaFacebookF/>
+                                                                                </button>
+                                                                            </a>
+                                                                        )}
+
+                                                                        {singleInfluencer.twitterLink && (
+                                                                            <a href={singleInfluencer.twitterLink} target='_blank'>
+                                                                                <button className='btn btn-social-influencer-img btn-social-img
+                                                                                    btn-social-twitter'>
+                                                                                    <FaTwitter/>
+                                                                                </button>
+                                                                            </a>
+                                                                        )}
+
+                                                                        {singleInfluencer.youtubeLink && (
+                                                                            <a href={singleInfluencer.youtubeLink}
+                                                                               target='_blank'>
+                                                                                <button className='btn btn-social-influencer-img btn-social-img
+                                                                                    btn-social-youtube'>
+                                                                                    <FaYoutube/>
+                                                                                </button>
+                                                                            </a>
+                                                                        )}
+
+                                                                        {singleInfluencer.tiktokLink && (
+                                                                            <a href={singleInfluencer.tiktokLink}
+                                                                               target='_blank'>
+                                                                                <button className='btn btn-social-influencer-img btn-social-img
+                                                                                    btn-social-tiktok'>
+                                                                                    <FaTiktok/>
+                                                                                </button>
+                                                                            </a>
+                                                                        )}
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 )}
                                                 {/*</a>*/}
@@ -652,7 +729,9 @@ function Influencer() {
 
                                                         <div className='template-p-detail'>
                                                             More information? Please contact
+
                                                             <a className='email__design-s' href='mailto:shawn@ktmanagers.com' target='_blank'>
+                                                                {" "}
                                                                 shawn@ktmanagers.com
                                                             </a>
                                                         </div>
@@ -672,6 +751,20 @@ function Influencer() {
                                 </div>
                             </div>
                         </div>
+
+
+                        {/*sticky footer*/}
+                            <div className={scroll ? 'map-color-3 influencer-handle-mobile-scroll' : 'map-color-3 influencer-handle-mobile' }>
+                                <div className="row">
+                                    <div className="home-headings tools-p-align">
+                                        <div className="horizontal-heading influencer-name">
+                                            <h1 className="home-headings-2 influencer-name-h1"><span className='influencer-name-span'> @{singleInfluencer.slug.current}</span></h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
                     </div>
                 </div>
 
