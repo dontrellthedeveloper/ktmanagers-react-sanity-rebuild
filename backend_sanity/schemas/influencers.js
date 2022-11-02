@@ -23,12 +23,32 @@ export default {
             type: 'text'
         },
         {
+            name: 'imageTitle',
+            title: 'Image 1 Title',
+            type: 'string'
+        },
+        {
+            name: 'imageDescription',
+            title: 'Image 1 Description',
+            type: 'text'
+        },
+        {
             name: 'imageUrl',
             title: 'ImageUrl',
             type: 'image',
             options: {
                 hotspot: true,
             },
+        },
+        {
+            name: 'imageTitle2',
+            title: 'Image 2 Title',
+            type: 'string'
+        },
+        {
+            name: 'imageDescription2',
+            title: 'Image 2 Description',
+            type: 'text'
         },
         {
             name: 'imageUrl2',
@@ -39,12 +59,32 @@ export default {
             },
         },
         {
+            name: 'imageTitle3',
+            title: 'Image 3 Title',
+            type: 'string'
+        },
+        {
+            name: 'imageDescription3',
+            title: 'Image 3 Description',
+            type: 'text'
+        },
+        {
             name: 'imageUrl3',
             title: 'ImageUrl 3',
             type: 'image',
             options: {
                 hotspot: true,
             },
+        },
+        {
+            name: 'imageTitle4',
+            title: 'Image 4 Title',
+            type: 'string'
+        },
+        {
+            name: 'imageDescription4',
+            title: 'Image 4 Description',
+            type: 'text'
         },
         {
             name: 'imageUrl4',
@@ -55,13 +95,34 @@ export default {
             },
         },
         {
+            name: 'imageTitle5',
+            title: 'Image 5 Title',
+            type: 'string'
+        },
+        {
+            name: 'imageDescription5',
+            title: 'Image 5 Description',
+            type: 'text'
+        },
+        {
             name: 'imageUrl5',
             title: 'ImageUrl 5',
             type: 'image',
             options: {
                 hotspot: true,
             },
-        },        {
+        },
+        {
+            name: 'imageTitle6',
+            title: 'Image 6 Title',
+            type: 'string'
+        },
+        {
+            name: 'imageDescription6',
+            title: 'Image 6 Description',
+            type: 'text'
+        },
+        {
             name: 'imageUrl6',
             title: 'ImageUrl 6',
             type: 'image',

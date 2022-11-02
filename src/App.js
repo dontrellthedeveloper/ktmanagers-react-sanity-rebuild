@@ -17,6 +17,7 @@ import Service from "./pages/Service";
 import {Footer} from "./container";
 import {Navbar} from "./components";
 import WhatWeOffer from "./pages/WhatWeOffer";
+import Mascot from "./pages/Mascot";
 
 
 
@@ -39,6 +40,7 @@ const App = () => {
             <Route path='/services' element={<Services/>} />
             <Route path='/service/:slug' element={<Service/>} />
             <Route path='/what-we-offer' element={<WhatWeOffer/>} />
+            <Route path='/our-mascot' element={<Mascot/>} />
         </Routes>
         <Footer/>
 
