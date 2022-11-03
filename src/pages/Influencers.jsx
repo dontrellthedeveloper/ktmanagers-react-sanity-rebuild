@@ -6,17 +6,24 @@ import videoBgMp4 from "../assets/KT-Management-home-screen-video-city-compresse
 import './scss/Influencers.scss';
 import {Brands, Stats} from "../container";
 
+import {Helmet} from "react-helmet";
+
 function Influencers() {
+
     const [influencers, setInfluencers] = useState([]);
-    const [filterInfluencers, setFilterInfluencers] = useState([]);
-    const [activeFilter, setActiveFilter] = useState('All');
+
 
     const [scroll, setScroll] = useState(false);
 
     useEffect(() => {
         window.addEventListener("scroll", () => {
-            setScroll(window.scrollY > 50);
+            setScroll(window.scrollY > 40);
         });
+        return () => {
+            window.removeEventListener('scroll', () => {
+                setScroll(false);
+            })
+        }
     }, []);
 
 
@@ -27,9 +34,10 @@ function Influencers() {
         client.fetch(query)
             .then((data) => {
                 setInfluencers(data)
-                // setFilterInfluencers(data)
-            })
-
+            });
+        return () => {
+            setInfluencers([])
+        }
     },[])
 
     if(!influencers) return (
@@ -39,28 +47,21 @@ function Influencers() {
     )
 
 
-
-
-    // const handleWorkFilter = (item) => {
-    //     setActiveFilter(item)
-    //
-    //     setTimeout(() => {
-    //
-    //
-    //         if(item === 'All') {
-    //             setFilterInfluencers(influencers);
-    //         } else {
-    //             setFilterInfluencers(influencers.filter((influencer) => influencer.tags.includes(item)))
-    //         }
-    //     }, 500)
-    // }
-
-
-
-
     return (
 
         <>
+            <Helmet>
+                <title>Our Influencers</title>
+                <meta
+                    name='description'
+                    content='Influencers on our roster'
+                />
+                <link
+                    rel="apple-touch-icon"
+                    sizes="180x180"
+                    href="%PUBLIC_URL%/logo152.png"
+                />
+            </Helmet>
             <section id="home-4">
                 <video className="home-bg-video" src={videoBgMp4} autoPlay loop muted playsInline>
                 </video>

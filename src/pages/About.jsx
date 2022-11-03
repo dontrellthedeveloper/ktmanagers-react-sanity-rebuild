@@ -21,6 +21,7 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 import {BiCaretRight, BiRightArrow} from "react-icons/bi";
 import videoBgMp4 from "../assets/KT-Management-home-screen-video-city-compressed.mp4";
 import {AiOutlineLineChart} from "react-icons/ai";
+import {Helmet} from "react-helmet";
 
 
 
@@ -35,8 +36,13 @@ function About() {
 
     useEffect(() => {
         window.addEventListener("scroll", () => {
-            setScroll(window.scrollY > 50);
+            setScroll(window.scrollY > 40);
         });
+        return () => {
+            window.removeEventListener('scroll', () => {
+                setScroll(false);
+            })
+        }
     }, []);
 
 
@@ -140,7 +146,18 @@ function About() {
 
     return (
         <>
-
+            <Helmet>
+                <title>About Us</title>
+                <meta
+                    name='description'
+                    content='About our company'
+                />
+                <link
+                    rel="apple-touch-icon"
+                    sizes="180x180"
+                    href="%PUBLIC_URL%/logo152.png"
+                />
+            </Helmet>
             <section id="home-4">
                 <video className="home-bg-video" src={videoBgMp4} autoPlay loop muted playsInline>
                 </video>
@@ -176,9 +193,87 @@ function About() {
 
 
                                             <div className="row-show port-popup show-page-image-s">
-                                                {/*<a className="portfolio-item-d-overlay"*/}
-                                                {/*   href={urlFor(singleTeamMember.imageUrl).width(400).height(400).url()}*/}
-                                                {/*   >*/}
+
+
+                                                {singleTeamMember.imageUrl && (
+                                                    <div className="influencer-image__show-on-mobile column-show map-color-7 influencer-image">
+                                                        <div className="portfolio-item">
+                                                            <img src={urlFor(singleTeamMember.imageUrl).width(800).height(800).url()} className="influencer-image-2" alt=""/>
+
+                                                            <div className="portfolio-item-overlay margin-top-g">
+                                                                <div className="portfolio-item-details text-center">
+                                                                    {/*Item Header*/}
+                                                                    {singleTeamMember.imageTitle && (
+                                                                        <>
+                                                                            <h3>{singleTeamMember.imageTitle}</h3>
+                                                                            {/*Item Strips*/}
+                                                                            <span></span>
+                                                                        </>
+
+                                                                    )}
+
+                                                                    {/*Item Description */}
+                                                                    {singleTeamMember.imageDescription && (
+                                                                        <p className='influencer-description'>{singleTeamMember.imageDescription}</p>
+                                                                    )}
+
+                                                                    <div className='show-button'>
+
+                                                                        {singleTeamMember.instagramLink && (
+                                                                            <a href={singleTeamMember.instagramLink} target='_blank'>
+                                                                                <button className='btn btn-social-influencer-img btn-social-img btn-social-instagram'>
+                                                                                    <FaInstagram/>
+                                                                                </button>
+                                                                            </a>
+                                                                        )}
+
+                                                                        {singleTeamMember.facebookLink && (
+                                                                            <a href={singleTeamMember.facebookLink} target='_blank'>
+                                                                                <button className='btn btn-social-influencer-img btn-social-img
+                                                                                    btn-social-facebook'>
+                                                                                    <FaFacebookF/>
+                                                                                </button>
+                                                                            </a>
+                                                                        )}
+
+                                                                        {singleTeamMember.twitterLink && (
+                                                                            <a href={singleTeamMember.twitterLink} target='_blank'>
+                                                                                <button className='btn btn-social-influencer-img btn-social-img
+                                                                                    btn-social-twitter'>
+                                                                                    <FaTwitter/>
+                                                                                </button>
+                                                                            </a>
+                                                                        )}
+
+                                                                        {singleTeamMember.youtubeLink && (
+                                                                            <a href={singleTeamMember.youtubeLink}
+                                                                               target='_blank'>
+                                                                                <button className='btn btn-social-influencer-img btn-social-img
+                                                                                    btn-social-youtube'>
+                                                                                    <FaYoutube/>
+                                                                                </button>
+                                                                            </a>
+                                                                        )}
+
+                                                                        {singleTeamMember.tiktokLink && (
+                                                                            <a href={singleTeamMember.tiktokLink}
+                                                                               target='_blank'>
+                                                                                <button className='btn btn-social-influencer-img btn-social-img
+                                                                                    btn-social-tiktok'>
+                                                                                    <FaTiktok/>
+                                                                                </button>
+                                                                            </a>
+                                                                        )}
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+
+                                                        </div>
+                                                    </div>
+                                                )}
+
 
                                                 {singleTeamMember.imageUrl2 && (
                                                     <div className="column-show map-color-7 influencer-image"
@@ -260,7 +355,7 @@ function About() {
                                                 )}
 
                                                 {singleTeamMember.imageUrl && (
-                                                    <div className="column-show map-color-7 influencer-image">
+                                                    <div className="influencer-image__hide-on-mobile column-show map-color-7 influencer-image">
                                                         <div className="portfolio-item">
                                                             <img src={urlFor(singleTeamMember.imageUrl).width(800).height(800).url()} className="influencer-image-2" alt=""/>
 

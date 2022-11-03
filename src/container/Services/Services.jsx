@@ -66,6 +66,7 @@ const Services = () => {
                                                                 <div className="horizontal-heading branding-promo-mobile-s">
                                                                     <h5>Learn about</h5>
                                                                     <h2>Branding & Promotion</h2>
+                                                                    <h6>Swipe 👉</h6>
                                                                 </div>
                                                             </div>
                                                         </div>

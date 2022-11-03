@@ -18,7 +18,7 @@ import {Footer} from "./container";
 import {Navbar} from "./components";
 import WhatWeOffer from "./pages/WhatWeOffer";
 import Mascot from "./pages/Mascot";
-
+import {Helmet} from "react-helmet";
 
 
 
@@ -30,6 +30,19 @@ const App = () => {
   return (
     <>
         <Navbar/>
+        <Helmet>
+            <title>Knight Team Management</title>
+            <meta
+                name='description'
+                content='Social Media Branding Agency located in Burbank, CA.'
+            />
+            <meta name='keywords' content='Social Media, Branding, Influencer'/>
+            <link
+                rel="apple-touch-icon"
+                sizes="180x180"
+                href="%PUBLIC_URL%/logo152.png"
+            />
+        </Helmet>
         <Routes>
             <Route path='/' element={<Homepage/>} exact />
             <Route path='/about' element={<About/>}  />

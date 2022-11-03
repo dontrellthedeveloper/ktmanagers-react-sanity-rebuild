@@ -4,6 +4,7 @@ import {client, urlFor} from "../client";
 import {Link} from "react-router-dom";
 import videoBgMp4 from "../assets/KT-Management-home-screen-video-city-compressed.mp4";
 import './scss/Influencers.scss';
+import {Helmet} from "react-helmet";
 
 function Services() {
     const [services, setServices] = useState([]);
@@ -11,8 +12,13 @@ function Services() {
     const [scroll, setScroll] = useState(false);
     useEffect(() => {
         window.addEventListener("scroll", () => {
-            setScroll(window.scrollY > 50);
+            setScroll(window.scrollY > 40);
         });
+        return () => {
+            window.removeEventListener('scroll', () => {
+                setScroll(false);
+            })
+        }
     }, []);
 
     useEffect(() => {
@@ -23,8 +29,10 @@ function Services() {
         client.fetch(query)
             .then((data) => {
                 setServices(data)
-            })
-
+            });
+        return () => {
+            setServices([])
+        }
     },[])
 
     if(!services) return (
@@ -36,6 +44,18 @@ function Services() {
     return (
 
         <>
+            <Helmet>
+                <title>Additional Services</title>
+                <meta
+                    name='description'
+                    content='Additional services we offer'
+                />
+                <link
+                    rel="apple-touch-icon"
+                    sizes="180x180"
+                    href="%PUBLIC_URL%/logo152.png"
+                />
+            </Helmet>
             <section id="home-4">
                 <video className="home-bg-video" src={videoBgMp4} autoPlay loop muted playsInline>
                 </video>

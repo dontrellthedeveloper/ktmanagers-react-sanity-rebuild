@@ -7,6 +7,7 @@ import './scss/Influencers.scss';
 import {Brands, Services, Stats} from "../container";
 import {FaFacebookF, FaInstagram, FaTiktok, FaTwitter, FaYoutube} from "react-icons/fa";
 import './scss/offer.scss'
+import {Helmet} from "react-helmet";
 
 function Influencers() {
     const [influencers, setInfluencers] = useState([]);
@@ -20,8 +21,13 @@ function Influencers() {
 
     useEffect(() => {
         window.addEventListener("scroll", () => {
-            setScroll(window.scrollY > 50);
+            setScroll(window.scrollY > 40);
         });
+        return () => {
+            window.removeEventListener('scroll', () => {
+                setScroll(false);
+            })
+        }
     }, []);
 
 
@@ -45,7 +51,7 @@ function Influencers() {
             offerDescription9,
             offerDescription10,
         }`).then((data) => setSingleOffer(data[0]))
-            .catch(console.error)
+            .catch(console.error);
     }, []);
 
 
@@ -57,9 +63,10 @@ function Influencers() {
         client.fetch(query)
             .then((data) => {
                 setInfluencers(data)
-                // setFilterInfluencers(data)
             })
-
+        return () => {
+            setInfluencers([])
+        };
     },[])
 
 
@@ -75,7 +82,9 @@ function Influencers() {
             .then((data) => {
                 setKids(data)
             })
-
+        return () => {
+            setKids([])
+        }
     },[])
 
     if(!kids) return (
@@ -100,6 +109,18 @@ function Influencers() {
     return (
 
         <>
+            <Helmet>
+                <title>What We Offer</title>
+                <meta
+                    name='description'
+                    content={singleOffer.offerDescription1}
+                />
+                <link
+                    rel="apple-touch-icon"
+                    sizes="180x180"
+                    href="%PUBLIC_URL%/logo152.png"
+                />
+            </Helmet>
             <section id="home-4">
                 <video className="home-bg-video" src={videoBgMp4} autoPlay loop muted playsInline>
                 </video>

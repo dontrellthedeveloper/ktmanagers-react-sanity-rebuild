@@ -20,6 +20,7 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import {BiCaretRight, BiRightArrow} from "react-icons/bi";
 import videoBgMp4 from "../assets/KT-Management-home-screen-video-city-compressed.mp4";
+import {Helmet} from "react-helmet";
 
 
 
@@ -33,8 +34,13 @@ function Service() {
     const [scroll, setScroll] = useState(false);
     useEffect(() => {
         window.addEventListener("scroll", () => {
-            setScroll(window.scrollY > 50);
+            setScroll(window.scrollY > 40);
         });
+        return () => {
+            window.removeEventListener('scroll', () => {
+                setScroll(false);
+            })
+        }
     }, []);
 
 
@@ -131,7 +137,18 @@ function Service() {
 
     return (
         <>
-
+            <Helmet>
+                <title>{singleService.name}</title>
+                <meta
+                    name='description'
+                    content={singleService.description}
+                />
+                <link
+                    rel="apple-touch-icon"
+                    sizes="180x180"
+                    // href="%PUBLIC_URL%/logo152.png"
+                    href={urlFor(singleService.imageUrl).width(800).height(800).url()}                />
+            </Helmet>
             <section id="home-4">
                 <video className="home-bg-video" src={videoBgMp4} autoPlay loop muted playsInline>
                 </video>
@@ -167,9 +184,86 @@ function Service() {
 
 
                                             <div className="row-show port-popup show-page-image-s">
-                                                {/*<a className="portfolio-item-d-overlay"*/}
-                                                {/*   href={urlFor(singleService.imageUrl).width(400).height(400).url()}*/}
-                                                {/*   >*/}
+
+                                                {singleService.imageUrl && (
+                                                    <div className="influencer-image__show-on-mobile column-show map-color-7 influencer-image">
+                                                        <div className="portfolio-item">
+                                                            <img src={urlFor(singleService.imageUrl).width(800).height(800).url()} className="influencer-image-2" alt=""/>
+
+                                                            <div className="portfolio-item-overlay margin-top-g">
+                                                                <div className="portfolio-item-details text-center">
+                                                                    {/*Item Header*/}
+                                                                    {singleService.imageTitle && (
+                                                                        <>
+                                                                            <h3>{singleService.imageTitle}</h3>
+                                                                            {/*Item Strips*/}
+                                                                            <span></span>
+                                                                        </>
+
+                                                                    )}
+
+                                                                    {/*Item Description */}
+                                                                    {singleService.imageDescription && (
+                                                                        <p className='influencer-description'>{singleService.imageDescription}</p>
+                                                                    )}
+
+                                                                    <div className='show-button'>
+
+                                                                        {singleService.instagramLink && (
+                                                                            <a href={singleService.instagramLink} target='_blank'>
+                                                                                <button className='btn btn-social-influencer-img btn-social-img btn-social-instagram'>
+                                                                                    <FaInstagram/>
+                                                                                </button>
+                                                                            </a>
+                                                                        )}
+
+                                                                        {singleService.facebookLink && (
+                                                                            <a href={singleService.facebookLink} target='_blank'>
+                                                                                <button className='btn btn-social-influencer-img btn-social-img
+                                                                                        btn-social-facebook'>
+                                                                                    <FaFacebookF/>
+                                                                                </button>
+                                                                            </a>
+                                                                        )}
+
+                                                                        {singleService.twitterLink && (
+                                                                            <a href={singleService.twitterLink} target='_blank'>
+                                                                                <button className='btn btn-social-influencer-img btn-social-img
+                                                                                        btn-social-twitter'>
+                                                                                    <FaTwitter/>
+                                                                                </button>
+                                                                            </a>
+                                                                        )}
+
+                                                                        {singleService.youtubeLink && (
+                                                                            <a href={singleService.youtubeLink}
+                                                                               target='_blank'>
+                                                                                <button className='btn btn-social-influencer-img btn-social-img
+                                                                                        btn-social-youtube'>
+                                                                                    <FaYoutube/>
+                                                                                </button>
+                                                                            </a>
+                                                                        )}
+
+                                                                        {singleService.tiktokLink && (
+                                                                            <a href={singleService.tiktokLink}
+                                                                               target='_blank'>
+                                                                                <button className='btn btn-social-influencer-img btn-social-img
+                                                                                        btn-social-tiktok'>
+                                                                                    <FaTiktok/>
+                                                                                </button>
+                                                                            </a>
+                                                                        )}
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+
+                                                        </div>
+
+                                                    </div>
+                                                )}
 
                                                 {singleService.imageUrl2 && (
                                                     <div className="column-show map-color-7 influencer-image">
@@ -249,7 +343,7 @@ function Service() {
                                                 )}
 
                                                 {singleService.imageUrl && (
-                                                    <div className="column-show map-color-7 influencer-image">
+                                                    <div className="influencer-image__hide-on-mobile column-show map-color-7 influencer-image">
                                                         <div className="portfolio-item">
                                                             <img src={urlFor(singleService.imageUrl).width(800).height(800).url()} className="influencer-image-2" alt=""/>
 

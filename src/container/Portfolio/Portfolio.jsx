@@ -1,10 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import './Portfolio.scss';
-import {images} from "../../constants";
+
 import {urlFor, client} from "../../client";
 
-import 'photoswipe/dist/photoswipe.css'
-import { Gallery, Item } from 'react-photoswipe-gallery'
+
 import {Link} from "react-router-dom";
 
 
@@ -20,8 +19,10 @@ const Portfolio = () => {
         client.fetch(query)
             .then((data) => {
                 setInfluencers(data)
-            })
-
+            });
+        return () => {
+            setInfluencers([])
+        }
     },[])
 
     if(!influencers) return (
@@ -42,18 +43,6 @@ const Portfolio = () => {
                                 <h2>Our <br/>Amazing <strong>Influencers</strong></h2>
                             </div>
                         </div>
-
-                        {/*<div className="col-md-12">*/}
-
-                        {/*    <div id="isotope-filters" className="margin-bottom-g">*/}
-
-                        {/*        <button className="btn btn-red btn-grey active-item gallery-list-item"*/}
-                        {/*                data-filter="all"><span>All</span></button>*/}
-                        {/*        <button className="btn btn-red gallery-list-item" data-filter="women"><span>Women</span>*/}
-                        {/*        </button>*/}
-                        {/*        <button className="btn btn-red active-item gallery-list-item" data-filter="men">*/}
-                        {/*            <span>Men</span></button>*/}
-                        {/*    </div>*/}
 
                         {/*</div>*/}
                         <div className="col-md-12">

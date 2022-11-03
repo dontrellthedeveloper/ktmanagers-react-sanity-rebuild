@@ -23,6 +23,10 @@
 
   position: fixed;
   z-index: 2;
+
+  @media(max-width: 767px) {
+    padding: 1rem 2rem 1rem 1rem;
+  }
 }
 
 .app__navbar-scroll {
@@ -63,6 +67,7 @@
     cursor: pointer;
 
     flex-direction: column;
+    text-align: center;
 
     div {
       width: 5px;

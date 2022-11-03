@@ -20,6 +20,7 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import {BiCaretRight, BiRightArrow} from "react-icons/bi";
 import videoBgMp4 from "../assets/KT-Management-home-screen-video-city-compressed.mp4";
+import {Helmet} from "react-helmet";
 
 
 
@@ -35,26 +36,14 @@ function Influencer() {
     const [scroll, setScroll] = useState(false);
     useEffect(() => {
         window.addEventListener("scroll", () => {
-            setScroll(window.scrollY > 50);
+            setScroll(window.scrollY > 40);
         });
-    }, []);
-
-
-    const options = {
-        responsive:{
-            0: {
-                items: 1
-            },
-            // 480: {
-            //     items: 2
-            // },
-            768: {
-                items: 3
-            }
+        return () => {
+            window.removeEventListener('scroll', () => {
+                setScroll(false);
+            })
         }
-    };
-
-
+    }, []);
 
     useEffect(() => {
         client.fetch(`*[slug.current == "${slug}"]{
@@ -122,8 +111,6 @@ function Influencer() {
 
 
 
-
-
     useEffect(() => {
         client.fetch(`*[_type == "service"] | order(order asc)`
 
@@ -132,8 +119,6 @@ function Influencer() {
         })
 
     }, []);
-
-
 
 
 
@@ -148,7 +133,19 @@ function Influencer() {
 
     return (
         <>
-
+            <Helmet>
+                <title>{singleInfluencer.name}</title>
+                <meta
+                    name='description'
+                    content={singleInfluencer.description}
+                />
+                <link
+                    rel="apple-touch-icon"
+                    sizes="180x180"
+                    // href="%PUBLIC_URL%/logo152.png"
+                    href={urlFor(singleInfluencer.imageUrl).width(800).height(800).url()}
+                />
+            </Helmet>
             <section id="home-4">
                 <video className="home-bg-video" src={videoBgMp4} autoPlay loop muted playsInline>
                 </video>
@@ -178,6 +175,89 @@ function Influencer() {
 
 
                                             <div className="row-show port-popup show-page-image-s">
+
+
+                                                    {singleInfluencer.imageUrl && (
+                                                        <div className='influencer-image__show-on-mobile column-show map-color-7 influencer-image'>
+                                                            <div className="portfolio-item">
+                                                                <img src={urlFor(singleInfluencer.imageUrl).width(800).height(800).url()} className="influencer-image-2" alt=""/>
+
+                                                                <div className="portfolio-item-overlay margin-top-g">
+                                                                    <div className="portfolio-item-details text-center">
+                                                                        {/*Item Header*/}
+                                                                        {singleInfluencer.imageTitle && (
+                                                                            <>
+                                                                                <h3>{singleInfluencer.imageTitle}</h3>
+                                                                                {/*Item Strips*/}
+                                                                                <span></span>
+                                                                            </>
+
+                                                                        )}
+
+                                                                        {/*Item Description */}
+                                                                        {singleInfluencer.imageDescription && (
+                                                                            <p className='influencer-description'>{singleInfluencer.imageDescription}</p>
+                                                                        )}
+
+                                                                        <div className='show-button'>
+
+                                                                            {singleInfluencer.instagramLink && (
+                                                                                <a href={singleInfluencer.instagramLink} target='_blank'>
+                                                                                    <button className='btn btn-social-influencer-img btn-social-img btn-social-instagram'>
+                                                                                        <FaInstagram/>
+                                                                                    </button>
+                                                                                </a>
+                                                                            )}
+
+                                                                            {singleInfluencer.facebookLink && (
+                                                                                <a href={singleInfluencer.facebookLink} target='_blank'>
+                                                                                    <button className='btn btn-social-influencer-img btn-social-img
+                                                                                        btn-social-facebook'>
+                                                                                        <FaFacebookF/>
+                                                                                    </button>
+                                                                                </a>
+                                                                            )}
+
+                                                                            {singleInfluencer.twitterLink && (
+                                                                                <a href={singleInfluencer.twitterLink} target='_blank'>
+                                                                                    <button className='btn btn-social-influencer-img btn-social-img
+                                                                                        btn-social-twitter'>
+                                                                                        <FaTwitter/>
+                                                                                    </button>
+                                                                                </a>
+                                                                            )}
+
+                                                                            {singleInfluencer.youtubeLink && (
+                                                                                <a href={singleInfluencer.youtubeLink}
+                                                                                   target='_blank'>
+                                                                                    <button className='btn btn-social-influencer-img btn-social-img
+                                                                                        btn-social-youtube'>
+                                                                                        <FaYoutube/>
+                                                                                    </button>
+                                                                                </a>
+                                                                            )}
+
+                                                                            {singleInfluencer.tiktokLink && (
+                                                                                <a href={singleInfluencer.tiktokLink}
+                                                                                   target='_blank'>
+                                                                                    <button className='btn btn-social-influencer-img btn-social-img
+                                                                                        btn-social-tiktok'>
+                                                                                        <FaTiktok/>
+                                                                                    </button>
+                                                                                </a>
+                                                                            )}
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+
+                                                            </div>
+                                                        </div>
+
+                                                    )}
+
+
                                                     {singleInfluencer.imageUrl2 && (
                                                         <div className="mobile__hide-image column-show map-color-7 influencer-image">
                                                             <div className="portfolio-item">
@@ -259,7 +339,7 @@ function Influencer() {
 
 
                                                     {singleInfluencer.imageUrl && (
-                                                        <div className='column-show map-color-7 influencer-image'>
+                                                        <div className='influencer-image__hide-on-mobile column-show map-color-7 influencer-image'>
                                                             <div className="portfolio-item">
                                                                 <img src={urlFor(singleInfluencer.imageUrl).width(800).height(800).url()} className="influencer-image-2" alt=""/>
 
@@ -416,7 +496,7 @@ function Influencer() {
                                                         </div>
                                                     </div>
                                                     )}
-                                                    {/*</a>*/}
+
                                                 </div>
 
 

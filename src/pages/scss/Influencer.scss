@@ -443,6 +443,7 @@
 
 
 .influencer-handle-mobile-scroll {
+  display: none;
   @media(max-width: 767px) {
     position: fixed;
     bottom: 0;
@@ -452,6 +453,7 @@
     border-bottom: none;
     background: hsla(0,0%,100%,.85);
     backdrop-filter: blur(10px);
+    z-index: 1;
    }
     //display: none;
 
@@ -465,6 +467,19 @@
     right: 0;
     display: none;
   }
-  //display: none;
+}
 
+.influencer-image__show-on-mobile {
+  display: none;
+  @media(max-width: 767px) {
+    display: block;
+  }
+}
+
+.influencer-image__hide-on-mobile {
+  display: block;
+
+  @media(max-width: 767px) {
+    display: none;
+  }
 }
