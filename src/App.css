@@ -1211,7 +1211,7 @@ ul.social-list .twitter-bg-color a:hover {
 
 .portfolio-item-overlay-service {
   position: absolute;
-  top: 85%;
+  /*top: 85%;*/
   bottom: 0;
   left: 0;
   right: 0;
@@ -1229,12 +1229,18 @@ ul.social-list .twitter-bg-color a:hover {
   color: #fff;
   text-transform: uppercase;
   /* font-size: 30px; */
-  font-size: 16px;
+  font-size: 13px;
   margin: 12px;
   /* padding: 0; */
   /* transform: translateY(-20%); */
   transition: all 0.5s;
   text-align: center;
+
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+
+  position: relative;
 }
 
 @media(max-width: 767px) {

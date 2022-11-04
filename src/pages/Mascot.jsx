@@ -48,7 +48,7 @@ function Mascot() {
 
 
     useEffect(() => {
-        client.fetch(`*[_type == "mascot" && slug.current == 'dalefromburbank']{
+        client.fetch(`*[slug.current == "${slug}"]{
             name,
             _id,
             slug,
@@ -140,10 +140,10 @@ function Mascot() {
     return (
         <>
             <Helmet>
-                <title>Our Mascot</title>
+                <title>{singleMascot.name}</title>
                 <meta
                     name='description'
-                    content='Our company Mascot'
+                    content={singleMascot.description}
                 />
                 <link
                     rel="apple-touch-icon"

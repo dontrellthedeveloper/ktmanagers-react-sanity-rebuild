@@ -174,13 +174,7 @@ function Kid() {
                                 <div className="row">
                                     <div id="content" className='influencer-single-page__mobile-img'>
                                         <section id="map-section" className="inner over client-section-b">
-                                            {/*<ul id="examples-2">*/}
-                                            {/*    <li><Link to='/'*/}
-                                            {/*           className="background-map-2">&#8592; Back to All Influencers</Link>*/}
-                                            {/*    </li>*/}
-                                            {/*</ul>*/}
 
-                                            {/*<hr/>*/}
 
 
                                             <div className="row-show port-popup show-page-image-s">

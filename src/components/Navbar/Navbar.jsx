@@ -62,9 +62,11 @@ const Navbar = () => {
                 </li>
                 <li className='app__flex p-text'>
                     <div/>
-                    <NavLink className={scroll ? 'navbar__links-styles navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to='/our-mascot'>Our Mascot
+                    <NavLink className={scroll ? 'navbar__links-styles navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to='/mascots'>Our Mascots
                     </NavLink>
                 </li>
+
+
 
                 {/*{['home','about','influencers','KTM kids','services'].map((item)=> (*/}
                 {/*    <li className='app__flex p-text' key={`link-${item}`}>*/}
@@ -115,9 +117,11 @@ const Navbar = () => {
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink className='app__navbar-menu-links' to='/our-mascot' onClick={() => setToggle(false)}>Our Mascot
+                                <NavLink className='app__navbar-menu-links' to='/mascots' onClick={() => setToggle(false)}>Our Mascots
                                 </NavLink>
                             </li>
+
+
                             {/*<li>*/}
                             {/*    <a href={`#`} onClick={() => setToggle(false)}>About</a>*/}
                             {/*</li>*/}

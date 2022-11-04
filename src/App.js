@@ -19,6 +19,7 @@ import {Navbar} from "./components";
 import WhatWeOffer from "./pages/WhatWeOffer";
 import Mascot from "./pages/Mascot";
 import {Helmet} from "react-helmet";
+import Mascots from "./pages/Mascots";
 
 
 
@@ -53,7 +54,8 @@ const App = () => {
             <Route path='/services' element={<Services/>} />
             <Route path='/service/:slug' element={<Service/>} />
             <Route path='/what-we-offer' element={<WhatWeOffer/>} />
-            <Route path='/our-mascot' element={<Mascot/>} />
+            <Route path='/mascots' element={<Mascots/>} />
+            <Route path='/mascot/:slug' element={<Mascot/>} />
         </Routes>
         <Footer/>
 

@@ -460,6 +460,7 @@
 }
 
 .influencer-handle-mobile {
+  display: none;
   @media(max-width: 767px) {
     position: fixed;
     bottom: 0;

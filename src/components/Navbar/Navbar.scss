@@ -89,7 +89,21 @@
       //text-shadow: 1px 0 #000, -1px 0 #000, 0 1px #000, 0 -1px #000,
       //1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
 
+      @media screen and (max-width: 1102px) {
+        font-size: 14px;
+      }
 
+      @media screen and (max-width: 1032px) {
+        font-size: 13px;
+      }
+
+      @media screen and (max-width: 995px) {
+        font-size: 12px;
+      }
+
+      @media screen and (max-width: 958px) {
+        font-size: 10px;
+      }
     }
 
     //a {
@@ -119,6 +133,11 @@
   @media screen and (max-width: 900px) {
     display: none;
   }
+
+  @media screen and (max-width: 1260px) {
+    margin-right: 0;
+  }
+
 }
 
 
