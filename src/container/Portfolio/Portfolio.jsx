@@ -87,6 +87,12 @@ const Portfolio = () => {
                                                              {/*Item Description */}
                                                             <p>{influencer.description}</p>
 
+
+                                                            {influencer.meetGreet && (
+                                                                <a href={influencer.meetGreet} target='_blank' style={{textDecoration: 'none'}}>
+                                                                    <h4 className='meet-n-great__style'>Meet & Greet</h4>
+                                                                </a>
+                                                            )}
                                                         </div>
                                                     </div>
 

@@ -842,7 +842,7 @@ function Mascot() {
 
 
                                             {/* Services Component */}
-                                            <Services/>
+                                            {/*<Services/>*/}
 
                                         </section>
                                     </div>

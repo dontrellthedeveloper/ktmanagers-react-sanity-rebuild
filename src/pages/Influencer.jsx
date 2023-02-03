@@ -55,6 +55,7 @@ function Influencer() {
             twitterLink,
             youtubeLink,
             tiktokLink,
+            meetGreet,
             description,
             imageTitle,
             imageDescription,
@@ -790,17 +791,34 @@ function Influencer() {
                                                             <hr />
 
                                                             {singleInfluencer.description && (
-                                                            <div className='template-p-detail'>
-                                                                {singleInfluencer.description}
-                                                            </div>
+
+                                                                    <div className='template-p-detail'>
+                                                                        {singleInfluencer.description}
+                                                                    </div>
+
                                                             )}
+
                                                             <hr/>
+
+                                                            {singleInfluencer.meetGreet && (
+                                                                <>
+                                                                    <a href={singleInfluencer.meetGreet} target='_blank' style={{textDecoration: 'none'}}>
+                                                                        <h4 className='meet-n-great__style-i' style={{marginTop: '.5rem'}}>Meet & Greet</h4>
+                                                                    </a>
+                                                                    <hr/>
+                                                                </>
+                                                            )}
+
+
+
 
                                                             {singleInfluencer.slug.current && (
                                                             <a href='#contact'>
                                                                 <button  className='btn btn-client-book btn-red'>Book @{singleInfluencer.slug.current} Promo!</button>
                                                             </a>
                                                             )}
+
+
                                                         </div>
 
 

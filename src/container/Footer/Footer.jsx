@@ -142,7 +142,7 @@ const Footer = () => {
                     <div className="row">
                         <div className="col-md-12">
                             <p className="my-auto marg-top">
-                                Copyright &copy; 2022 All Rights Reserved By <span>KNIGHT TEAM MANAGEMENT, LLC.</span>
+                                Copyright &copy; 2023 All Rights Reserved By <span>KNIGHT TEAM MANAGEMENT, LLC.</span>
                             </p>
                         </div>
                     </div>

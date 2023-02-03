@@ -44,3 +44,30 @@
   line-clamp: 3;
   -webkit-box-orient: vertical;
 }
+
+
+
+.meet-n-great__style {
+  color: #fff;
+  margin-top: 1.5rem;
+  font-size: 1.3rem;
+  text-shadow: 1px 1px 2px black, 0 0 25px red, 0 0 5px darkred;
+}
+
+
+.meet-n-great__style:hover {
+  color: #db8a8a;
+}
+
+.meet-n-great__style-i {
+  color: #fff;
+  margin-top: 1.5rem;
+  font-size: 1.3rem;
+  text-shadow: 1px 1px 2px black, 0 0 10px red, 0 0 2px darkred;
+  display: inline-block;
+}
+
+
+.meet-n-great__style-i:hover {
+  color: #db8a8a;
+}
