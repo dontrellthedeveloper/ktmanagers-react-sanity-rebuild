@@ -13,7 +13,8 @@
     "@sanity/default-login",
     "@sanity/desk-tool",
     "order-documents",
-    "icon-picker"
+    "icon-picker",
+    "emoji-picker"
   ],
   "env": {
     "development": {

@@ -60,14 +60,35 @@
 }
 
 .meet-n-great__style-i {
-  color: #fff;
+  //color: #fff;
+  color: #500000;
   margin-top: 1.5rem;
-  font-size: 1.3rem;
-  text-shadow: 1px 1px 2px black, 0 0 10px red, 0 0 2px darkred;
+  //font-size: 1.3rem;
+  text-shadow: 1px 1px 2px white, 0 0 10px red, 0 0 2px darkred;
   display: inline-block;
+  margin-bottom: 0;
+  margin-right: .8rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+
+  @media(max-width: 767px) {
+    font-size: 1.4rem;
+  }
+}
+
+.meet-n-great__style-em {
+  margin-right: 0.5rem;
+  font-size: 1.8rem;
+
+  @media(max-width: 767px) {
+    font-size: 1.4rem;
+  }
 }
 
 
 .meet-n-great__style-i:hover {
-  color: #db8a8a;
+  //color: #db8a8a;
+  color: #F4F4F4;
+  text-shadow: 1px 1px 2px black, 0 0 10px red, 0 0 2px darkred;
+
 }

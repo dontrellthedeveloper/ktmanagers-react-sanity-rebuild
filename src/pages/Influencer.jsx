@@ -56,6 +56,7 @@ function Influencer() {
             youtubeLink,
             tiktokLink,
             meetGreet,
+            meetGreetEmoji,
             description,
             imageTitle,
             imageDescription,
@@ -129,7 +130,8 @@ function Influencer() {
             <div className="status"></div>
         </div>
     )
-    // if(!services) return <div>Loading.....</div>
+
+
 
 
     return (
@@ -741,7 +743,23 @@ function Influencer() {
                                                     <div className="map-paragraph">
 
                                                         {singleInfluencer.name && (
-                                                        <h2 className="i-map-paragraph"><b className='show-page-name-s'>{singleInfluencer.name}</b></h2>
+                                                            <div style={{textAlign: 'center'}}>
+                                                                {singleInfluencer.meetGreet && (
+                                                                    <>
+                                                                        <a href={singleInfluencer.meetGreet} target='_blank' style={{textDecoration: 'none'}}>
+                                                                            <h4 className='meet-n-great__style-i'>Meet & Greet</h4>
+                                                                        </a>
+                                                                        {/*<hr/>*/}
+                                                                    </>
+                                                                )}
+
+                                                                {singleInfluencer.meetGreetEmoji && (
+                                                                    <span className='meet-n-great__style-em'>{singleInfluencer.meetGreetEmoji}</span>
+                                                                )}
+
+                                                                <h2 className="i-map-paragraph" style={{display:'inline-block'}}>
+                                                                    <b className='show-page-name-s'>{singleInfluencer.name}</b></h2>
+                                                            </div>
                                                         )}
 
                                                         <div className='show-button'>
@@ -800,14 +818,14 @@ function Influencer() {
 
                                                             <hr/>
 
-                                                            {singleInfluencer.meetGreet && (
-                                                                <>
-                                                                    <a href={singleInfluencer.meetGreet} target='_blank' style={{textDecoration: 'none'}}>
-                                                                        <h4 className='meet-n-great__style-i' style={{marginTop: '.5rem'}}>Meet & Greet</h4>
-                                                                    </a>
-                                                                    <hr/>
-                                                                </>
-                                                            )}
+                                                            {/*{singleInfluencer.meetGreet && (*/}
+                                                            {/*    <>*/}
+                                                            {/*        <a href={singleInfluencer.meetGreet} target='_blank' style={{textDecoration: 'none'}}>*/}
+                                                            {/*            <h4 className='meet-n-great__style-i' style={{marginTop: '.5rem'}}>Meet & Greet</h4>*/}
+                                                            {/*        </a>*/}
+                                                            {/*        <hr/>*/}
+                                                            {/*    </>*/}
+                                                            {/*)}*/}
 
 
 
@@ -839,8 +857,6 @@ function Influencer() {
 
 
 
-
-
                                             {/* Services Component */}
                                             <Services/>
 
@@ -867,45 +883,6 @@ function Influencer() {
                 </div>
 
             </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            {/*<section id="about">*/}
-
-            {/*    /!* About 01 *!/*/}
-            {/*    <div className="about-01">*/}
-            {/*        <div className="content-box-main">*/}
-            {/*            <div className="container">*/}
-
-            {/*                /!* About Bottom *!/*/}
-            {/*                <div className="row">*/}
-            {/*                    <div className="col-md-12">*/}
-            {/*                        <div className="about-bottom">*/}
-            {/*                            <img src={urlFor(singleInfluencer.imageUrl).width(400).height(400).url()} alt="About Us" className="img-responsive"/>*/}
-            {/*                        </div>*/}
-            {/*                    </div>*/}
-            {/*                </div>*/}
-            {/*            </div>*/}
-            {/*        </div>*/}
-            {/*    </div>*/}
-
-            {/*    /!* About 02 *!/*/}
-
-            {/*</section>*/}
 
 
         </>

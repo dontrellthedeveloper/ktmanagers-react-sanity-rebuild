@@ -162,6 +162,11 @@ export default {
             type: 'string'
         },
         {
+            name: "meetGreetEmoji",
+            title: "Meet Greet Emoji",
+            type: "string",
+        },
+        {
             name: 'tags',
             title: 'Tags',
             type:'array',
