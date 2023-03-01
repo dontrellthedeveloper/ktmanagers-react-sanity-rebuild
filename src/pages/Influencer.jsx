@@ -164,7 +164,21 @@ function Influencer() {
                             <div className="row">
                                 <div className="home-headings tools-p-align">
                                     <div className="horizontal-heading influencer-name">
-                                        <h1 className="home-headings-2 influencer-name-h1"><span className='influencer-name-span'> @{singleInfluencer.slug.current}</span></h1>
+                                        {singleInfluencer.meetGreet && (
+                                            <>
+                                                <a href={singleInfluencer.meetGreet} target='_blank' style={{textDecoration: 'none'}}>
+                                                    <h4 className='meet-n-great__style-i__heading'>Meet & Greet</h4>
+                                                </a>
+                                                {/*<hr/>*/}
+                                            </>
+                                        )}
+
+                                        {singleInfluencer.meetGreetEmoji && (
+                                            <span className='meet-n-great__style-em'>{singleInfluencer.meetGreetEmoji}</span>
+                                        )}
+                                        <h1 className="home-headings-2 influencer-name-h1"><span className='influencer-name-span'> @{singleInfluencer.slug.current}</span>
+
+                                        </h1>
                                     </div>
                                 </div>
                             </div>
@@ -832,6 +846,7 @@ function Influencer() {
 
                                                             {singleInfluencer.slug.current && (
                                                             <a href='#contact'>
+
                                                                 <button  className='btn btn-client-book btn-red'>Book @{singleInfluencer.slug.current} Promo!</button>
                                                             </a>
                                                             )}
@@ -872,6 +887,18 @@ function Influencer() {
                                 <div className="row">
                                     <div className="home-headings tools-p-align">
                                         <div className="horizontal-heading influencer-name">
+                                            {singleInfluencer.meetGreet && (
+                                                <>
+                                                    <a href={singleInfluencer.meetGreet} target='_blank' style={{textDecoration: 'none'}}>
+                                                        <h4 className='meet-n-great__style-i__heading'>Meet & Greet</h4>
+                                                    </a>
+                                                    {/*<hr/>*/}
+                                                </>
+                                            )}
+
+                                            {singleInfluencer.meetGreetEmoji && (
+                                                <span className='meet-n-great__style-em'>{singleInfluencer.meetGreetEmoji}</span>
+                                            )}
                                             <h1 className="home-headings-2 influencer-name-h1"><span className='influencer-name-span'> @{singleInfluencer.slug.current}</span></h1>
                                         </div>
                                     </div>
