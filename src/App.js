@@ -20,6 +20,10 @@ import WhatWeOffer from "./pages/WhatWeOffer";
 import Mascot from "./pages/Mascot";
 import {Helmet} from "react-helmet";
 import Mascots from "./pages/Mascots";
+import { toast, ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+
+
 
 
 
@@ -31,6 +35,7 @@ const App = () => {
   return (
     <>
         <Navbar/>
+
         <Helmet>
             <title>Knight Team Management</title>
             <meta
@@ -44,6 +49,8 @@ const App = () => {
                 href="%PUBLIC_URL%/logo152.png"
             />
         </Helmet>
+        <ToastContainer />
+
         <Routes>
             <Route path='/' element={<Homepage/>} exact />
             <Route path='/about' element={<About/>}  />

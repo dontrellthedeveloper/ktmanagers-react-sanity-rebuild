@@ -1,23 +1,37 @@
 import React from 'react';
-import {useEffect, useState} from "react";
+import {useEffect, useState, useRef} from "react";
 import {client, urlFor} from "../client";
 import {Link, useParams} from "react-router-dom";
 import videoBgMp4 from "../assets/KT-Management-home-screen-video-city-compressed.mp4";
 import './scss/Influencers.scss';
 import {Brands, Services, Stats} from "../container";
-import {FaFacebookF, FaInstagram, FaTiktok, FaTwitter, FaYoutube} from "react-icons/fa";
 import './scss/offer.scss'
 import {Helmet} from "react-helmet";
+import {PayPalScriptProvider, PayPalButtons} from "@paypal/react-paypal-js";
+import { toast } from "react-toastify";
+
 
 function Influencers() {
     const [influencers, setInfluencers] = useState([]);
     const [kids, setKids] = useState([]);
-    const [filterInfluencers, setFilterInfluencers] = useState([]);
-    const [activeFilter, setActiveFilter] = useState('All');
     const [singleOffer, setSingleOffer] = useState(null);
     const {slug} = useParams();
-
+    const [toggle, setToggle] = useState(false)
     const [scroll, setScroll] = useState(false);
+    const [price, setPrice] = useState(0);
+
+    const priceRef = useRef(null);
+
+    let product = {
+        price,
+        description: "Dues total payment: "
+    };
+
+    const onHandlePay = () => {
+        setPrice(priceRef.current.value);
+    };
+
+
 
     useEffect(() => {
         window.addEventListener("scroll", () => {
@@ -29,9 +43,6 @@ function Influencers() {
             })
         }
     }, []);
-
-
-
 
 
     useEffect(() => {
@@ -255,6 +266,68 @@ function Influencers() {
                                                 <hr/>
                                             </div>
                                         )}
+
+
+                                        <div>
+                                            <p className='offer-p-detail show-page-name-s offer-subheading' style={{fontWeight: '600'}}>
+                                                HAVE YOU BEEN QUOTED AND READY TO PAY?
+                                            </p>
+                                        </div>
+
+                                        <div>
+
+                                            <div style={{textAlign: 'center', margin: '30px auto'}}>
+                                                <input placeholder='Enter Quoted Amount...' type="text"  ref={priceRef} />
+                                                <button onClick={onHandlePay} className='btn btn-general btn-red' type="button">
+                                                    Confirm
+                                                </button>
+                                            </div>
+
+                                            <p className='offer-p-detail show-page-name-s offer-subheading'>
+                                                Quoted Amount: ${product.price}
+                                            </p>
+                                        </div>
+
+                                        <div style={{marginBottom: '60px'}}>
+                                            <p onClick={() => setToggle(!toggle)}  className='offer-p-detail show-page-name-s offer-subheading' style={{fontWeight: '600', color: 'green', cursor: 'pointer'}}>CLICK HERE TO PAY NOW</p>
+                                        </div>
+
+
+
+                                        {toggle && (
+
+                                            <div>
+                                                <hr/>
+                                                <div className='paypal-button-styles'>
+                                                    <PayPalScriptProvider options={{"client-id": "ATi-9LwLhRCZmHgw6GGVDosfmeqo1kHIRMSHAdDn7f_eU5FvCJakABw3eTET5FKKrZZACU_Iv1X4tI55"}}>
+                                                        <PayPalButtons
+                                                            createOrder={(data, actions) => {
+                                                                return actions.order.create({
+                                                                    purchase_units: [
+                                                                        {
+                                                                            amount: {
+                                                                                value: priceRef.current.value
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                })
+                                                            }}
+                                                            onApprove={(data, actions) =>{
+                                                                return actions.order.capture().then(function (details){
+                                                                    // alert("Transaction completed by " + details.payer.name.given_name)
+                                                                    toast.success("Transaction completed by " + details.payer.name.given_name);
+                                                                })
+                                                            }}
+                                                        />
+                                                    </PayPalScriptProvider>
+                                                </div>
+
+                                            </div>
+
+                                            )}
+
+
+
 
                                         <div className="pricing-btn offer-button-page">
                                             <a className="btn btn-general btn-white services-button-s"
