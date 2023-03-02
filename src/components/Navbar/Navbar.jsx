@@ -31,41 +31,51 @@ const Navbar = () => {
             </div>
             <ul className='app__navbar-links'>
                 <li className='app__flex p-text'>
-                    <div/>
+                    {/*<div/>*/}
                     <NavLink className={scroll ? 'navbar__links-styles navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to='/'>Home
                     </NavLink>
                 </li>
                 <li className='app__flex p-text'>
-                    <div/>
+                    {/*<div/>*/}
                     <NavLink className={scroll ? 'navbar__links-styles navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to='/what-we-offer'>What We Offer
                     </NavLink>
                 </li>
                 <li className='app__flex p-text'>
-                    <div/>
+                    {/*<div/>*/}
                     <NavLink className={scroll ? 'navbar__links-styles navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to='/influencers'>Influencers
                     </NavLink>
                 </li>
                 <li className='app__flex p-text'>
-                    <div/>
+                    {/*<div/>*/}
                     <NavLink className={scroll ? 'navbar__links-styles navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to='/kids'>ktm kids
                     </NavLink>
                 </li>
                 <li className='app__flex p-text'>
-                    <div/>
+                    {/*<div/>*/}
                     <NavLink className={scroll ? 'navbar__links-styles navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to='/services'>Services
                     </NavLink>
                 </li>
                 <li className='app__flex p-text'>
-                    <div/>
+                    {/*<div/>*/}
                     <NavLink className={scroll ? 'navbar__links-styles navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to='/about'>About Us
                     </NavLink>
                 </li>
                 <li className='app__flex p-text'>
-                    <div/>
+                    {/*<div/>*/}
                     <NavLink className={scroll ? 'navbar__links-styles navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to='/mascots'>Our Mascots
                     </NavLink>
                 </li>
 
+                <li>
+                    {/*<div/>*/}
+                    <NavLink to='/payment'>
+                    <button  className='btn pay-btn-navbar btn-pay' type="button">
+
+                            <span className='pay-quote-button-styles'>PAY NOW</span>
+
+                    </button>
+                    </NavLink>
+                </li>
 
 
                 {/*{['home','about','influencers','KTM kids','services'].map((item)=> (*/}

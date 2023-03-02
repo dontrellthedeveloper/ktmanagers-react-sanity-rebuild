@@ -170,6 +170,17 @@ section {
   transition: all .5s;
 }
 
+.pay-btn-navbar {
+  font-family: 'raleway', sans-serif;
+  border-radius: 28px;
+  font-size: 13px;
+  text-transform: uppercase;
+  margin: 0 6px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  padding: 8px 34px 8px 34px;
+}
+
 .btn-client-book {
   font-family: 'raleway', sans-serif !important;
   border-radius: 28px !important;
@@ -254,6 +265,48 @@ section {
   color: #dcdcdc;
   background-color: #a1a0a1;
   border: 1px solid #454545;
+}
+
+
+.pay-quote-button-styles {
+  font-weight: 800;
+  font-size: 15px;
+  color: #fff;
+}
+
+/*.pay-quote-button-styles:hover,*/
+/*.pay-quote-button-styles:focus {*/
+/*  color: #500000;*/
+/*}*/
+
+.btn-pay {
+  color: #dcdcdc;
+  border: 1px solid #f4f4f4;
+  background:
+
+  radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 0%),
+  radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 0%),
+
+  radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%),
+  radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%),
+
+  radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%),
+  radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%),
+
+  radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent),
+
+  linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);;
+}
+
+.btn-pay:hover,
+.btn-pay:focus {
+
+  background-color: #500000 ;
+  background: #500000;
+  transition: all .5s;
+  border: 1px solid #500000;
+  color: #500000;
+  border: 1px solid #fff;
 }
 
 .btn-instagram {
@@ -1850,7 +1903,9 @@ ul.navbar-nav > li > a:focus {
   border: 1px solid #dcdcdc;
 }
 
-
+#home-4 {
+  height: 72px !important;
+}
 
 
 

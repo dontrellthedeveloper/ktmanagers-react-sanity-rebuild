@@ -22,6 +22,7 @@ import {Helmet} from "react-helmet";
 import Mascots from "./pages/Mascots";
 import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import Payment from "./pages/Payment";
 
 
 
@@ -49,7 +50,9 @@ const App = () => {
                 href="%PUBLIC_URL%/logo152.png"
             />
         </Helmet>
-        <ToastContainer />
+        <ToastContainer
+            position="top-center"
+        />
 
         <Routes>
             <Route path='/' element={<Homepage/>} exact />
@@ -63,6 +66,7 @@ const App = () => {
             <Route path='/what-we-offer' element={<WhatWeOffer/>} />
             <Route path='/mascots' element={<Mascots/>} />
             <Route path='/mascot/:slug' element={<Mascot/>} />
+            <Route path='/payment' element={<Payment/>} />
         </Routes>
         <Footer/>
 

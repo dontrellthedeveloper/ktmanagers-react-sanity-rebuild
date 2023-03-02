@@ -288,8 +288,12 @@ function Influencers() {
                                             </p>
                                         </div>
 
-                                        <div style={{marginBottom: '60px'}}>
-                                            <p onClick={() => setToggle(!toggle)}  className='offer-p-detail show-page-name-s offer-subheading' style={{fontWeight: '600', color: 'green', cursor: 'pointer'}}>CLICK HERE TO PAY NOW</p>
+                                        <div className="pricing-btn offer-button-page" style={{marginBottom: '60px', marginTop: '20px'}}>
+                                            {/*<p onClick={() => setToggle(!toggle)}  className='offer-p-detail show-page-name-s offer-subheading ' style={{fontWeight: '600', color: 'green', cursor: 'pointer'}}>CLICK HERE TO PAY NOW</p>*/}
+
+                                            <button onClick={() => setToggle(!toggle)} className='btn btn-general btn-pay' type="button">
+                                                <span className='pay-quote-button-styles'>CLICK HERE TO PAY NOW</span>
+                                            </button>
                                         </div>
 
 
@@ -299,7 +303,7 @@ function Influencers() {
                                             <div>
                                                 <hr/>
                                                 <div className='paypal-button-styles'>
-                                                    <PayPalScriptProvider options={{"client-id": "ATi-9LwLhRCZmHgw6GGVDosfmeqo1kHIRMSHAdDn7f_eU5FvCJakABw3eTET5FKKrZZACU_Iv1X4tI55"}}>
+                                                    <PayPalScriptProvider options={{"client-id": process.env.REACT_APP_PAYPAL_LIVE}}>
                                                         <PayPalButtons
                                                             createOrder={(data, actions) => {
                                                                 return actions.order.create({
