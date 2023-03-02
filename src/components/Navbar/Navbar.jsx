@@ -130,7 +130,21 @@ const Navbar = () => {
                                 <NavLink className='app__navbar-menu-links' to='/mascots' onClick={() => setToggle(false)}>Our Mascots
                                 </NavLink>
                             </li>
+                            {/*<li>*/}
+                            {/*    <NavLink className='app__navbar-menu-links' to='/payment' onClick={() => setToggle(false)}>Pay Now*/}
+                            {/*    </NavLink>*/}
+                            {/*</li>*/}
 
+                            <li>
+                                {/*<div/>*/}
+                                <NavLink to='/payment' onClick={() => setToggle(false)}>
+                                    <button  className='btn pay-btn-navbar btn-pay' type="button">
+
+                                        <span className='pay-quote-button-styles'>PAY NOW</span>
+
+                                    </button>
+                                </NavLink>
+                            </li>
 
                             {/*<li>*/}
                             {/*    <a href={`#`} onClick={() => setToggle(false)}>About</a>*/}

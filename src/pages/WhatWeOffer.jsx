@@ -319,7 +319,7 @@ function Influencers() {
                                                             onApprove={(data, actions) =>{
                                                                 return actions.order.capture().then(function (details){
                                                                     // alert("Transaction completed by " + details.payer.name.given_name)
-                                                                    toast.success("Transaction completed by " + details.payer.name.given_name);
+                                                                    toast.success("Transaction completed by " + details.payer.name.given_name + ". You will receive an email confirmation shortly");
                                                                 })
                                                             }}
                                                         />
