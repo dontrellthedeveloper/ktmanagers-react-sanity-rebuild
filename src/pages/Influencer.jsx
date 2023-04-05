@@ -15,6 +15,9 @@ import './scss/Influencer.scss';
 import {Services} from "../container";
 
 
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
+
 import OwlCarousel from "react-owl-carousel";
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
@@ -58,6 +61,7 @@ function Influencer() {
             meetGreet,
             meetGreetEmoji,
             description,
+            bio,
             imageTitle,
             imageDescription,
             imageTitle2,
@@ -830,6 +834,11 @@ function Influencer() {
 
                                                             )}
 
+                                                            {singleInfluencer.bio && (
+                                                            <div className='template-p-detail template-p-detail-2'>
+                                                                <ReactMarkdown children={singleInfluencer.bio} remarkPlugins={[remarkGfm]} />
+                                                            </div>
+                                                            )}
                                                             <hr/>
 
                                                             {/*{singleInfluencer.meetGreet && (*/}

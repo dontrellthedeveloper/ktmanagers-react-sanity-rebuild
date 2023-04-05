@@ -23,6 +23,11 @@ export default {
             type: 'text'
         },
         {
+            type: "markdown",
+            description: "A Github flavored markdown field with image uploading",
+            name: "bio"
+        },
+        {
             name: 'imageUrl',
             title: 'ImageUrl',
             type: 'image',

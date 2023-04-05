@@ -14,7 +14,8 @@
     "@sanity/desk-tool",
     "order-documents",
     "icon-picker",
-    "emoji-picker"
+    "emoji-picker",
+    "markdown"
   ],
   "env": {
     "development": {
