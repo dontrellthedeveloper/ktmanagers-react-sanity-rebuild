@@ -162,6 +162,11 @@ export default {
             type: 'string',
         },
         {
+            name: 'imdbLink',
+            title: 'IMDB Link',
+            type: 'string',
+        },
+        {
             name: 'meetGreet',
             title: 'Meet and Greet Link',
             type: 'string'

@@ -198,7 +198,8 @@ section {
   font-size: 22px;
   text-transform: uppercase;
   margin: 0 15px;
-  padding: 6px 12px 6px 12px;
+  //padding: 6px 12px 6px 12px;
+  padding: 14px 14px 14px 14px;
   -webkit-transition: all .5s;
   transition: all .5s;
 }
@@ -210,7 +211,8 @@ section {
   text-transform: uppercase;
   margin: 0 15px;
   /*padding: 6px 16px 6px 16px;*/
-  padding: 6px 12px 6px 12px;
+  //padding: 6px 12px 6px 12px;
+  padding: 14px 14px 14px 14px;
   -webkit-transition: all .5s;
   transition: all .5s;
 }
@@ -221,7 +223,8 @@ section {
   font-size: 22px;
   text-transform: uppercase;
   margin: 0 15px;
-  padding: 6px 11px 6px 11px;
+  //padding: 6px 11px 6px 11px;
+  padding: 14px 14px 14px 14px;
   -webkit-transition: all .5s;
   transition: all .5s;
 }
@@ -232,7 +235,20 @@ section {
   font-size: 22px;
   text-transform: uppercase;
   margin: 0 15px;
-  padding: 6px 11px 6px 11px;
+  //padding: 6px 11px 6px 11px;
+  padding: 14px 14px 14px 14px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.btn-social-imdb {
+  font-family: 'raleway', sans-serif;
+  border-radius: 28px;
+  font-size: 22px;
+  text-transform: uppercase;
+  margin: 0 15px;
+  //padding: 6px 11px 6px 11px;
+  padding: 10px 10px 10px 10px;
   -webkit-transition: all .5s;
   transition: all .5s;
 }
@@ -333,8 +349,8 @@ section {
 
 .btn-instagram:hover,
 .btn-instagram:focus {
-  color: #dcdcdc;
-  background: #a1a0a1;
+  color: #6559ca;
+  background: #f4f4f4;
   border: 1px solid rgb(160,160,255);
 }
 
@@ -345,9 +361,9 @@ section {
 
 .btn-facebook:hover,
 .btn-facebook:focus {
-  color: #dcdcdc;
-  background: #a1a0a1;
-  border: 1px solid #dcdcdc;
+  color: #3b5998;
+  background: white;
+  border: 1px solid #3b5998;
 }
 
 .btn-tiktok {
@@ -358,9 +374,9 @@ section {
 
 .btn-tiktok:hover,
 .btn-tiktok:focus {
-  color: #dcdcdc;
-  background: #a1a0a1;
-  border: 1px solid #dcdcdc;
+  color: #5bdcd2;
+  background: white;
+  border: 1px solid #5bdcd2;
 }
 
 .btn-youtube {
@@ -370,9 +386,9 @@ section {
 
 .btn-youtube:hover,
 .btn-youtube:focus {
-  color: #dcdcdc;
-  background: #a1a0a1;
-  border: 1px solid #dcdcdc;
+  color: #FF0000;
+  background: white;
+  border: 1px solid #FF0000;
 }
 
 .btn-twitter {
@@ -382,9 +398,21 @@ section {
 
 .btn-twitter:hover,
 .btn-twitter:focus {
-  color: #dcdcdc;
-  background: #a1a0a1;
-  border: 1px solid #dcdcdc;
+  color: #00aced;
+  background: white;
+  border: 1px solid #00aced;
+}
+
+.btn-imdb {
+  color: black;
+  background: #F5C518;
+}
+
+.btn-imdb:hover,
+.btn-imdb:focus {
+  color: #F5C518;
+  background: black;
+  border: 1px solid #F5C518;
 }
 
 .btn-grey {
@@ -1932,7 +1960,7 @@ ul.navbar-nav > li > a:focus {
 
 .template-p-detail-2 p {
   font-size: 16px;
-  text-align: left;
+  text-align: center;
   text-indent: 20px;
   margin-bottom: 20px;
 }

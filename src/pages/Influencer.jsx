@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useLayoutEffect} from 'react';
 import {
-    FaFacebookF, FaHandPointRight,
+    FaFacebookF, FaHandPointRight, FaImdb,
     FaInstagram,
     FaTiktok,
     FaTwitter,
@@ -58,6 +58,7 @@ function Influencer() {
             twitterLink,
             youtubeLink,
             tiktokLink,
+            imdbLink,
             meetGreet,
             meetGreetEmoji,
             description,
@@ -780,49 +781,62 @@ function Influencer() {
                                                             </div>
                                                         )}
 
-                                                        <div className='show-button'>
+                                                        <div className='show-button' >
 
-                                                            {singleInfluencer.instagramLink && (
-                                                                <a href={singleInfluencer.instagramLink} target='_blank'>
-                                                                    <button className='btn btn-social-i btn-instagram'>
-                                                                        <FaInstagram/>
+                                                            <div style={{display: 'flex', justifyContent: 'center'}}>
+                                                                {singleInfluencer.imdbLink && (
+
+                                                                    <a href={singleInfluencer.imdbLink} target='_blank'>
+                                                                    <button className='btn btn-social-imdb btn-imdb' style={{display: 'flex', justifyContent: 'center'}}>
+                                                                        <FaImdb/>
                                                                     </button>
                                                                 </a>
-                                                            )}
+                                                                )}
 
-                                                            {singleInfluencer.facebookLink && (
-                                                                <a href={singleInfluencer.facebookLink} target='_blank'>
-                                                                    <button className='btn btn-social-i-f btn-facebook'>
-                                                                        <FaFacebookF/>
-                                                                    </button>
-                                                                </a>
-                                                            )}
+                                                                {singleInfluencer.instagramLink && (
+                                                                    <a href={singleInfluencer.instagramLink} target='_blank'>
+                                                                        <button className='btn btn-social-i btn-instagram' style={{display: 'flex', justifyContent: 'center'}}>
+                                                                            <FaInstagram/>
+                                                                        </button>
+                                                                    </a>
+                                                                )}
 
-                                                            {singleInfluencer.twitterLink && (
-                                                                <a href={singleInfluencer.twitterLink} target='_blank'>
-                                                                    <button className='btn btn-social-i-t btn-twitter'>
-                                                                        <FaTwitter/>
-                                                                    </button>
-                                                                </a>
-                                                            )}
+                                                                {singleInfluencer.facebookLink && (
+                                                                    <a href={singleInfluencer.facebookLink} target='_blank'>
+                                                                        <button className='btn btn-social-i-f btn-facebook' style={{display: 'flex', justifyContent: 'center'}}>
+                                                                            <FaFacebookF/>
+                                                                        </button>
+                                                                    </a>
+                                                                )}
 
-                                                            {singleInfluencer.youtubeLink && (
-                                                                <a href={singleInfluencer.youtubeLink}
-                                                                   target='_blank'>
-                                                                    <button className='btn btn-social-i-y btn-youtube'>
-                                                                        <FaYoutube/>
-                                                                    </button>
-                                                                </a>
-                                                            )}
+                                                                {singleInfluencer.twitterLink && (
+                                                                    <a href={singleInfluencer.twitterLink} target='_blank'>
+                                                                        <button className='btn btn-social-i-t btn-twitter' style={{display: 'flex', justifyContent: 'center'}}>
+                                                                            <FaTwitter/>
+                                                                        </button>
+                                                                    </a>
+                                                                )}
 
-                                                            {singleInfluencer.tiktokLink && (
-                                                                <a href={singleInfluencer.tiktokLink}
-                                                                   target='_blank'>
-                                                                    <button className='btn btn-social-i btn-tiktok'>
-                                                                        <FaTiktok/>
-                                                                    </button>
-                                                                </a>
-                                                            )}
+                                                                {singleInfluencer.youtubeLink && (
+                                                                    <a href={singleInfluencer.youtubeLink}
+                                                                       target='_blank'>
+                                                                        <button className='btn btn-social-i-y btn-youtube' style={{display: 'flex', justifyContent: 'center'}}>
+                                                                            <FaYoutube/>
+                                                                        </button>
+                                                                    </a>
+                                                                )}
+
+                                                                {singleInfluencer.tiktokLink && (
+                                                                    <a href={singleInfluencer.tiktokLink}
+                                                                       target='_blank'>
+                                                                        <button className='btn btn-social-i btn-tiktok' style={{display: 'flex', justifyContent: 'center'}}>
+                                                                            <FaTiktok/>
+                                                                        </button>
+                                                                    </a>
+                                                                )}
+                                                            </div>
+
+
 
                                                             <hr />
 

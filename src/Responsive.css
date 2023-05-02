@@ -687,6 +687,30 @@
     }
 }
 
+@media(min-width: 768px) {
+    .btn-social-imdb svg {
+        font-size: 33px;
+    }
+
+    .btn-social-i svg {
+        font-size: 26px;
+    }
+
+    .btn-social-i-f svg {
+        font-size: 26px;
+    }
+
+    .btn-social-i-t svg {
+        font-size: 26px;
+    }
+
+    .btn-social-i-y svg {
+        font-size: 26px;
+    }
+
+}
+
+
 /* Extra Small Devices (Desktop & Laptops) */
 @media(max-width: 767px) {
 
@@ -734,30 +758,41 @@
 
     .btn-social-i {
         /*padding: 9px 12px 9px 12px;*/
-        padding: 7px 11px 7px 11px;
+        /*padding: 7px 11px 7px 11px;*/
         font-size: 15px;
         margin: 10px;
+        padding: 10px;
     }
 
 
     .btn-social-i-f {
-        padding: 7px 11px 7px 11px;
+        /*padding: 7px 11px 7px 11px;*/
         font-size: 15px;
         margin: 10px;
+        padding: 10px;
     }
 
     .btn-social-i-t {
         /*padding: 9px 12px 9px 12px;*/
-        padding: 7px 10px 7px 10px;
+        /*padding: 7px 10px 7px 10px;*/
         font-size: 15px;
         margin: 10px;
+        padding: 10px;
     }
 
     .btn-social-i-y {
         /*padding: 9px 12px 9px 12px;*/
-        padding: 7px 10px 7px 10px;
+        /*padding: 7px 10px 7px 10px;*/
         font-size: 15px;
         margin: 10px;
+        padding: 10px;
+    }
+
+    .btn-social-imdb {
+        /*padding: 7px 10px 7px 10px;*/
+        font-size: 25px;
+        margin: 10px;
+        padding: 5px;
     }
 
     .btn-social-i-tg {
@@ -1221,6 +1256,8 @@
 
 
 }
+
+
 
 @media(max-width: 767px) {
 
