@@ -9,6 +9,42 @@ import './scss/offer.scss'
 import {Helmet} from "react-helmet";
 import {PayPalScriptProvider, PayPalButtons} from "@paypal/react-paypal-js";
 import { toast } from "react-toastify";
+import { IoClose } from "react-icons/io5";
+
+import 'react-calendar/dist/Calendar.css';
+
+
+
+
+// import { useState } from 'react';
+import Calendar from 'react-calendar';
+import Modal from 'react-modal';
+import ModalComp from '../components/Modal/Modal';
+import ModalComp2 from '../components/Modal/Modal2';
+
+
+const customStyles = {
+    content: {
+      top: '50%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      marginRight: '-50%',
+      transform: 'translate(-50%, -50%)',
+      padding: 0, 
+      border: 'none',
+      maxWidth: '1000px',
+      overflow: 'scroll',
+    },
+    overlay: {
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        backgroundColor: 'rgba(0, 0, 0, 0.75)'
+      },
+  };
 
 
 function Influencers() {
@@ -19,6 +55,32 @@ function Influencers() {
     const [toggle, setToggle] = useState(false)
     const [scroll, setScroll] = useState(false);
     const [price, setPrice] = useState(0);
+
+    const [date, setDate] = useState(new Date());
+
+    let subtitle;
+    const [modalIsOpen, setIsOpen] = React.useState(false);
+
+    function openModal() {
+        setIsOpen(true);
+    }
+
+    function openModal2() {
+        setIsOpen(true);
+    }
+
+    function afterOpenModal() {
+        // references are now sync'd and can be accessed.
+        subtitle.style.color = '#000';
+    }
+
+    function closeModal() {
+        setIsOpen(false);
+    }
+
+    function closeModal2() {
+        setIsOpen(false);
+    }
 
     const priceRef = useRef(null);
 
@@ -31,6 +93,9 @@ function Influencers() {
         setPrice(priceRef.current.value);
     };
 
+    const onChange = date => {
+        setDate(date)
+    }
 
 
     useEffect(() => {
@@ -52,14 +117,58 @@ function Influencers() {
             title,
             subTitle,
             offerDescription1,
+            bookingLink,
+            bookingLinkTitle,
+            title2,
+            subTitle2,
             offerDescription2,
+            moreInfoTitle1,
+            moreInfoDescription1,
+            moreInfoLink1,
+            moreInfoTitle2,
+            moreInfoDescription2,
+            moreInfoLink2,
+            moreInfoTitle3,
+            moreInfoDescription3,
+            moreInfoLink3,
+            moreInfoTitle4,
+            moreInfoDescription4,
+            moreInfoLink4,
+            title3,
+            subTitle3,
             offerDescription3,
+            moreInfo2Title1,
+            moreInfo2Description1,
+            moreInfo2Link1,
+            moreInfo2Title2,
+            moreInfo2Description2,
+            moreInfo2Link2,
+            moreInfo2Title3,
+            moreInfo2Description3,
+            moreInfo2Link3,
+            moreInfo2Title4,
+            moreInfo2Description4,
+            moreInfo2Link4,
+            title4,
+            subTitle4,
             offerDescription4,
+            title5,
+            subTitle5,
             offerDescription5,
+            title6,
+            subTitle6,
             offerDescription6,
+            title7,
+            subTitle7,
             offerDescription7,
+            title8,
+            subTitle8,
             offerDescription8,
+            title9,
+            subTitle9,
             offerDescription9,
+            title10,
+            subTitle10,
             offerDescription10,
         }`).then((data) => setSingleOffer(data[0]))
             .catch(console.error);
@@ -121,7 +230,7 @@ function Influencers() {
 
         <>
             <Helmet>
-                <title>What We Offer</title>
+                <title>Services</title>
                 <meta
                     name='description'
                     content={singleOffer.offerDescription1}
@@ -143,7 +252,7 @@ function Influencers() {
                 <div className="">
                     <div className="home-headings tools-p-align">
                         <div className="horizontal-heading influencer-name">
-                            <h1 className="home-headings-2 influencer-name-h1"><span className='influencer-name-span'> What We Offer</span></h1>
+                            <h1 className="home-headings-2 influencer-name-h1"><span className='influencer-name-span'> Services</span></h1>
                         </div>
                     </div>
                 </div>
@@ -161,29 +270,65 @@ function Influencers() {
 
                                 <div className="desc map-color-8 container-paragraph offering-info">
                                     <div className="map-paragraph">
+                                        {singleOffer.title && (
                                         <h3 className="i-map-paragraph"><b className='show-page-name-s'>{singleOffer.title}</b></h3>
-
+                                        )}
 
                                         {singleOffer.subTitle && (
                                             <h4 className='i-map-paragraph show-page-name-s offer-subheading'>{singleOffer.subTitle}</h4>
                                         )}
+
+
 
                                         {singleOffer.offerDescription1 && (
                                             <div className='show-button'>
                                                 <div className='offer-p-detail'>
                                                     {singleOffer.offerDescription1}
                                                 </div>
+                                                {singleOffer.bookingLink && (
+                                                <div className='template-p-detail'>
+                                                    <a
+                                                    href={singleOffer.bookingLink}
+                                                    target='_blank'
+                                                    style={{cursor: 'pointer'}}
+                                                    className='email__design-s'>[BOOK NOW]</a>
+                                                </div>
+                                                )}
+
                                                 <hr/>
                                             </div>
                                         )}
 
+                                        {singleOffer.title2 && (
+                                        <h3 className="i-map-paragraph"><b className='show-page-name-s'>{singleOffer.title2}</b></h3>
+                                        )}
+
+                                        {singleOffer.subTitle2 && (
+                                            <h4 className='i-map-paragraph show-page-name-s offer-subheading'>{singleOffer.subTitle2}</h4>
+                                        )}
                                         {singleOffer.offerDescription2 && (
                                             <div className='show-button'>
                                                 <div className='offer-p-detail'>
                                                     {singleOffer.offerDescription2}
                                                 </div>
+
+
+                                                <ModalComp/>
+                                                <div>
+                                                {/* <button >Open Modal</button> */}
+
+                                                </div>
                                                 <hr/>
                                             </div>
+                                        )}
+
+
+                                        {singleOffer.title3 && (
+                                        <h3 className="i-map-paragraph"><b className='show-page-name-s'>{singleOffer.title3}</b></h3>
+                                        )}
+
+                                        {singleOffer.subTitle3 && (
+                                            <h4 className='i-map-paragraph show-page-name-s offer-subheading'>{singleOffer.subTitle3}</h4>
                                         )}
 
                                         {singleOffer.offerDescription3 && (
@@ -191,9 +336,21 @@ function Influencers() {
                                                 <div className='offer-p-detail'>
                                                     {singleOffer.offerDescription3}
                                                 </div>
+
+                                                <ModalComp2/>
+
                                                 <hr/>
                                             </div>
                                         )}
+
+                                        {singleOffer.title4 && (
+                                        <h3 className="i-map-paragraph"><b className='show-page-name-s'>{singleOffer.title4}</b></h3>
+                                        )}
+
+                                        {singleOffer.subTitle4 && (
+                                            <h4 className='i-map-paragraph show-page-name-s offer-subheading'>{singleOffer.subTitle4}</h4>
+                                        )}
+
 
                                         {singleOffer.offerDescription4 && (
                                             <div className='show-button'>
@@ -202,6 +359,14 @@ function Influencers() {
                                                 </div>
                                                 <hr/>
                                             </div>
+                                        )}
+
+                                        {singleOffer.title5 && (
+                                        <h3 className="i-map-paragraph"><b className='show-page-name-s'>{singleOffer.title5}</b></h3>
+                                        )}
+
+                                        {singleOffer.subTitle5 && (
+                                            <h4 className='i-map-paragraph show-page-name-s offer-subheading'>{singleOffer.subTitle5}</h4>
                                         )}
 
                                         {singleOffer.offerDescription5 && (
@@ -213,6 +378,15 @@ function Influencers() {
                                             </div>
                                         )}
 
+                                        {singleOffer.title6 && (
+                                        <h3 className="i-map-paragraph"><b className='show-page-name-s'>{singleOffer.title6}</b></h3>
+                                        )}
+
+                                        {singleOffer.subTitle6 && (
+                                            <h4 className='i-map-paragraph show-page-name-s offer-subheading'>{singleOffer.subTitle6}</h4>
+                                        )}
+
+
                                         {singleOffer.offerDescription6 && (
                                             <div className='show-button'>
                                                 <div className='offer-p-detail'>
@@ -220,6 +394,15 @@ function Influencers() {
                                                 </div>
                                                 <hr/>
                                             </div>
+                                        )}
+
+
+                                        {singleOffer.title7 && (
+                                        <h3 className="i-map-paragraph"><b className='show-page-name-s'>{singleOffer.title7}</b></h3>
+                                        )}
+
+                                        {singleOffer.subTitle7 && (
+                                            <h4 className='i-map-paragraph show-page-name-s offer-subheading'>{singleOffer.subTitle7}</h4>
                                         )}
 
                                         {singleOffer.offerDescription7 && (
@@ -231,6 +414,15 @@ function Influencers() {
                                             </div>
                                         )}
 
+                                        {singleOffer.title8 && (
+                                        <h3 className="i-map-paragraph"><b className='show-page-name-s'>{singleOffer.title8}</b></h3>
+                                        )}
+
+                                        {singleOffer.subTitle8 && (
+                                            <h4 className='i-map-paragraph show-page-name-s offer-subheading'>{singleOffer.subTitle8}</h4>
+                                        )}
+
+
                                         {singleOffer.offerDescription8 && (
                                             <div className='show-button'>
                                                 <div className='offer-p-detail'>
@@ -240,14 +432,16 @@ function Influencers() {
                                             </div>
                                         )}
 
-                                        {singleOffer.offerDescription3 && (
-                                            <div className='show-button'>
-                                                <div className='offer-p-detail'>
-                                                    {singleOffer.offerDescription3}
-                                                </div>
-                                                <hr/>
-                                            </div>
+
+                                        {singleOffer.title9 && (
+                                        <h3 className="i-map-paragraph"><b className='show-page-name-s'>{singleOffer.title9}</b></h3>
                                         )}
+
+                                        {singleOffer.subTitle9 && (
+                                            <h4 className='i-map-paragraph show-page-name-s offer-subheading'>{singleOffer.subTitle9}</h4>
+                                        )}
+
+
 
                                         {singleOffer.offerDescription9 && (
                                             <div className='show-button'>
@@ -257,6 +451,16 @@ function Influencers() {
                                                 <hr/>
                                             </div>
                                         )}
+
+
+                                        {singleOffer.title10 && (
+                                        <h3 className="i-map-paragraph"><b className='show-page-name-s'>{singleOffer.title10}</b></h3>
+                                        )}
+
+                                        {singleOffer.subTitle10 && (
+                                            <h4 className='i-map-paragraph show-page-name-s offer-subheading'>{singleOffer.subTitle10}</h4>
+                                        )}
+
 
                                         {singleOffer.offerDescription10 && (
                                             <div className='show-button'>
@@ -268,78 +472,7 @@ function Influencers() {
                                         )}
 
 
-                                        <div>
-                                            <p className='offer-p-detail show-page-name-s offer-subheading' style={{fontWeight: '600'}}>
-                                                HAVE YOU BEEN QUOTED AND READY TO PAY?
-                                            </p>
-                                        </div>
-
-                                        <div>
-
-                                            <div style={{textAlign: 'center', margin: '30px auto'}}>
-                                                <input placeholder='Enter Quoted Amount...' type="text"  ref={priceRef} />
-                                                <button onClick={onHandlePay} className='btn btn-general btn-red' type="button">
-                                                    Confirm
-                                                </button>
-                                            </div>
-
-                                            <p className='offer-p-detail show-page-name-s offer-subheading'>
-                                                Quoted Amount: ${product.price}
-                                            </p>
-                                        </div>
-
-                                        <div className="pricing-btn offer-button-page" style={{marginBottom: '60px', marginTop: '20px'}}>
-                                            {/*<p onClick={() => setToggle(!toggle)}  className='offer-p-detail show-page-name-s offer-subheading ' style={{fontWeight: '600', color: 'green', cursor: 'pointer'}}>CLICK HERE TO PAY NOW</p>*/}
-
-                                            <button onClick={() => setToggle(!toggle)} className='btn btn-general btn-pay' type="button">
-                                                <span className='pay-quote-button-styles'>CLICK HERE TO PAY NOW</span>
-                                            </button>
-                                        </div>
-
-
-
-                                        {toggle && (
-
-                                            <div>
-                                                <hr/>
-                                                <div className='paypal-button-styles'>
-                                                    <PayPalScriptProvider options={{"client-id": process.env.REACT_APP_PAYPAL_LIVE}}>
-                                                        <PayPalButtons
-                                                            createOrder={(data, actions) => {
-                                                                return actions.order.create({
-                                                                    purchase_units: [
-                                                                        {
-                                                                            amount: {
-                                                                                value: priceRef.current.value
-                                                                            }
-                                                                        }
-                                                                    ]
-                                                                })
-                                                            }}
-                                                            onApprove={(data, actions) =>{
-                                                                return actions.order.capture().then(function (details){
-                                                                    // alert("Transaction completed by " + details.payer.name.given_name)
-                                                                    toast.success("Transaction completed by " + details.payer.name.given_name + ". You will receive an email confirmation shortly");
-                                                                })
-                                                            }}
-                                                        />
-                                                    </PayPalScriptProvider>
-                                                </div>
-
-                                            </div>
-
-                                            )}
-
-
-
-
-                                        <div className="pricing-btn offer-button-page">
-                                            <a className="btn btn-general btn-white services-button-s"
-                                               href='#contact'
-                                               title="Get Started" role="button">Get
-                                                Started</a>
-                                        </div>
-                                        {/*<hr/>*/}
+                       
                                         <hr className='show-break-style'/>
                                         <div className='template-p-detail'>
 
@@ -525,7 +658,11 @@ function Influencers() {
 
 
 
-
+            <Helmet>
+                <script>
+                    
+                </script>
+            </Helmet>
 
 
         </>

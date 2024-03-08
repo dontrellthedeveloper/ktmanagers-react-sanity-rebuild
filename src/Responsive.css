@@ -688,6 +688,9 @@
 }
 
 @media(min-width: 768px) {
+
+
+
     .btn-social-imdb svg {
         font-size: 33px;
     }
@@ -714,7 +717,10 @@
 /* Extra Small Devices (Desktop & Laptops) */
 @media(max-width: 767px) {
 
-
+    .template-p-detail-2 p {
+        text-align: center;
+        text-indent: 0;
+    }
 
     /* Navigation */
     .navbar {

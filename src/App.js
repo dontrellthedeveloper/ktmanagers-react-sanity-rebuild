@@ -61,9 +61,9 @@ const App = () => {
             <Route path='/:slug' element={<Influencer/>} />
             <Route path='/kids' element={<Kids/>} />
             <Route path='/kid/:slug' element={<Kid/>} />
-            <Route path='/services' element={<Services/>} />
+            {/* <Route path='/services' element={<Services/>} /> */}
             <Route path='/service/:slug' element={<Service/>} />
-            <Route path='/what-we-offer' element={<WhatWeOffer/>} />
+            <Route path='/services' element={<WhatWeOffer/>} />
             <Route path='/mascots' element={<Mascots/>} />
             <Route path='/mascot/:slug' element={<Mascot/>} />
             <Route path='/payment' element={<Payment/>} />

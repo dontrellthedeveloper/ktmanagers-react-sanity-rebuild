@@ -22,7 +22,9 @@
   display: none;
 }
 
-
+.owl-carousel {
+  z-index: 0 !important;
+}
 
 #home {
   background: none;
