@@ -86,7 +86,7 @@ function Payment() {
 
                                 <div className="desc map-color-8 container-paragraph offering-info">
                                     <div className="map-paragraph">
-                                        <h3 className="i-map-paragraph"><b className='show-page-name-s'>Payment Form</b></h3>
+                                        <h3 className="i-map-paragraph"><b className='show-page-name-s'>One-Time Payment</b></h3>
 
                                         {/*    <h4 className='i-map-paragraph show-page-name-s offer-subheading'>Submit your Quited Amount Below</h4>*/}
 
@@ -110,7 +110,9 @@ function Payment() {
                                             </p>
                                         </div>
 
-                                        <div>
+
+
+                                        {/* <div>
 
                                             <div style={{textAlign: 'center', margin: '30px auto'}}>
                                                 <input placeholder='Enter Quoted Amount...' type="text"  ref={priceRef} />
@@ -122,14 +124,18 @@ function Payment() {
                                             <p className='offer-p-detail show-page-name-s offer-subheading'>
                                                 Quoted Amount: ${product.price}
                                             </p>
-                                        </div>
+                                        </div> */}
 
                                         <div className="pricing-btn offer-button-page" style={{marginBottom: '60px', marginTop: '20px'}}>
                                             {/*<p onClick={() => setToggle(!toggle)}  className='offer-p-detail show-page-name-s offer-subheading ' style={{fontWeight: '600', color: 'green', cursor: 'pointer'}}>CLICK HERE TO PAY NOW</p>*/}
 
-                                            <button onClick={() => setToggle(!toggle)} className='btn btn-general btn-pay' type="button">
+                                            <a
+                                            //  onClick={() => setToggle(!toggle)} 
+                                            target='_blank'
+                                            href='https://square.link/u/HVLUGZp2'
+                                             className='btn btn-general btn-pay' type="button">
                                                 <span className='pay-quote-button-styles'>CLICK HERE TO PAY NOW</span>
-                                            </button>
+                                            </a>
                                         </div>
 
 
@@ -169,12 +175,12 @@ function Payment() {
 
 
 
-                                        <div className="pricing-btn offer-button-page">
+                                        {/* <div className="pricing-btn offer-button-page">
                                             <a className="btn btn-general btn-white services-button-s"
                                                href='#contact'
                                                title="Get Started" role="button">Get
                                                 Started</a>
-                                        </div>
+                                        </div> */}
                                         {/*<hr/>*/}
                                         <hr className='show-break-style'/>
                                         <div className='template-p-detail'>

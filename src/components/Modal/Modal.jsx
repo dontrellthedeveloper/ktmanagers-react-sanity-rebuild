@@ -6,6 +6,9 @@ import Modal from 'react-modal';
 import { IoClose } from "react-icons/io5";
 
 
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+
 const customStyles = {
   content: {
     top: '50%',
@@ -62,7 +65,17 @@ function ModalComp2() {
         slug,
         title,
         subTitle,
+        subTitleB,
         offerDescription1,
+        consultationDescription,
+        multiInfluencerDescription,
+        moreInfoDescriptionBox1,
+        moreInfoDescriptionBox2,
+        moreInfoDescriptionBox3,
+        prMarketingDescription,
+        moreInfo2DescriptionBox1,
+        moreInfo2DescriptionBox2,
+        moreInfo2DescriptionBox3,
         bookingLink,
         bookingLinkTitle,
         title2,
@@ -130,167 +143,165 @@ function ModalComp2() {
 
   return (
     <>
-    <div className='template-p-detail'>
-                                                    <a
-                                                    style={{cursor: 'pointer'}}
-                                                    onClick={openModal}
-                                                    className='email__design-s'>[LEARN MORE]</a>
-                                                </div>
-                                                <Modal
-                                                    isOpen={modalIsOpen}
-                                                    onAfterOpen={afterOpenModal}
-                                                    onRequestClose={closeModal}
-                                                    
-                                                    style={customStyles}
-                                                    contentLabel="Example Modal"
-                                                >
+      <div className='template-p-detail'>
+
+      <a  
+      className='btn pay-btn-navbar btn-moreInfo'
+      onClick={openModal}
+      type="button">
+
+      <span className='pay-quote-button-styles'>LEARN MORE</span>
+
+      </a>
+      </div>
+
+      <Modal
+          isOpen={modalIsOpen}
+          onAfterOpen={afterOpenModal}
+          onRequestClose={closeModal}
+          
+          style={customStyles}
+          contentLabel="Example Modal"
+      >
+          <div className="map-color-6" style={{backgroundColor: 'transparent', paddingBottom: '0'}}>
+              <div className="container">
+                  <div className="row" style={{paddingLeft: '0', paddingRight: '0'}}>
+                      <div id="content" style={{paddingLeft: '0', paddingRight: '0'}}>
+
+                          <section id="map-section" className="inner over client-section-b">
+                              <div className="row-show port-popup show-page-image-s">
+                              </div>
+
+                              <div className="desc map-color-8 container-paragraph offering-info"
+                              style={{width: '100%', marginTop: '0', marginBottom: '0', border: 'none'}}
+                              >
+                                  <div className="map-paragraph">
+                                      
+                                  <button onClick={closeModal}><IoClose /></button>
+                                  {singleOffer.subTitle2 && (
+                                      <h3 className="i-map-paragraph"><b className='show-page-name-s'>
+                                      {singleOffer.subTitle2}
+                                      </b></h3>
+                                      )}
+
+                                      <hr/>
+
+                                      {singleOffer.moreInfoTitle1 && (
+                                          <h4 className='i-map-paragraph show-page-name-s offer-subheading'>
+                                          {singleOffer.moreInfoTitle1}
+
+                                          </h4>
+                                      )}
 
 
 
-                                                
-                                                    
+                                      {singleOffer.moreInfoDescriptionBox1 && (
+                                          <div className='show-button'>
+                                              <div className='offer-p-detail'>
+                          
+                                                  <ReactMarkdown children={singleOffer.moreInfoDescriptionBox1} remarkPlugins={[remarkGfm]} />
+                                              </div>
+                                              
+                                              <div className='template-p-detail'>
+                                              {singleOffer.moreInfoLink1 && (
+                                                  <a
+                                                  href={singleOffer.moreInfoLink1}
+                                                  target='_blank'
+                                                  style={{cursor: 'pointer'}}
+                                                  className='email__design-s'>[OPTIONAL LINK]</a>
+                                                  )}
+                                              </div>
+                                              
 
+                                              <hr/>
+                                          </div>
+                                      )}
 
-                                                    <div className="map-color-6" style={{backgroundColor: 'transparent', paddingBottom: '0'}}>
-                                                        <div className="container">
-                                                            <div className="row" style={{paddingLeft: '0', paddingRight: '0'}}>
-                                                                <div id="content" style={{paddingLeft: '0', paddingRight: '0'}}>
-
-                                                                    <section id="map-section" className="inner over client-section-b">
-                                                                        <div className="row-show port-popup show-page-image-s">
-                                                                        </div>
-
-                                                                        <div className="desc map-color-8 container-paragraph offering-info"
-                                                                        style={{width: '100%', marginTop: '0', marginBottom: '0', border: 'none'}}
-                                                                        >
-                                                                            <div className="map-paragraph">
-                                                                                
-                                                                            <button onClick={closeModal}><IoClose /></button>
-                                                                            {singleOffer.subTitle2 && (
-                                                                                <h3 className="i-map-paragraph"><b className='show-page-name-s'>
-                                                                                {singleOffer.subTitle2}
-                                                                                </b></h3>
-                                                                                )}
-
-                                                                                <hr/>
-
-                                                                                {singleOffer.moreInfoTitle1 && (
-                                                                                    <h4 className='i-map-paragraph show-page-name-s offer-subheading'>
-                                                                                    {singleOffer.moreInfoTitle1}
-                                            
-                                                                                    </h4>
-                                                                                )}
+                                      {singleOffer.moreInfoTitle2 && (
+                                          <h4 className='i-map-paragraph show-page-name-s offer-subheading'>
+                                  
+                                          {singleOffer.moreInfoTitle2}
+                                          </h4>
+                                      )}
 
 
 
-                                                                                {singleOffer.moreInfoDescription1 && (
-                                                                                    <div className='show-button'>
-                                                                                        <div className='offer-p-detail'>
-                                                                                            {singleOffer.moreInfoDescription1}
-                                                                                   
-                                                                                        </div>
-                                                                                        
-                                                                                        <div className='template-p-detail'>
-                                                                                        {singleOffer.moreInfoLink1 && (
-                                                                                            <a
-                                                                                            href={singleOffer.moreInfoLink1}
-                                                                                            target='_blank'
-                                                                                            style={{cursor: 'pointer'}}
-                                                                                            className='email__design-s'>[OPTIONAL LINK]</a>
-                                                                                            )}
-                                                                                        </div>
-                                                                                        
+                                      {singleOffer.moreInfoDescriptionBox2 && (
+                                          <div className='show-button'>
+                                              <div className='offer-p-detail'>
+                                          
+                                                  <ReactMarkdown children={singleOffer.moreInfoDescriptionBox2} remarkPlugins={[remarkGfm]} />
+                                              </div>
+                                              
+                                              <div className='template-p-detail'>
+                                              {singleOffer.moreInfoLink2 && (
+                                                  <a
+                                                  href={singleOffer.moreInfoLink2}
+                                                  target='_blank'
+                                                  style={{cursor: 'pointer'}}
+                                                  className='email__design-s'>[OPTIONAL LINK]</a>
+                                                  )}
+                                              </div>
+                                              
 
-                                                                                        <hr/>
-                                                                                    </div>
-                                                                                )}
-
-                                                                                {singleOffer.moreInfoTitle2 && (
-                                                                                    <h4 className='i-map-paragraph show-page-name-s offer-subheading'>
-                                                                            
-                                                                                    {singleOffer.moreInfoTitle2}
-                                                                                    </h4>
-                                                                                )}
-
-
-
-                                                                                {singleOffer.moreInfoDescription2 && (
-                                                                                    <div className='show-button'>
-                                                                                        <div className='offer-p-detail'>
-                                                                                    
-
-                                                                                            {singleOffer.moreInfoDescription2}
-                                                                                        </div>
-                                                                                        
-                                                                                        <div className='template-p-detail'>
-                                                                                        {singleOffer.moreInfoLink2 && (
-                                                                                            <a
-                                                                                            href={singleOffer.moreInfoLink2}
-                                                                                            target='_blank'
-                                                                                            style={{cursor: 'pointer'}}
-                                                                                            className='email__design-s'>[OPTIONAL LINK]</a>
-                                                                                            )}
-                                                                                        </div>
-                                                                                        
-
-                                                                                        <hr/>
-                                                                                    </div>
-                                                                                )}
-                                                            
-                                                                                {singleOffer.moreInfoTitle3 && (
-                                                                                    <h4 className='i-map-paragraph show-page-name-s offer-subheading'>      
-                                                                                    {singleOffer.moreInfoTitle3}
-                                                                                    </h4>
-                                                                                )}
+                                              <hr/>
+                                          </div>
+                                      )}
+                  
+                                      {singleOffer.moreInfoTitle3 && (
+                                          <h4 className='i-map-paragraph show-page-name-s offer-subheading'>      
+                                          {singleOffer.moreInfoTitle3}
+                                          </h4>
+                                      )}
 
 
 
-                                                                                {singleOffer.moreInfoDescription3 && (
-                                                                                    <div className='show-button'>
-                                                                                        <div className='offer-p-detail'>
-                                                                                        
+                                      {singleOffer.moreInfoDescriptionBox3 && (
+                                          <div className='show-button'>
+                                              <div className='offer-p-detail'>
+                                              
+                                              <ReactMarkdown children={singleOffer.moreInfoDescriptionBox3} remarkPlugins={[remarkGfm]} />
+                                        
+                                              </div>
+                                              
+                                              <div className='template-p-detail'>
+                                              {singleOffer.moreInfoLink3 && (
+                                                  <a
+                                                  href={singleOffer.moreInfoLink3}
+                                                  target='_blank'
+                                                  style={{cursor: 'pointer'}}
+                                                  className='email__design-s'>[OPTIONAL LINK]</a>
+                                                  )}
+                                              </div>
+                                              
 
-                                                                                        {singleOffer.moreInfoDescription3}
-                                                                                        </div>
-                                                                                        
-                                                                                        <div className='template-p-detail'>
-                                                                                        {singleOffer.moreInfoLink3 && (
-                                                                                            <a
-                                                                                            href={singleOffer.moreInfoLink3}
-                                                                                            target='_blank'
-                                                                                            style={{cursor: 'pointer'}}
-                                                                                            className='email__design-s'>[OPTIONAL LINK]</a>
-                                                                                            )}
-                                                                                        </div>
-                                                                                        
+                                              {/* <hr/> */}
+                                          </div>
+                                      )}
+                  
 
-                                                                                        {/* <hr/> */}
-                                                                                    </div>
-                                                                                )}
-                                                            
+                  
+                  
+                                      {/* <hr className='show-break-style'/>
+                                      <div className='template-p-detail'>
 
-                                                            
-                                                            
-                                                                                {/* <hr className='show-break-style'/>
-                                                                                <div className='template-p-detail'>
-
-                                                                                    More information?
-                                                                                    Please contact <a
-                                                                                    className='email__design-s'
-                                                                                    href='mailto:shawn@ktmanagers.com'
-                                                                                    target='_blank'>shawn@ktmanagers.com</a>
-                                                                                </div> */}
-                                                                            </div>
-                                                                        </div>
-                                                                        {/* Services Component */}
-                                                                    </section>
-                                                                    
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </Modal>
-     </>
+                                          More information?
+                                          Please contact <a
+                                          className='email__design-s'
+                                          href='mailto:shawn@ktmanagers.com'
+                                          target='_blank'>shawn@ktmanagers.com</a>
+                                      </div> */}
+                                  </div>
+                              </div>
+                              {/* Services Component */}
+                          </section>
+                          
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </Modal>
+    </>
   );
 }
 

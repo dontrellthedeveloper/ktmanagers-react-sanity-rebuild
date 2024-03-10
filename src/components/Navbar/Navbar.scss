@@ -135,6 +135,10 @@
     display: none;
   }
 
+  @media screen and (max-width: 1220px) {
+    display: none;
+  }
+
   @media screen and (max-width: 1260px) {
     margin-right: 0;
   }
@@ -308,16 +312,16 @@
         }
       }
 
-      @media screen and (min-width: 900px) {
+      @media screen and (min-width: 1221px) {
         display: none;
       }
     }
 
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: 1221px) {
       display: none;
     }
   }
-  @media screen and (min-width: 900px) {
+  @media screen and (min-width: 1221px) {
     display: none;
   }
 }

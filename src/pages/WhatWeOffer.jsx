@@ -13,7 +13,8 @@ import { IoClose } from "react-icons/io5";
 
 import 'react-calendar/dist/Calendar.css';
 
-
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 
 // import { useState } from 'react';
@@ -116,7 +117,23 @@ function Influencers() {
             slug,
             title,
             subTitle,
+            subTitleB,
+            subTitleBB,
+            subTitle2B,
+            subTitleB2,
+            consultationDescriptionB,
+            bookingLinkB,
+            bookingLinkTitleB,
             offerDescription1,
+            consultationDescription,
+            multiInfluencerDescription,
+            moreInfoDescriptionBox1,
+            moreInfoDescriptionBox2,
+            moreInfoDescriptionBox3,
+            prMarketingDescription,
+            moreInfo2DescriptionBox1,
+            moreInfo2DescriptionBox2,
+            moreInfo2DescriptionBox3,
             bookingLink,
             bookingLinkTitle,
             title2,
@@ -274,30 +291,80 @@ function Influencers() {
                                         <h3 className="i-map-paragraph"><b className='show-page-name-s'>{singleOffer.title}</b></h3>
                                         )}
 
+                                        <hr/>
+
                                         {singleOffer.subTitle && (
                                             <h4 className='i-map-paragraph show-page-name-s offer-subheading'>{singleOffer.subTitle}</h4>
                                         )}
 
+                                     
+
+                                        {singleOffer.subTitleB && (
+                                            <h4 style={{marginTop: '8px'}} className='i-map-paragraph show-page-name-s offer-subheading'>{singleOffer.subTitleB}</h4>
+                                        )}
 
 
-                                        {singleOffer.offerDescription1 && (
+
+                                        {singleOffer.consultationDescription && (
                                             <div className='show-button'>
                                                 <div className='offer-p-detail'>
-                                                    {singleOffer.offerDescription1}
+                                                    {/* {singleOffer.consultationDescription} */}
+                                                    <ReactMarkdown children={singleOffer.consultationDescription} remarkPlugins={[remarkGfm]} />
+
                                                 </div>
                                                 {singleOffer.bookingLink && (
                                                 <div className='template-p-detail'>
-                                                    <a
-                                                    href={singleOffer.bookingLink}
-                                                    target='_blank'
-                                                    style={{cursor: 'pointer'}}
-                                                    className='email__design-s'>[BOOK NOW]</a>
+                                                <a  className='btn pay-btn-navbar btn-pay'
+                                                href={singleOffer.bookingLink} type="button">
+
+                                                <span className='pay-quote-button-styles'>{singleOffer.bookingLinkTitle}</span>
+
+                                                </a>
                                                 </div>
+
+                                                
                                                 )}
 
                                                 <hr/>
                                             </div>
                                         )}
+
+
+                                        {singleOffer.subTitleBB && (
+                                            <h4 className='i-map-paragraph show-page-name-s offer-subheading'>{singleOffer.subTitleBB}</h4>
+                                        )}
+
+
+                                        {singleOffer.subTitle2B && (
+                                            <h4 style={{marginTop: '8px'}} className='i-map-paragraph show-page-name-s offer-subheading'>{singleOffer.subTitle2B}</h4>
+                                        )}
+
+
+
+                                        {singleOffer.consultationDescriptionB && (
+                                            <div className='show-button'>
+                                                <div className='offer-p-detail'>
+                                                    {/* {singleOffer.consultationDescription} */}
+                                                    <ReactMarkdown children={singleOffer.consultationDescriptionB} remarkPlugins={[remarkGfm]} />
+
+                                                </div>
+                                                {singleOffer.bookingLinkB && (
+                                                <div className='template-p-detail'>
+                                                <a  className='btn pay-btn-navbar btn-pay'
+                                                href={singleOffer.bookingLinkB} type="button">
+
+                                                <span className='pay-quote-button-styles'>{singleOffer.bookingLinkTitleB}</span>
+
+                                                </a>
+                                                </div>
+
+                                                
+                                                )}
+
+                                                <hr/>
+                                            </div>
+                                        )}
+
 
                                         {singleOffer.title2 && (
                                         <h3 className="i-map-paragraph"><b className='show-page-name-s'>{singleOffer.title2}</b></h3>
@@ -306,10 +373,17 @@ function Influencers() {
                                         {singleOffer.subTitle2 && (
                                             <h4 className='i-map-paragraph show-page-name-s offer-subheading'>{singleOffer.subTitle2}</h4>
                                         )}
-                                        {singleOffer.offerDescription2 && (
+
+
+                                        {singleOffer.subTitleB2 && (
+                                            <h4 className='i-map-paragraph show-page-name-s offer-subheading'>{singleOffer.subTitleB2}</h4>
+                                        )}
+                                        {singleOffer.multiInfluencerDescription && (
                                             <div className='show-button'>
                                                 <div className='offer-p-detail'>
-                                                    {singleOffer.offerDescription2}
+                                              
+
+                                                    <ReactMarkdown children={singleOffer.multiInfluencerDescription} remarkPlugins={[remarkGfm]} />
                                                 </div>
 
 
@@ -331,10 +405,12 @@ function Influencers() {
                                             <h4 className='i-map-paragraph show-page-name-s offer-subheading'>{singleOffer.subTitle3}</h4>
                                         )}
 
-                                        {singleOffer.offerDescription3 && (
+                                        {singleOffer.prMarketingDescription && (
                                             <div className='show-button'>
                                                 <div className='offer-p-detail'>
-                                                    {singleOffer.offerDescription3}
+                                            
+
+                                                    <ReactMarkdown children={singleOffer.prMarketingDescription} remarkPlugins={[remarkGfm]} />
                                                 </div>
 
                                                 <ModalComp2/>

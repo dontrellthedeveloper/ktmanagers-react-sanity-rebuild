@@ -23,6 +23,8 @@ import Mascots from "./pages/Mascots";
 import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import Payment from "./pages/Payment";
+import Opportunities from './pages/Opportunities';
+import Campaign from './pages/Campaign';
 
 
 
@@ -61,8 +63,9 @@ const App = () => {
             <Route path='/:slug' element={<Influencer/>} />
             <Route path='/kids' element={<Kids/>} />
             <Route path='/kid/:slug' element={<Kid/>} />
-            {/* <Route path='/services' element={<Services/>} /> */}
+            <Route path='/opportunities' element={<Opportunities/>} />
             <Route path='/service/:slug' element={<Service/>} />
+            <Route path='/campaigns' element={<Campaign/>} />
             <Route path='/services' element={<WhatWeOffer/>} />
             <Route path='/mascots' element={<Mascots/>} />
             <Route path='/mascot/:slug' element={<Mascot/>} />
