@@ -26,7 +26,7 @@ const Navbar = () => {
         <nav className={scroll ? "app__navbar app__navbar-scroll" : "app__navbar"}>
             <div className='app__navbar-logo'>
                 <NavLink to='/'>
-                    <img src={scroll ? images.logo3 : images.logo2} alt="logo"/>
+                    <img src={scroll ? images.logo5 : images.logo4} alt="logo"/>
                 </NavLink>
             </div>
             <ul className='app__navbar-links'>

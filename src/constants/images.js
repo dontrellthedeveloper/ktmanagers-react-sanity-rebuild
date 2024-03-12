@@ -10,6 +10,8 @@ import clientTemp from '../assets/client_temp.jpeg';
 import logo from '../assets/logo.png';
 import logo2 from '../assets/logo-light.png';
 import logo3 from '../assets/logo-dark.png';
+import logo4 from '../assets/logo-light2.png';
+import logo5 from '../assets/logo-dark2.png';
 
 export default {
     aboutLeft,
@@ -23,5 +25,7 @@ export default {
     clientTemp,
     logo,
     logo2,
-    logo3
+    logo3,
+    logo4,
+    logo5
 }
