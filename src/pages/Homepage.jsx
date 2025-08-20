@@ -26,11 +26,12 @@ const Homepage = () => {
         <>
             {/*<Navbar/>*/}
             <Header/>
-            <Portfolio/>
             <Brands/>
+            <Services/>
+            <Portfolio/>
             <Stats/>
 
-            <Services/>
+
 
             {/*<About/>*/}
 
