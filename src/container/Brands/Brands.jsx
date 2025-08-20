@@ -62,7 +62,10 @@ const Brands = () => {
                                 </div>
 
                                 <div className="item client">
-                                    <img src={images.honorCulture} className="img-fluid" alt="client"/>
+                                    <a href=' https://www.tiktok.com/@h0n0rculture?lang=en' target='_blank'>
+                                       <img src={images.honorCulture} className="img-fluid" alt="client"/>
+                                    </a>
+                                    {/* <img src={images.honorCulture} className="img-fluid" alt="client"/> */}
                                 </div>
 
                                 <div className="item client">
