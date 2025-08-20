@@ -13,6 +13,7 @@ import Kids from "./pages/Kids";
 import Kid from "./pages/Kid";
 import Services from "./pages/Services";
 import Service from "./pages/Service";
+import OurBrands from "./pages/Brands"
 
 import {Footer} from "./container";
 import {Navbar} from "./components";
@@ -59,6 +60,7 @@ const App = () => {
         <Routes>
             <Route path='/' element={<Homepage/>} exact />
             <Route path='/about' element={<About/>}  />
+            <Route path='/brands' element={<OurBrands/>}  />
             <Route path='/influencers' element={<Influencers/>} />
             <Route path='/:slug' element={<Influencer/>} />
             <Route path='/kids' element={<Kids/>} />

@@ -13,7 +13,7 @@ const Brands = () => {
                     <div className="row">
                         <div className="col-md-12 text-center">
                             <div className="horizontal-heading">
-                                <h2 className="brand-thin">Our Happy <strong className="brand-bold">Brands</strong></h2>
+                                <h2 className="brand-thin">Brand <strong className="brand-bold">Partners</strong></h2>
                             </div>
                         </div>
                     </div>
@@ -21,7 +21,7 @@ const Brands = () => {
                         <div className="col-md-12">
                             <OwlCarousel
                                 items='6'
-                                autoplay
+                                // autoplay
                                 smartSpeed='700'
                                 loop
                                 autoplayHoverPause='false'
@@ -30,49 +30,47 @@ const Brands = () => {
                                 id="clients-list" className="owl-carousel owl-theme"
                                 responsive={{
                                     0: {
-                                        items: 2
+                                        items: 1
                                     },
                                     480: {
-                                        items: 2
+                                        items: 1
                                     },
                                     768: {
                                         items: 3
                                     },
                                     1000: {
-                                        items: 6
+                                        items: 3
                                     },
                                     1200: {
-                                        items: 6
+                                        items: 3
                                     },
                                 }}
                             >
+                                
 
+                                
                                 <div className="item client">
-                                    <img src={images.brands1} className="img-fluid" alt="client"/>
-                                </div>
-                                <div className="item client">
-                                    <img src={images.brands2} className="img-fluid" alt="client"/>
-                                </div>
-
-                                <div className="item client">
-                                    <img src={images.brands3} className="img-fluid" alt="client"/>
+                                    <a href='https://www.tiktok.com/@seventhavenuebeauty?lang=en' target='_blank'>
+                                    <img src={images.seventhAve2} className="img-fluid" alt="client"/>
+                                    </a>
                                 </div>
 
                                 <div className="item client">
-                                    <img src={images.brands4} className="img-fluid" alt="client"/>
+                                    <a href=' https://www.tiktok.com/@golinutrition?lang=en' target='_blank'>
+                                    <img src={images.goli} className="img-fluid" alt="client"/>
+                                    </a>
                                 </div>
 
                                 <div className="item client">
-                                    <img src={images.brands5} className="img-fluid" alt="client"/>
+                                    <img src={images.honorCulture} className="img-fluid" alt="client"/>
                                 </div>
 
                                 <div className="item client">
-                                    <img src={images.brands6} className="img-fluid" alt="client"/>
+                                    <img src={images.desireeFinery} className="img-fluid" alt="client"/>
                                 </div>
 
-                                <div className="item client">
-                                    <img src={images.brands7} className="img-fluid" alt="client"/>
-                                </div>
+
+
                             </OwlCarousel>
                         </div>
                     </div>

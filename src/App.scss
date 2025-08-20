@@ -1653,7 +1653,8 @@ ul.social-list .twitter-bg-color a:hover {
 
 .client {
   padding: 0 10px;
-  max-width: 150px;
+  // max-width: 150px;
+  max-width: 400px;
   margin: 0 auto;
   line-height: 100px;
 }
@@ -2000,3 +2001,5 @@ ul.navbar-nav > li > a:focus {
   color: #500000;
 }
 
+
+.owl-carousel .owl-stage { display: flex; align-items: center; }

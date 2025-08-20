@@ -12,6 +12,11 @@ import logo2 from '../assets/logo-light.png';
 import logo3 from '../assets/logo-dark.png';
 import logo4 from '../assets/logo-light2.png';
 import logo5 from '../assets/logo-dark2.png';
+import goli from '../assets/goli.png'
+import seventhAve from '../assets/seventh-avenue.png'
+import seventhAve2 from '../assets/seventh-avenue-2.png'
+import desireeFinery from '../assets/desiree-finery.png'
+import honorCulture from '../assets/honor-culture.png'
 
 export default {
     aboutLeft,
@@ -27,5 +32,10 @@ export default {
     logo2,
     logo3,
     logo4,
-    logo5
+    logo5,
+    goli,
+    seventhAve,
+    seventhAve2,
+    desireeFinery,
+    honorCulture
 }

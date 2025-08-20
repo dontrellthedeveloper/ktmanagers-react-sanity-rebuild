@@ -37,6 +37,11 @@ const Navbar = () => {
                 </li>
                 <li className='app__flex p-text'>
                     {/*<div/>*/}
+                    <NavLink className={scroll ? 'navbar__links-styles navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to='/brands'>Brand Partners
+                    </NavLink>
+                </li>
+                <li className='app__flex p-text'>
+                    {/*<div/>*/}
                     <NavLink className={scroll ? 'navbar__links-styles navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to='/campaigns'>KTM Campaigns
                     </NavLink>
                 </li>
@@ -45,6 +50,7 @@ const Navbar = () => {
                     <NavLink className={scroll ? 'navbar__links-styles navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to='/influencers'>Influencers
                     </NavLink>
                 </li>
+
                 <li className='app__flex p-text'>
                     {/*<div/>*/}
                     <NavLink className={scroll ? 'navbar__links-styles navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to='/services'>Services
@@ -53,11 +59,6 @@ const Navbar = () => {
                 <li className='app__flex p-text'>
                     {/*<div/>*/}
                     <NavLink className={scroll ? 'navbar__links-styles navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to='/about'>About
-                    </NavLink>
-                </li>
-                <li className='app__flex p-text'>
-                    {/*<div/>*/}
-                    <NavLink className={scroll ? 'navbar__links-styles navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to='/kids'>ktm kids
                     </NavLink>
                 </li>
 
@@ -116,6 +117,10 @@ const Navbar = () => {
                                 </NavLink>
                             </li>
                             <li>
+                                <NavLink className='app__navbar-menu-links' to='/brands' onClick={() => setToggle(false)}>Brand Partners
+                                </NavLink>
+                            </li>
+                            <li>
                                 <NavLink className='app__navbar-menu-links' to='/campaigns' onClick={() => setToggle(false)}>KTM Campaigns
                                 </NavLink>
                             </li>
@@ -131,10 +136,10 @@ const Navbar = () => {
                                 <NavLink className='app__navbar-menu-links' to='/about' onClick={() => setToggle(false)}>About
                                 </NavLink>
                             </li>
-                            <li>
+                            {/* <li>
                                 <NavLink className='app__navbar-menu-links' to='/kids' onClick={() => setToggle(false)}>KTM Kids
                                 </NavLink>
-                            </li>
+                            </li> */}
                             {/* <li>
                                 <NavLink className='app__navbar-menu-links' to='/services' onClick={() => setToggle(false)}>Services
                                 </NavLink>

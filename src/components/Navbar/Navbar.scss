@@ -233,12 +233,15 @@
     align-items: flex-end;
     flex-direction: column;
 
+
     //background: url('../../assets/bgWhite.png');
     background-color: var(--white-color);
     background-size: cover;
     background-repeat: repeat;
 
     box-shadow: 0 0 20px rgba(168, 168, 168, 0.15);
+
+    border-left: 3px solid #500000;
 
     svg {
       width: 35px;
@@ -257,7 +260,8 @@
 
       display: flex;
       justify-content: flex-start;
-      align-items: flex-start;
+      // align-items: flex-start;
+      align-items: center;
       flex-direction: column;
 
       li {
